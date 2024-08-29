@@ -1,0 +1,8 @@
+{
+  "name": "yechan-common",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/k1my3ch4n/BoilerPlate.git",
+  "author": "yechan <kevin2695@naver.com>",
+  "license": "MIT"
+}
