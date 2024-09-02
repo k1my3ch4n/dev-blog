@@ -1,8 +1,27 @@
 {
-  "name": "yechan-common",
-  "version": "0.0.1",
-  "main": "index.js",
-  "repository": "https://github.com/k1my3ch4n/BoilerPlate.git",
-  "author": "yechan <kevin2695@naver.com>",
-  "license": "MIT"
+  "name": "project",
+  "packageManager": "yarn@4.4.1",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "blog": "yarn workspace blog",
+    "typecheck:blog": "tsc -p 'packages/blog/ -w"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "references": [
+    {
+      "path": "packages/blog"
+    }
+  ],
+  "exclude": [
+    "packages/**/dist/**"
+  ],
+  "include": []
 }
