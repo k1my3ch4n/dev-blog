@@ -1,11 +1,5 @@
-import Header from './Layouts/Header';
-
 const App = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <div>1</div>;
 };
 
 export default App;
