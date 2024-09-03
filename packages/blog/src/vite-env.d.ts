@@ -1,8 +1,7 @@
 /// <reference types="vite/client" />
 
 declare module '@images';
-declare module '@colors';
-declare module '@images/static_map_image.pgm';
+// declare module '@colors';
 
 declare module '*.svg' {
   import React = require('react');
