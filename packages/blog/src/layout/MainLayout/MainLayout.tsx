@@ -6,7 +6,9 @@ import Header from '@layout/Header';
 const MainLayout = () => {
   return (
     <div className={styles.wrapper}>
-      <Header />
+      <div className={styles.header}>
+        <Header />
+      </div>
       <div className={styles.content}>
         <Suspense>
           <Outlet />

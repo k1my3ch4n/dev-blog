@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+
+  .header {
+    width: 100%;
+    @include flex(center, center, column);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .content {
+    @include flex(center, center, column);
+  }
+}
