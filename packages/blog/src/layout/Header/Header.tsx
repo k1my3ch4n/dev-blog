@@ -1,4 +1,4 @@
-import MainLogo from './assets/images/main_logo.svg?react';
+import MainLogo from '@images/main_logo.svg?react';
 import styles from './Header.module.scss';
 
 const Header = () => {
