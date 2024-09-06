@@ -23,7 +23,8 @@
     "paths": {
       "@src/*": ["./src/*"],
       "@styles/*": ["./src/assets/styles/*"],
-      "@images/*": ["./src/assets/images/*"]
+      "@images/*": ["./src/assets/images/*"],
+      "@layout/*": ["./src/layout/*"]
     }
   },
   "include": ["src"]
