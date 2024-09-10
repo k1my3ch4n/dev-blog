@@ -1,8 +1,11 @@
-import { graphql } from 'msw';
+import { GetTagsQueryResponse } from '@src/fixtures/tags';
+import { graphql, HttpResponse } from 'msw';
 
 const mockHandlers = [
-  graphql.query('/home', (_, res, ctx) => {
-    return res(ctx.data({}));
+  graphql.query('GetTags', () => {
+    return HttpResponse.json({
+      data: GetTagsQueryResponse,
+    });
   }),
 ];
 
