@@ -8,7 +8,9 @@
   },
   "scripts": {
     "blog": "yarn workspace blog",
-    "typecheck:blog": "tsc -p 'packages/blog/ -w"
+    "server": "yarn workspace server",
+    "typeCheck:blog": "tsc -p 'packages/blog/ -w",
+    "typeCheck:server": "tsc -p 'packages/server/ -w"
   },
   "devDependencies": {
     "eslint": "^9.9.1",
@@ -18,6 +20,9 @@
   "references": [
     {
       "path": "packages/blog"
+    },
+    {
+      "path": "packages/server"
     }
   ],
   "exclude": [
