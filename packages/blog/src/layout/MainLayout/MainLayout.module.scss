@@ -1,5 +1,6 @@
 .wrapper {
   width: 100%;
+  @include flex(center, center, column);
 
   .header {
     width: 100%;
@@ -8,6 +9,6 @@
   }
 
   .content {
-    @include flex(center, center, column);
+    width: 70%;
   }
 }
