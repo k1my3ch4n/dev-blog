@@ -34,7 +34,23 @@ const Blog = () => {
       </div>
 
       {/* post */}
-      <div className={styles.postWrapper}>posts</div>
+      <div className={styles.postWrapper}>
+        <div className={styles.postTitle}>게시글 {postsData?.length} 개</div>
+        <div className={styles.postContent}>
+          {postsData?.map((post) => {
+            const { id, title, description, createDate, thumbnail } = post;
+
+            return (
+              <div key={id} className={styles.post}>
+                <div className={styles.thumbnail}>{thumbnail}</div>
+                <div>{title}</div>
+                <div>{description}</div>
+                <div>{createDate}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
