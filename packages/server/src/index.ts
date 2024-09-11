@@ -9,12 +9,12 @@ const typeDefs = `#graphql
   }
 
   type Query {
-    tags: [tag]
+    tags: [tag],
   }
 `;
 
-// 예제 데이터
-const tags = [
+// 데이터 정의
+const GetTagsQueryResponse = [
   {
     id: '1',
     tag: 'mock1',
@@ -32,7 +32,7 @@ const tags = [
 // 리졸버 정의
 const resolvers = {
   Query: {
-    tags: () => tags,
+    tags: () => GetTagsQueryResponse,
   },
 };
 
