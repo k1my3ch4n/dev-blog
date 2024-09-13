@@ -1,5 +1,5 @@
-import { GetPostsQueryResponse } from '@src/fixtures/posts';
-import { GetTagsQueryResponse } from '@src/fixtures/tags';
+import { GetPostsQueryResponse } from '@fixtures/posts';
+import { GetTagsQueryResponse } from '@fixtures/tags';
 import { graphql, HttpResponse } from 'msw';
 
 const mockHandlers = [

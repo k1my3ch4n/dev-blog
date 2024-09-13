@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Blog.module.scss';
-import useGetTagsQuery from '@src/apis/useGetTagsQuery';
-import useGetPostsQuery from '@src/apis/useGetPostsQuery';
+import useGetTagsQuery from '@apis/useGetTagsQuery';
+import useGetPostsQuery from '@apis/useGetPostsQuery';
 
 const Blog = () => {
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined);

@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
-import { GetTagsDocument } from '@src/graphql/tags/tags';
-import tagsAtom, { TagType } from '@src/recoil/blog/tag';
+import { GetTagsDocument } from '@graphql/tags';
+import tagsAtom, { TagType } from '@recoil/blog/tag';
 import { useEffect, useMemo } from 'react';
 
 import { useResetRecoilState, useSetRecoilState } from 'recoil';

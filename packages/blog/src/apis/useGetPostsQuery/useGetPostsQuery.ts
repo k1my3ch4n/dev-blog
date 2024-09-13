@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
-import { GetPostsDocument } from '@src/graphql/posts/posts';
-import postsAtom, { PostType } from '@src/recoil/blog/post';
+import { GetPostsDocument } from '@graphql/posts';
+import postsAtom, { PostType } from '@recoil/blog/post';
 import { useEffect, useMemo } from 'react';
 import { useResetRecoilState, useSetRecoilState } from 'recoil';
 

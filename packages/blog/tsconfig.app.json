@@ -24,7 +24,11 @@
       "@src/*": ["./src/*"],
       "@styles/*": ["./src/assets/styles/*"],
       "@images/*": ["./src/assets/images/*"],
-      "@layout/*": ["./src/layout/*"]
+      "@apis/*": ["./src/apis/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@graphql/*": ["./src/graphql/*"],
+      "@fixtures/*": ["./src/fixtures/*"],
+      "@recoil/*": ["./src/recoil/*"]
     }
   },
   "include": ["src"]
