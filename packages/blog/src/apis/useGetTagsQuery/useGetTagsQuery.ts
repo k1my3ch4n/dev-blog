@@ -15,13 +15,13 @@ const useGetTagsQuery = () => {
     },
   });
 
-  const tagData = useMemo(() => data, [data]);
+  const tagsData = useMemo(() => data, [data]);
 
   useEffect(() => {
-    if (tagData) {
-      setTags(tagData);
+    if (tagsData) {
+      setTags(tagsData);
     }
-  }, [tagData, setTags]);
+  }, [tagsData, setTags]);
 
   useEffect(() => {
     return () => {
@@ -30,7 +30,7 @@ const useGetTagsQuery = () => {
   }, [resetTags]);
 
   return {
-    tagData,
+    tagsData,
     isLoading,
   };
 };

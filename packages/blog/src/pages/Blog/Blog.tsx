@@ -5,7 +5,7 @@ import useGetPostsQuery from '@src/apis/useGetPostsQuery';
 
 const Blog = () => {
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined);
-  const { data: tagsData } = useGetTagsQuery();
+  const { tagsData } = useGetTagsQuery();
   const { data: postsData } = useGetPostsQuery();
 
   return (
