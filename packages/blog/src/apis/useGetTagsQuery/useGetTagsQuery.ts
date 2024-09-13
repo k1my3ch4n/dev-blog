@@ -1,23 +1,37 @@
 import { useQuery } from '@apollo/client';
 import { GetTagsDocument } from '@src/graphql/tags/tags';
+import tagsAtom, { TagType } from '@src/recoil/blog/tag';
+import { useEffect, useMemo } from 'react';
 
-interface TagData {
-  id: string;
-  tag: string;
-}
+import { useResetRecoilState, useSetRecoilState } from 'recoil';
 
 const useGetTagsQuery = () => {
-  const { data } = useQuery<TagData[]>(GetTagsDocument, {
-    onCompleted: (data) => {
-      console.log(data);
-    },
+  const setTags = useSetRecoilState(tagsAtom);
+  const resetTags = useResetRecoilState(tagsAtom);
+
+  const { data, loading: isLoading } = useQuery<TagType[]>(GetTagsDocument, {
     onError: (error) => {
       console.error(error);
     },
   });
 
+  const tagData = useMemo(() => data, [data]);
+
+  useEffect(() => {
+    if (tagData) {
+      setTags(tagData);
+    }
+  }, [tagData, setTags]);
+
+  useEffect(() => {
+    return () => {
+      resetTags();
+    };
+  }, [resetTags]);
+
   return {
-    data,
+    tagData,
+    isLoading,
   };
 };
 
