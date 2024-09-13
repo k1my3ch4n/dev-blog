@@ -6,7 +6,7 @@ import useGetPostsQuery from '@src/apis/useGetPostsQuery';
 const Blog = () => {
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined);
   const { tagsData } = useGetTagsQuery();
-  const { data: postsData } = useGetPostsQuery();
+  const { postsData } = useGetPostsQuery();
 
   return (
     <div className={styles.wrapper}>
