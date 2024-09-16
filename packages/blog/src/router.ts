@@ -4,13 +4,13 @@ import MainLayout from '@layout/MainLayout';
 
 export const router = createBrowserRouter([
   {
+    path: '',
+    Component: lazy(() => import('./pages/Main')),
+  },
+  {
     path: '/',
     Component: MainLayout,
     children: [
-      {
-        path: '',
-        Component: lazy(() => import('./pages/Main')),
-      },
       {
         path: 'blog',
         Component: lazy(() => import('./pages/Blog')),

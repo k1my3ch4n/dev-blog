@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from './Blog.module.scss';
 import useGetTagsQuery from '@apis/useGetTagsQuery';
 import useGetPostsQuery from '@apis/useGetPostsQuery';
+import { format } from 'date-fns';
 
 const Blog = () => {
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined);
@@ -45,7 +46,7 @@ const Blog = () => {
                 <div className={styles.thumbnail}>{thumbnail}</div>
                 <div>{title}</div>
                 <div>{description}</div>
-                <div>{createDate}</div>
+                <div>{format(createDate, 'yyyy-MM-dd')}</div>
               </div>
             );
           })}
