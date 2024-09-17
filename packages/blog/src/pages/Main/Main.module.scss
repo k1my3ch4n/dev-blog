@@ -1,0 +1,15 @@
+.wrapper {
+  @include flex(center, center, column);
+
+  .mainImage {
+    width: 100%;
+    height: 600px;
+
+    // 임시 이미지
+    background-image: url('@images/background_cat.png');
+    background-size: cover;
+  }
+
+  .introduce {
+  }
+}
