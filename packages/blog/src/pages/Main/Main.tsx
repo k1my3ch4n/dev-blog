@@ -1,4 +1,5 @@
 import styles from './Main.module.scss';
+import MainLogo from '@images/main_logo.svg?react';
 
 const Main = () => {
   return (
@@ -20,9 +21,12 @@ const Main = () => {
       <div className={styles.introduceMore}>
         저에 대해 더 자세하게 알고 싶으신가요 ? 클릭 ! {'>'}
       </div>
+      <div className={styles.title}>프로젝트</div>
       <div className={styles.projects}>
-        {/* 좌측 스크롤 */}
-        <div>card</div>
+        <div className={styles.project}>
+          <MainLogo style={{ width: '500px', height: '150px' }} />
+          <p>이 블로그는 어떻게 만들어졌을까요 ?</p>
+        </div>
       </div>
       <div>etc</div>
     </div>
