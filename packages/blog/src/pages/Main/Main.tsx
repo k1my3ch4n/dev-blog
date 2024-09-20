@@ -28,7 +28,25 @@ const Main = () => {
           <p>이 블로그는 어떻게 만들어졌을까요 ?</p>
         </div>
       </div>
-      <div>etc</div>
+      <div className={styles.title}>포스트</div>
+      <div className={styles.posts}>
+        <div className={styles.post}>
+          <p>이름</p>
+          <p>태그</p>
+        </div>
+        <div className={styles.post}>
+          <p>이름</p>
+          <p>태그</p>
+        </div>
+        <div className={styles.post}>
+          <p>이름</p>
+          <p>태그</p>
+        </div>
+        <div className={styles.post}>
+          <p>이름</p>
+          <p>태그</p>
+        </div>
+      </div>
     </div>
   );
 };
