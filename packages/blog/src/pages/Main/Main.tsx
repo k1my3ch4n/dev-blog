@@ -46,7 +46,12 @@ const Main = () => {
           <p>이름</p>
           <p>태그</p>
         </div>
+        <div className={styles.post}>
+          <p>이름</p>
+          <p>태그</p>
+        </div>
       </div>
+      <div className={styles.title}>ETC</div>
     </div>
   );
 };
