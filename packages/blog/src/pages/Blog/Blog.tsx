@@ -3,11 +3,15 @@ import styles from './Blog.module.scss';
 import useGetTagsQuery from '@apis/useGetTagsQuery';
 import useGetPostsQuery from '@apis/useGetPostsQuery';
 import { format } from 'date-fns';
+import MarkdownToJSX from 'markdown-to-jsx';
+import useGetMarkdown from '@src/hooks/useGetMarkdown';
 
 const Blog = () => {
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined);
   const { tagsData } = useGetTagsQuery();
   const { postsData } = useGetPostsQuery();
+
+  const { markdown } = useGetMarkdown('recoil');
 
   return (
     <div className={styles.wrapper}>
@@ -52,6 +56,14 @@ const Blog = () => {
           })}
         </div>
       </div>
+
+      <MarkdownToJSX
+        options={{
+          wrapper: 'article',
+        }}
+      >
+        {markdown}
+      </MarkdownToJSX>
     </div>
   );
 };

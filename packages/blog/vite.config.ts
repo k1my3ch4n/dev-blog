@@ -17,4 +17,5 @@ export default defineConfig({
   resolve: {
     alias: [{ find: '@images', replacement: path.resolve(__dirname, 'src/assets/images') }],
   },
+  assetsInclude: ['**/*.md'],
 });
