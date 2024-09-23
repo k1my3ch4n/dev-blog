@@ -12,7 +12,7 @@
 
   .introduce {
     width: 100%;
-    padding: 70px;
+    padding: 50px 70px 30px 70px;
     @include flex(center, space-between);
 
     .item {
