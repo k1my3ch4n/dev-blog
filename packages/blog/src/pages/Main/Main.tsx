@@ -1,5 +1,6 @@
 import styles from './Main.module.scss';
 import MainLogo from '@images/main_logo.svg?react';
+import { MAIN_POSTS } from '@src/constants/posts';
 
 const Main = () => {
   return (
@@ -18,9 +19,7 @@ const Main = () => {
           <p>김예찬</p>
         </div>
       </div>
-      <div className={styles.introduceMore}>
-        저에 대해 더 자세하게 알고 싶으신가요 ? 클릭 ! {'>'}
-      </div>
+      <div className={styles.introduceMore}>저에 대해 더 자세하게 알고 싶으신가요 ? 클릭 !</div>
       <div className={styles.title}>프로젝트</div>
       <div className={styles.projects}>
         <div className={styles.project}>
@@ -28,28 +27,23 @@ const Main = () => {
           <p>이 블로그는 어떻게 만들어졌을까요 ?</p>
         </div>
       </div>
-      <div className={styles.title}>포스트</div>
+      <div className={styles.title}>Blog</div>
       <div className={styles.posts}>
-        <div className={styles.post}>
-          <p>이름</p>
-          <p>태그</p>
-        </div>
-        <div className={styles.post}>
-          <p>이름</p>
-          <p>태그</p>
-        </div>
-        <div className={styles.post}>
-          <p>이름</p>
-          <p>태그</p>
-        </div>
-        <div className={styles.post}>
-          <p>이름</p>
-          <p>태그</p>
-        </div>
-        <div className={styles.post}>
-          <p>이름</p>
-          <p>태그</p>
-        </div>
+        {MAIN_POSTS.map((data) => {
+          const { id, title, tags, createDate, thumbnail } = data;
+
+          return (
+            <div className={styles.post}>
+              <img className={styles.thumbnail} src={thumbnail} alt="" />
+              <p>{title}</p>
+              <div className={styles.tagWrapper}>
+                {tags.map((tag) => {
+                  return <div className={styles.tag}>{tag}</div>;
+                })}
+              </div>
+            </div>
+          );
+        })}
       </div>
       <div className={styles.title}>ETC</div>
     </div>

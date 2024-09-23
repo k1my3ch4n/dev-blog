@@ -72,18 +72,35 @@
   }
 
   .posts {
+    @include flex(flex-start, center);
     width: 100%;
-    @include flex(center, flex-start);
-    overflow-x: auto;
+    margin: 20px;
 
     gap: 30px;
 
     .post {
       width: 300px;
-      height: 200px;
-      min-width: 300px;
 
-      border: 1px solid red;
+      .thumbnail {
+        width: 300px;
+        height: 200px;
+        border-radius: 20px;
+        margin-bottom: 4px;
+      }
+
+      .tagWrapper {
+        @include flex(center, flex-start);
+        flex-wrap: wrap;
+        margin-top: 4px;
+
+        .tag {
+          @include font($size: 12px, $color: white);
+          padding: 4px 6px;
+          margin: 2px;
+          background-color: #264db1;
+          border-radius: 10px;
+        }
+      }
     }
   }
 }
