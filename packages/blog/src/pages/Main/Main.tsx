@@ -1,8 +1,11 @@
 import styles from './Main.module.scss';
 import MainLogo from '@images/main_logo.svg?react';
 import { MAIN_POSTS } from '@src/constants/posts';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.wrapper}>
       {/* todo : 이미지 수정 예정 */}
@@ -29,10 +32,14 @@ const Main = () => {
       <div className={styles.title}>Blog</div>
       <div className={styles.posts}>
         {MAIN_POSTS.map((data) => {
-          const { id, title, tags, createDate, thumbnail } = data;
+          const { id, title, tags, thumbnail } = data;
+
+          const handleClick = () => {
+            navigate(`/blog/${id}`);
+          };
 
           return (
-            <div className={styles.post}>
+            <div className={styles.post} onClick={handleClick}>
               <img className={styles.thumbnail} src={thumbnail} alt="" />
               <p>{title}</p>
               <div className={styles.tagWrapper}>

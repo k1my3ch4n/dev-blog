@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useGetMarkdown = (filename: string) => {
+const useGetMarkdown = (filename?: string) => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {

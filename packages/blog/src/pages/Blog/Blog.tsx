@@ -3,7 +3,6 @@ import styles from './Blog.module.scss';
 import useGetTagsQuery from '@apis/useGetTagsQuery';
 import useGetPostsQuery from '@apis/useGetPostsQuery';
 import { format } from 'date-fns';
-import MarkdownToJSX from 'markdown-to-jsx';
 import useGetMarkdown from '@src/hooks/useGetMarkdown';
 
 const Blog = () => {
@@ -56,14 +55,6 @@ const Blog = () => {
           })}
         </div>
       </div>
-
-      <MarkdownToJSX
-        options={{
-          wrapper: 'article',
-        }}
-      >
-        {markdown}
-      </MarkdownToJSX>
     </div>
   );
 };
