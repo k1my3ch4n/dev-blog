@@ -4,15 +4,11 @@ import MarkdownToJSX from 'markdown-to-jsx';
 /*
   todo : 작업해야할 태그
 
-  - h2
   - pre ( 긴 코드 )
   - code ( 짧은 코드 )
   - ul 
   - li 
   - ol
-  - p
-  - h3
-  - img
 */
 
 const MarkdownWrapper = ({ markdown }: { markdown: string }) => {

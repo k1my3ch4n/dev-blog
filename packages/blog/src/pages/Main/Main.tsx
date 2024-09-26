@@ -43,8 +43,12 @@ const Main = () => {
               <img className={styles.thumbnail} src={thumbnail} alt="" />
               <p>{title}</p>
               <div className={styles.tagWrapper}>
-                {tags.map((tag) => {
-                  return <div className={styles.tag}>{tag}</div>;
+                {tags.map((tag, index) => {
+                  return (
+                    <div key={index} className={styles.tag}>
+                      {tag}
+                    </div>
+                  );
                 })}
               </div>
             </div>
