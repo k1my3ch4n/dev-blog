@@ -79,20 +79,23 @@
     gap: 30px;
 
     .post {
-      width: 300px;
+      width: 500px;
       cursor: pointer;
 
       .thumbnail {
-        width: 300px;
-        height: 200px;
+        width: 500px;
+        height: 350px;
         border-radius: 20px;
-        margin-bottom: 4px;
+      }
+
+      p {
+        @include font($size: 20px, $weight: 600);
+        margin: 10px 8px;
       }
 
       .tagWrapper {
         @include flex(center, flex-start);
         flex-wrap: wrap;
-        margin-top: 4px;
 
         .tag {
           @include font($size: 12px, $color: white);
