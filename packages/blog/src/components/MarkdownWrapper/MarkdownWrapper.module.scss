@@ -1,5 +1,7 @@
 .wrapper {
   width: 100%;
+  @include font($size: 20px);
+  line-height: 1.5;
 
   h2 {
     @include font($size: 32px, $weight: 700);
@@ -9,11 +11,6 @@
   h3 {
     @include font($size: 24px, $weight: 700);
     margin: 16px 0;
-  }
-
-  p {
-    @include font($size: 20px);
-    line-height: 1.5;
   }
 
   img {
@@ -26,29 +23,30 @@
     @include font($size: 20px, $weight: 600);
   }
 
-  // li {
-  //   @include font($size: 20px);
-  //   line-height: 1.5;
-  // }
+  ul,
+  ol {
+    margin: 10px;
+  }
 
-  // code {
-  //   @include font($size: 16px, $weight: 600);
-  //   background-color: gray;
-  //   color: white;
-  //   padding: 4px 2px;
-  //   border-radius: 8px;
-  // }
+  code {
+    @include font($weight: 600);
+    padding: 2px;
+    background-color: lightgray;
+  }
 
-  // pre {
-  //   background-color: gray;
-  //   border-radius: 8px;
-  //   padding: 10px;
+  pre {
+    padding: 10px;
+    background-color: lightgray;
+    position: relative;
 
-  //   code {
-  //     @include font($size: 16px, $weight: 600);
-  //     background-color: none;
-  //     color: white;
-  //     padding: 0;
-  //   }
-  // }
+    code {
+      background-color: lightgray;
+    }
+
+    .preLanguage {
+      @include font($size: 12px, $weight: 400);
+      position: absolute;
+      right: 10px;
+    }
+  }
 }

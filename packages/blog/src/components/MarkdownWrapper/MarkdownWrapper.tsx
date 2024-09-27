@@ -1,31 +1,36 @@
 import styles from './MarkdownWrapper.module.scss';
 import MarkdownToJSX from 'markdown-to-jsx';
 
-/*
-  todo : 작업해야할 태그
-
-  - pre ( 긴 코드 )
-  - code ( 짧은 코드 )
-  - ul 
-  - li 
-  - ol
-*/
-
 const MarkdownWrapper = ({ markdown }: { markdown: string }) => {
-  // const H2Component = ({ children }) => {
-  //   return <h2 className={styles.h2}>{children}</h2>;
-  // };
+  const PreComponent = ({ ...props }: React.HTMLAttributes<HTMLElement>) => {
+    return <pre className={styles.pre}>{props.children}</pre>;
+  };
+
+  const CodeComponent = ({ ...props }: React.HTMLAttributes<HTMLElement>) => {
+    const preLanguage = props.className?.slice(5);
+
+    return (
+      <>
+        {preLanguage && <p className={styles.preLanguage}>{preLanguage}</p>}
+        <code className={`${styles.pre} ${props.className}`}>{props.children}</code>
+      </>
+    );
+  };
+
+  const LiComponent = ({ ...props }: React.LiHTMLAttributes<HTMLLIElement>) => {
+    return <li> - {props.children}</li>;
+  };
 
   return (
     <div className={styles.wrapper}>
       <MarkdownToJSX
-        options={
-          {
-            // overrides: {
-            //   h2: H2Component,
-            // },
-          }
-        }
+        options={{
+          overrides: {
+            pre: PreComponent,
+            code: CodeComponent,
+            li: LiComponent,
+          },
+        }}
       >
         {markdown}
       </MarkdownToJSX>
