@@ -1,5 +1,6 @@
 import styles from './Main.module.scss';
 import MainLogo from '@images/main_logo.svg?react';
+import Tag from '@src/components/Tag';
 import { MAIN_POSTS } from '@src/constants/posts';
 import { useNavigate } from 'react-router-dom';
 
@@ -44,11 +45,7 @@ const Main = () => {
               <p>{title}</p>
               <div className={styles.tagWrapper}>
                 {tags.map((tag, index) => {
-                  return (
-                    <div key={index} className={styles.tag}>
-                      {tag}
-                    </div>
-                  );
+                  return <Tag key={index} tag={tag} />;
                 })}
               </div>
             </div>
