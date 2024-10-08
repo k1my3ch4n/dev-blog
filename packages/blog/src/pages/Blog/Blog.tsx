@@ -4,6 +4,7 @@ import useGetTagsQuery from '@apis/useGetTagsQuery';
 import useGetPostsQuery from '@apis/useGetPostsQuery';
 import { format } from 'date-fns';
 import useGetMarkdown from '@src/hooks/useGetMarkdown';
+import Tag from '@src/components/Tag';
 
 const Blog = () => {
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined);
@@ -26,13 +27,12 @@ const Blog = () => {
           };
 
           return (
-            <div
+            <Tag
               key={id}
               onClick={handleTagClick}
               className={`${styles.tag} ${selectedTag === tag ? styles.isSelected : ''}`}
-            >
-              {tag}
-            </div>
+              tag={tag}
+            />
           );
         })}
       </div>
