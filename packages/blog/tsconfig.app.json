@@ -25,9 +25,14 @@
       "@styles/*": ["./src/assets/styles/*"],
       "@images/*": ["./src/assets/images/*"],
       "@apis/*": ["./src/apis/*"],
-      "@layout/*": ["./src/layout/*"],
-      "@graphql/*": ["./src/graphql/*"],
+      "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
       "@fixtures/*": ["./src/fixtures/*"],
+      "@graphql/*": ["./src/graphql/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@posts/*": ["./src/posts/*"],
       "@recoil/*": ["./src/recoil/*"]
     }
   },

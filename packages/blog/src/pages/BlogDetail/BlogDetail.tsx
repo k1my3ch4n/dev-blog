@@ -1,10 +1,10 @@
 import styles from './BlogDetail.module.scss';
-import useGetMarkdown from '@src/hooks/useGetMarkdown';
+import useGetMarkdown from '@hooks/useGetMarkdown';
 import { useParams } from 'react-router-dom';
-import MarkdownWrapper from '@src/components/MarkdownWrapper';
-import { MAIN_POSTS } from '@src/constants/posts';
+import MarkdownWrapper from '@components/MarkdownWrapper';
+import { MAIN_POSTS } from '@constants/posts';
 import { format } from 'date-fns';
-import Tag from '@src/components/Tag';
+import Tag from '@components/Tag';
 
 const BlogDetail = () => {
   const { postId } = useParams();

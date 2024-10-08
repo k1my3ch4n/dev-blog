@@ -3,8 +3,8 @@ import styles from './Blog.module.scss';
 import useGetTagsQuery from '@apis/useGetTagsQuery';
 import useGetPostsQuery from '@apis/useGetPostsQuery';
 import { format } from 'date-fns';
-import useGetMarkdown from '@src/hooks/useGetMarkdown';
-import Tag from '@src/components/Tag';
+import useGetMarkdown from '@hooks/useGetMarkdown';
+import Tag from '@components/Tag';
 
 const Blog = () => {
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined);

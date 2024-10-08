@@ -1,7 +1,7 @@
-import MainPost from '@src/components/MainPost';
+import MainPost from '@components/MainPost';
 import styles from './Main.module.scss';
 import MainLogo from '@images/main_logo.svg?react';
-import { MAIN_POSTS } from '@src/constants/posts';
+import { MAIN_POSTS } from '@constants/posts';
 import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
