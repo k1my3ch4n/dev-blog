@@ -1,0 +1,16 @@
+.wrapper {
+  padding: 10px 0;
+
+  .title {
+    @include font($size: 40px, $weight: 700);
+  }
+
+  .tagWrapper {
+    padding: 10px 0;
+    @include flex(center, flex-start);
+  }
+
+  .createDate {
+    @include font($size: 12px);
+  }
+}
