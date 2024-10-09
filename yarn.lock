@@ -1958,38 +1958,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"blog@workspace:packages/blog":
-  version: 0.0.0-use.local
-  resolution: "blog@workspace:packages/blog"
-  dependencies:
-    "@apollo/client": "npm:^3.11.8"
-    "@eslint/js": "npm:^9.9.0"
-    "@types/node": "npm:^22.5.2"
-    "@types/react": "npm:^18.3.5"
-    "@types/react-dom": "npm:^18.3.0"
-    "@vitejs/plugin-react": "npm:^4.3.1"
-    date-fns: "npm:^4.0.0"
-    eslint: "npm:^9.9.0"
-    eslint-plugin-react-hooks: "npm:^5.1.0-rc.0"
-    eslint-plugin-react-refresh: "npm:^0.4.9"
-    globals: "npm:^15.9.0"
-    graphql: "npm:^16.9.0"
-    markdown-to-jsx: "npm:^7.5.0"
-    msw: "npm:^2.4.2"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
-    react-router-dom: "npm:^6.26.1"
-    recoil: "npm:^0.7.7"
-    sass: "npm:^1.77.8"
-    ts-node: "npm:^10.9.2"
-    typescript: "npm:^5.5.3"
-    typescript-eslint: "npm:^8.0.1"
-    vite: "npm:^5.4.1"
-    vite-plugin-svgr: "npm:^4.2.0"
-    vite-tsconfig-paths: "npm:^5.0.1"
-  languageName: unknown
-  linkType: soft
-
 "body-parser@npm:1.20.3":
   version: 1.20.3
   resolution: "body-parser@npm:1.20.3"
@@ -5132,6 +5100,38 @@ __metadata:
   checksum: 10c0/1607dd32ac7fc22f2d8f77051e6a64845c9bce5cd3dd8aa0070c074ec73e666a1f63c7b4e0f4bf2bc8b9d59dc85a15e17807446d9d2b17c8485fbc2147b27f9b
   languageName: node
   linkType: hard
+
+"v1@workspace:packages/v1":
+  version: 0.0.0-use.local
+  resolution: "v1@workspace:packages/v1"
+  dependencies:
+    "@apollo/client": "npm:^3.11.8"
+    "@eslint/js": "npm:^9.9.0"
+    "@types/node": "npm:^22.5.2"
+    "@types/react": "npm:^18.3.5"
+    "@types/react-dom": "npm:^18.3.0"
+    "@vitejs/plugin-react": "npm:^4.3.1"
+    date-fns: "npm:^4.0.0"
+    eslint: "npm:^9.9.0"
+    eslint-plugin-react-hooks: "npm:^5.1.0-rc.0"
+    eslint-plugin-react-refresh: "npm:^0.4.9"
+    globals: "npm:^15.9.0"
+    graphql: "npm:^16.9.0"
+    markdown-to-jsx: "npm:^7.5.0"
+    msw: "npm:^2.4.2"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    react-router-dom: "npm:^6.26.1"
+    recoil: "npm:^0.7.7"
+    sass: "npm:^1.77.8"
+    ts-node: "npm:^10.9.2"
+    typescript: "npm:^5.5.3"
+    typescript-eslint: "npm:^8.0.1"
+    vite: "npm:^5.4.1"
+    vite-plugin-svgr: "npm:^4.2.0"
+    vite-tsconfig-paths: "npm:^5.0.1"
+  languageName: unknown
+  linkType: soft
 
 "v8-compile-cache-lib@npm:^3.0.1":
   version: 3.0.1
