@@ -1,0 +1,41 @@
+# ! v1 패키지의 c1 진행
+
+name: v1_ci
+
+on:
+  workflow_call:
+    secrets:
+      GH_AUTH_TOKEN:
+        required: true
+
+env:
+  GITHUB_AUTH_TOKEN: ${{secrets.GH_AUTH_TOKEN}}
+
+jobs:
+  integration:
+    name: integration
+    runs-on: ubuntu-latest
+    # 만약 분할하게 된다면 , 사용
+    # strategy:
+    #   matrix:
+    #     app-name: []
+
+    steps:
+      - name: Checkout
+        id: git_checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        id: setup_node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: yarn
+
+      - name: Install dependency
+        id: install_dependency
+        run: yarn install 2> >(tee log_${{ github.run_id }}.txt)
+
+      #   - name: Set Environment File
+      #   - name: Run test
+      #   - name: Get failed test title

@@ -1,0 +1,47 @@
+# ! PR을 opened, reopened, labeled, synchronize 때 CICD 워크플로우를 호출
+# ! 변경된 버전의 워크플로우만 호출
+
+name: cicd_caller
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - labeled
+      - synchronize
+
+# concurrency 설정 추가 예정
+# concurrency:
+
+jobs:
+  changes:
+    if: github.event.pull_request.state != 'closed'
+    runs-on: ubuntu-latest
+    outputs:
+      v1: ${{ steps.filter.outputs.v1 }}
+      v2: ${{ steps.filter.outputs.v2 }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            v1:
+              - 'packages/v1/**'
+            v2: 
+              - 'packages/v2/**'
+
+  # v1_ci
+  v1_ci:
+    needs: changes
+    if: needs.changes.outputs.v1 == 'true'
+    uses: ./.github/workflows/v1_ci.yml
+    secrets: inherit
+
+  # v1_cd
+#   v1_cd:
+#     needs: changes
+#     if: needs.v1_ci.result == 'success' && contains(github.event.pull_request.labels.*.name, 'action:v1_cd')
+#     uses: ./.github/workflows/v1_cd.yml
+#     secrets: inherit
