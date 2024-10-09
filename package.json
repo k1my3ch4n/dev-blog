@@ -19,7 +19,7 @@
   },
   "references": [
     {
-      "path": "packages/blog"
+      "path": "packages/v1"
     },
     {
       "path": "packages/server"
