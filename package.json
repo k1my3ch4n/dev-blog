@@ -7,9 +7,9 @@
     ]
   },
   "scripts": {
-    "blog": "yarn workspace blog",
+    "v1": "yarn workspace v1",
     "server": "yarn workspace server",
-    "typeCheck:blog": "tsc -p 'packages/blog/ -w",
+    "typeCheck:v1": "tsc -p 'packages/v1/ -w",
     "typeCheck:server": "tsc -p 'packages/server/ -w"
   },
   "devDependencies": {
@@ -19,7 +19,7 @@
   },
   "references": [
     {
-      "path": "packages/blog"
+      "path": "packages/v1"
     },
     {
       "path": "packages/server"
