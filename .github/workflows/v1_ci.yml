@@ -4,12 +4,6 @@ name: v1_ci
 
 on:
   workflow_call:
-    secrets:
-      GH_AUTH_TOKEN:
-        required: true
-
-env:
-  GITHUB_AUTH_TOKEN: ${{secrets.GH_AUTH_TOKEN}}
 
 jobs:
   integration:

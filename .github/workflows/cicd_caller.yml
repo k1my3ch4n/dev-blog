@@ -39,8 +39,7 @@ jobs:
     if: needs.changes.outputs.v1 == 'true'
     uses: ./.github/workflows/v1_ci.yml
     secrets: inherit
-
-  # v1_cd
+#   v1_cd
 #   v1_cd:
 #     needs: changes
 #     if: needs.v1_ci.result == 'success' && contains(github.event.pull_request.labels.*.name, 'action:v1_cd')
