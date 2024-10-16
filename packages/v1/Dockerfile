@@ -1,12 +1,18 @@
 FROM node:20.11.0-alpine as build
 
-WORKDIR /
+WORKDIR /app
 
-COPY package.json ./package.json
-COPY yarn.lock ../../yarn.lock
+# 3. Monorepo 루트에서 package.json과 yarn.lock 복사
+COPY ./package.json ./packages/v1/package.json
+COPY ./yarn.lock ./yarn.lock
+
+# 4. Yarn PnP 관련 파일 복사
+COPY ./.yarn ./.yarn
+COPY ./.pnp.cjs ./.pnp.cjs
+COPY ./.yarnrc.yml ./.yarnrc.yml
+
+COPY ./packages/v1 ./
 
 RUN yarn install
-
-COPY . .
 
 RUN yarn build
