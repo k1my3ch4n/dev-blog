@@ -16,3 +16,13 @@ COPY ./packages/v1 ./
 RUN yarn install
 
 RUN yarn build
+
+FROM nginx:alpine
+
+COPY packages/v1/dist /usr/share/nginx/html
+
+RUN rm /etc/nginx/conf.d/default.conf
+
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
