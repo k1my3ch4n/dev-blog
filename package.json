@@ -9,8 +9,10 @@
   "scripts": {
     "v1": "yarn workspace v1",
     "server": "yarn workspace server",
+    "portfolio": "yarn workspace portfolio",
     "typeCheck:v1": "tsc -p 'packages/v1/ -w",
-    "typeCheck:server": "tsc -p 'packages/server/ -w"
+    "typeCheck:server": "tsc -p 'packages/server/ -w",
+    "typeCheck:portfolio": "tsc -p 'packages/portfolio/ -w"
   },
   "devDependencies": {
     "eslint": "^9.12.0",
@@ -23,6 +25,9 @@
     },
     {
       "path": "packages/server"
+    },
+    {
+      "path": "packages/portfolio"
     }
   ],
   "exclude": [
