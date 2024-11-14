@@ -14,10 +14,12 @@
     "typeCheck:server": "tsc -p 'packages/server/ -w",
     "typeCheck:portfolio": "tsc -p 'packages/portfolio/ -w"
   },
+  "dependencies": {
+    "typescript": "^5.5.4"
+  },
   "devDependencies": {
     "eslint": "^9.12.0",
-    "prettier": "^3.3.3",
-    "typescript": "^5.5.4"
+    "prettier": "^3.3.3"
   },
   "references": [
     {
