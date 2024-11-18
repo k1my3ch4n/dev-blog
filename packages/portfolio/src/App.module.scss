@@ -20,3 +20,9 @@
   margin: 20px;
   font-size: 36px;
 }
+
+.whoAmI {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
