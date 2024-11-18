@@ -1,0 +1,12 @@
+@import '../fonts/paperlogy.css';
+@import './util.scss';
+
+// * {
+//   box-sizing: border-box;
+//   @include scrollbar-styles;
+// }
+
+body {
+  font-family: 'Paperlogy';
+  font-size: 16px;
+}
