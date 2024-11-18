@@ -1,14 +1,16 @@
 import styles from './App.module.scss';
+import Header from './components/Header';
 
 const App = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.mainTitle}>질문을 "잘" 하는 프론트엔드 개발자 김예찬입니다.</div>
+      <div className={styles.mainTitle}>🔥 질문을 '잘' 하는 프론트엔드 개발자 김예찬입니다.</div>
       <div className={styles.content}>
-        <div className={styles.header}>
-          <div className={styles.headerIcon}>icon</div>
-          <div className={styles.headerTitle}>Who Am I ?</div>
-        </div>
+        <Header title="🙎‍♂️ Who Am I ?" />
+        <Header title="🔎 Profile" />
+        <Header title="⚒️ Skills" />
+        <Header title="👩🏻‍💻 Projects" />
+        <Header title="💫 About Me" />
         {/* lhs */}
         <div>
           <div>img</div>
