@@ -1,8 +1,8 @@
 import styles from './Header.module.scss';
 
-const Header = ({ title }: { title: string }) => {
+const Header = ({ title, size = 'l' }: { title: string; size?: 'l' | 'm' | 's' }) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${styles[size]}`}>
       <div className={styles.title}>{title}</div>
     </div>
   );
