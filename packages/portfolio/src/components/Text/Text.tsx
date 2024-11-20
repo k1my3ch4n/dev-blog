@@ -1,9 +1,9 @@
 import styles from './Text.module.scss';
 
-const Text = ({ text }: { text: string }) => {
+const Text = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.text}>{text}</div>
+      <div className={styles.text}>{children}</div>
     </div>
   );
 };

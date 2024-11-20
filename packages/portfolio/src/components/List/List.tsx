@@ -1,10 +1,16 @@
 import styles from './List.module.scss';
 
-const List = ({ text }: { text: string }) => {
+const List = ({
+  // spot = 'l',
+  children,
+}: {
+  // spot?: 'l' | 'm' | 's';
+  children: React.ReactNode;
+}) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.spot}>•</div>
-      <div className={styles.text}>{text}</div>
+      <div className={styles.text}>{children}</div>
     </div>
   );
 };
