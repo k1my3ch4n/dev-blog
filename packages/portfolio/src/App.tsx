@@ -8,7 +8,7 @@ const App = () => {
     <div className={styles.wrapper}>
       <div className={styles.mainTitle}>🔥 질문을 '잘' 하는 프론트엔드 개발자 김예찬입니다.</div>
       <div className={styles.content}>
-        <Header title="🙎‍♂️ Who Am I ?" />
+        <Header>🙎‍♂️ Who Am I ?</Header>
         <div className={styles.whoAmI}>
           {/* lhs */}
           <div>
@@ -41,10 +41,23 @@ const App = () => {
           </div>
         </div>
 
-        <Header title="🔎 Profile" />
-        <Header title="⚒️ Skills" />
-        <Header title="👩🏻‍💻 Projects" />
-        <Header title="💫 About Me" />
+        <Header>🔎 Profile</Header>
+        <div className={styles.profile}>
+          <Header size="s">경력 (총 2년)</Header>
+          <div>
+            {/* lhs */}
+            <div>
+              <div>img</div>
+              <Text>TWINNY</Text>
+              <Text>2022.4 - 2024.4</Text>
+            </div>
+            {/* rhs */}
+            <div></div>
+          </div>
+        </div>
+        <Header>⚒️ Skills</Header>
+        <Header>👩🏻‍💻 Projects</Header>
+        <Header>💫 About Me</Header>
       </div>
       {/* Profile */}
       <div>

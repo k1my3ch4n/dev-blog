@@ -1,9 +1,15 @@
 import styles from './Header.module.scss';
 
-const Header = ({ title, size = 'l' }: { title: string; size?: 'l' | 'm' | 's' }) => {
+const Header = ({
+  children,
+  size = 'l',
+}: {
+  children: React.ReactNode;
+  size?: 'l' | 'm' | 's';
+}) => {
   return (
     <div className={`${styles.wrapper} ${styles[size]}`}>
-      <div className={styles.title}>{title}</div>
+      <div className={styles.title}>{children}</div>
     </div>
   );
 };
