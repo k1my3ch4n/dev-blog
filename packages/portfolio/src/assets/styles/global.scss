@@ -1,10 +1,4 @@
-@import '../fonts/paperlogy.css';
-@import './util.scss';
-
-// * {
-//   box-sizing: border-box;
-//   @include scrollbar-styles;
-// }
+@use '../fonts/paperlogy.css';
 
 body {
   font-family: 'Paperlogy';
