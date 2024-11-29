@@ -6,6 +6,8 @@
 
   margin: auto;
   width: 70%;
+
+  line-height: 1.5;
 }
 
 .content {
@@ -16,13 +18,28 @@
   align-items: flex-start;
 }
 
-.mainTitle {
-  margin: 20px;
-  font-size: 36px;
-}
-
 .splitGrid {
   width: 100%;
   display: grid;
   grid-template-columns: 2fr 3fr;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+
+  .tableHeader {
+    display: table-row;
+  }
+
+  .tableBody {
+    display: table-row;
+  }
+
+  .cell {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 10px;
+  }
 }
