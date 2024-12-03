@@ -3465,6 +3465,13 @@ const RAW_RUNTIME_STATE =
           ["cookie", "npm:0.7.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/cookie-npm-1.0.2-7a4273d897-10c0.zip/node_modules/cookie/",\
+        "packageDependencies": [\
+          ["cookie", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["cookie-signature", [\
@@ -5758,6 +5765,7 @@ const RAW_RUNTIME_STATE =
           ["globals", "npm:15.12.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:18.3.1"],\
+          ["react-router-dom", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:7.0.2"],\
           ["sass", "npm:1.80.7"],\
           ["typescript", "patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"],\
           ["typescript-eslint", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:8.14.0"],\
@@ -5994,6 +6002,34 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:7.0.2", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/react-router-npm-7.0.2-b96f2bd13c-10c0.zip/node_modules/react-router/",\
+        "packageDependencies": [\
+          ["react-router", "npm:7.0.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:2a1f72367305876a9e79e4ec7e4166b345bad5873f16ba5d3da0392a8818ec1e8fc152f4060dd27b43dcb3f253d7a851d402df6f2a9429b4566340717672abb3#npm:7.0.2", {\
+        "packageLocation": "./.yarn/__virtual__/react-router-virtual-e01512ee7c/3/Users/예찬/AppData/Local/Yarn/Berry/cache/react-router-npm-7.0.2-b96f2bd13c-10c0.zip/node_modules/react-router/",\
+        "packageDependencies": [\
+          ["react-router", "virtual:2a1f72367305876a9e79e4ec7e4166b345bad5873f16ba5d3da0392a8818ec1e8fc152f4060dd27b43dcb3f253d7a851d402df6f2a9429b4566340717672abb3#npm:7.0.2"],\
+          ["@types/cookie", "npm:0.6.0"],\
+          ["@types/react", "npm:18.3.12"],\
+          ["@types/react-dom", "npm:18.3.1"],\
+          ["cookie", "npm:1.0.2"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:18.3.1"],\
+          ["set-cookie-parser", "npm:2.7.1"],\
+          ["turbo-stream", "npm:2.4.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["virtual:735294b34d8590151978737ee5be176ff860021fae1e0a03d4d44f638b97ba9e9d0fa12fe16f927b35a10082402c6779a2c1b2b1ead3c850ba4463ad018fa3ed#npm:6.27.0", {\
         "packageLocation": "./.yarn/__virtual__/react-router-virtual-124f9a6263/3/Users/예찬/AppData/Local/Yarn/Berry/cache/react-router-npm-6.27.0-1707eacc21-10c0.zip/node_modules/react-router/",\
         "packageDependencies": [\
@@ -6016,6 +6052,31 @@ const RAW_RUNTIME_STATE =
           ["react-router-dom", "npm:6.27.0"]\
         ],\
         "linkType": "SOFT"\
+      }],\
+      ["npm:7.0.2", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/react-router-dom-npm-7.0.2-e59f7896df-10c0.zip/node_modules/react-router-dom/",\
+        "packageDependencies": [\
+          ["react-router-dom", "npm:7.0.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:7.0.2", {\
+        "packageLocation": "./.yarn/__virtual__/react-router-dom-virtual-2a1f723673/3/Users/예찬/AppData/Local/Yarn/Berry/cache/react-router-dom-npm-7.0.2-e59f7896df-10c0.zip/node_modules/react-router-dom/",\
+        "packageDependencies": [\
+          ["react-router-dom", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:7.0.2"],\
+          ["@types/react", "npm:18.3.12"],\
+          ["@types/react-dom", "npm:18.3.1"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:18.3.1"],\
+          ["react-router", "virtual:2a1f72367305876a9e79e4ec7e4166b345bad5873f16ba5d3da0392a8818ec1e8fc152f4060dd27b43dcb3f253d7a851d402df6f2a9429b4566340717672abb3#npm:7.0.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
       }],\
       ["virtual:6a882a97ee0164e067d8bcc3f6b0899760d538a6e0847b87bb2896738d16c6892d16f3f70a42a47ed4582ec47e8d6e42930131a156f7bd65af01f2a6fb4ad046#npm:6.27.0", {\
         "packageLocation": "./.yarn/__virtual__/react-router-dom-virtual-735294b34d/3/Users/예찬/AppData/Local/Yarn/Berry/cache/react-router-dom-npm-6.27.0-de32a53fc4-10c0.zip/node_modules/react-router-dom/",\
@@ -6311,6 +6372,15 @@ const RAW_RUNTIME_STATE =
           ["typescript", "patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"]\
         ],\
         "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["set-cookie-parser", [\
+      ["npm:2.7.1", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/set-cookie-parser-npm-2.7.1-0e92d9e679-10c0.zip/node_modules/set-cookie-parser/",\
+        "packageDependencies": [\
+          ["set-cookie-parser", "npm:2.7.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["set-function-length", [\
@@ -6741,6 +6811,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/tslib-npm-2.8.0-6ce3ffdd05-10c0.zip/node_modules/tslib/",\
         "packageDependencies": [\
           ["tslib", "npm:2.8.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["turbo-stream", [\
+      ["npm:2.4.0", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/turbo-stream-npm-2.4.0-e0cec53097-10c0.zip/node_modules/turbo-stream/",\
+        "packageDependencies": [\
+          ["turbo-stream", "npm:2.4.0"]\
         ],\
         "linkType": "HARD"\
       }]\
