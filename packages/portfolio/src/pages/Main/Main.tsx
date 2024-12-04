@@ -6,11 +6,15 @@ import Link from '@components/Link';
 import List from '@components/List';
 import Text from '@components/Text';
 import Title from '@components/Title';
-
-import Project1 from '../../projects/project1';
-import Project2 from '../../projects/project2';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (projectName: string) => {
+    navigate(`/project/${projectName}`);
+  };
+
   return (
     <>
       <Title title="🔥 질문을 '잘' 하는 프론트엔드 개발자 김예찬입니다." />
@@ -170,8 +174,12 @@ const Main = () => {
 
         {/* Projects */}
         <Header>👩🏻‍💻 Projects</Header>
-        <Project1 />
-        <Project2 />
+        <div className={styles.box} onClick={() => handleClick('1')}>
+          1
+        </div>
+        <div className={styles.box} onClick={() => handleClick('2')}>
+          2
+        </div>
 
         <Header>💫 About Me</Header>
       </div>
