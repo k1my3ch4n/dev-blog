@@ -12,7 +12,7 @@ import Project2 from '../../projects/project2';
 
 const Main = () => {
   return (
-    <div className={styles.wrapper}>
+    <>
       <Title title="🔥 질문을 '잘' 하는 프론트엔드 개발자 김예찬입니다." />
       <div className={styles.content}>
         {/* Who Am I */}
@@ -175,7 +175,7 @@ const Main = () => {
 
         <Header>💫 About Me</Header>
       </div>
-    </div>
+    </>
   );
 };
 
