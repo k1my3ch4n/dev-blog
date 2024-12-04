@@ -1,17 +1,23 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
+import Layout from '@components/Layout';
 
 export const router = createBrowserRouter([
   {
-    path: '',
-    Component: lazy(() => import('./pages/Main')),
-  },
-  {
-    path: '/',
+    Component: Layout,
     children: [
       {
-        path: 'project/:projectName',
-        // Component: lazy(() => import('./pages/Project'))
+        path: '',
+        Component: lazy(() => import('./pages/Main')),
+      },
+      {
+        path: '/',
+        children: [
+          {
+            path: 'project/:projectName',
+            Component: lazy(() => import('./pages/Project')),
+          },
+        ],
       },
     ],
   },
