@@ -1741,6 +1741,29 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:5.1.4", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/@rollup-pluginutils-npm-5.1.4-83ce21024f-10c0.zip/node_modules/@rollup/pluginutils/",\
+        "packageDependencies": [\
+          ["@rollup/pluginutils", "npm:5.1.4"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:5.1.4", {\
+        "packageLocation": "./.yarn/__virtual__/@rollup-pluginutils-virtual-6d3e620176/3/Users/예찬/AppData/Local/Yarn/Berry/cache/@rollup-pluginutils-npm-5.1.4-83ce21024f-10c0.zip/node_modules/@rollup/pluginutils/",\
+        "packageDependencies": [\
+          ["@rollup/pluginutils", "virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:5.1.4"],\
+          ["@types/estree", "npm:1.0.6"],\
+          ["@types/rollup", null],\
+          ["estree-walker", "npm:2.0.2"],\
+          ["picomatch", "npm:4.0.2"],\
+          ["rollup", null]\
+        ],\
+        "packagePeers": [\
+          "@types/rollup",\
+          "rollup"\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["virtual:f1736ba4e5611e8911a04ce5e3f39f983ccb73d8ff147ce8f597eb8da2b2f7f52fee51c8ed1f3a838e16c8745adf0aca6f1cc8c7c0c5ced58e7018f07237bbe2#npm:5.1.2", {\
         "packageLocation": "./.yarn/__virtual__/@rollup-pluginutils-virtual-cb5a590053/3/Users/예찬/AppData/Local/Yarn/Berry/cache/@rollup-pluginutils-npm-5.1.2-42da129318-10c0.zip/node_modules/@rollup/pluginutils/",\
         "packageDependencies": [\
@@ -2141,10 +2164,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:f1736ba4e5611e8911a04ce5e3f39f983ccb73d8ff147ce8f597eb8da2b2f7f52fee51c8ed1f3a838e16c8745adf0aca6f1cc8c7c0c5ced58e7018f07237bbe2#npm:8.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/@svgr-plugin-jsx-virtual-92e8540117/3/Users/예찬/AppData/Local/Yarn/Berry/cache/@svgr-plugin-jsx-npm-8.1.0-e2710753df-10c0.zip/node_modules/@svgr/plugin-jsx/",\
+      ["virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:8.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/@svgr-plugin-jsx-virtual-fe6e34d8f4/3/Users/예찬/AppData/Local/Yarn/Berry/cache/@svgr-plugin-jsx-npm-8.1.0-e2710753df-10c0.zip/node_modules/@svgr/plugin-jsx/",\
         "packageDependencies": [\
-          ["@svgr/plugin-jsx", "virtual:f1736ba4e5611e8911a04ce5e3f39f983ccb73d8ff147ce8f597eb8da2b2f7f52fee51c8ed1f3a838e16c8745adf0aca6f1cc8c7c0c5ced58e7018f07237bbe2#npm:8.1.0"],\
+          ["@svgr/plugin-jsx", "virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:8.1.0"],\
           ["@babel/core", "npm:7.25.8"],\
           ["@svgr/babel-preset", "virtual:77cc138b8f03e76bc81b53d7c536b91810383e8b8e9f294aac9f969daaf6fd5a72e29c2099e3025b537aac701c45d44c7e6af1647a2799c9f61d4f4f9312b7a3#npm:8.1.0"],\
           ["@svgr/core", "npm:8.1.0"],\
@@ -2352,6 +2375,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
+      ["npm:22.10.2", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/@types-node-npm-22.10.2-572466b048-10c0.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:22.10.2"],\
+          ["undici-types", "npm:6.20.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:22.7.5", {\
         "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/@types-node-npm-22.7.5-0428b60a8c-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
@@ -5748,6 +5779,13 @@ const RAW_RUNTIME_STATE =
           ["picomatch", "npm:2.3.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.0.2", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/picomatch-npm-4.0.2-e93516ddf2-10c0.zip/node_modules/picomatch/",\
+        "packageDependencies": [\
+          ["picomatch", "npm:4.0.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["portfolio", [\
@@ -5756,6 +5794,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["portfolio", "workspace:packages/portfolio"],\
           ["@eslint/js", "npm:9.14.0"],\
+          ["@types/node", "npm:22.10.2"],\
           ["@types/react", "npm:18.3.12"],\
           ["@types/react-dom", "npm:18.3.1"],\
           ["@vitejs/plugin-react", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:4.3.3"],\
@@ -5770,6 +5809,7 @@ const RAW_RUNTIME_STATE =
           ["typescript", "patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"],\
           ["typescript-eslint", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:8.14.0"],\
           ["vite", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:5.4.11"],\
+          ["vite-plugin-svgr", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:4.3.0"],\
           ["vite-tsconfig-paths", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:5.1.3"]\
         ],\
         "linkType": "SOFT"\
@@ -6934,6 +6974,13 @@ const RAW_RUNTIME_STATE =
           ["undici-types", "npm:6.19.8"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:6.20.0", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/undici-types-npm-6.20.0-bd21e669af-10c0.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:6.20.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["unique-filename", [\
@@ -7119,7 +7166,7 @@ const RAW_RUNTIME_STATE =
           ["vite", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:5.4.11"],\
           ["@types/less", null],\
           ["@types/lightningcss", null],\
-          ["@types/node", null],\
+          ["@types/node", "npm:22.10.2"],\
           ["@types/sass", null],\
           ["@types/sass-embedded", null],\
           ["@types/stylus", null],\
@@ -7208,13 +7255,36 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:4.3.0", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/vite-plugin-svgr-npm-4.3.0-ded8bb690b-10c0.zip/node_modules/vite-plugin-svgr/",\
+        "packageDependencies": [\
+          ["vite-plugin-svgr", "npm:4.3.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:4.3.0", {\
+        "packageLocation": "./.yarn/__virtual__/vite-plugin-svgr-virtual-3616d12934/3/Users/예찬/AppData/Local/Yarn/Berry/cache/vite-plugin-svgr-npm-4.3.0-ded8bb690b-10c0.zip/node_modules/vite-plugin-svgr/",\
+        "packageDependencies": [\
+          ["vite-plugin-svgr", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:4.3.0"],\
+          ["@rollup/pluginutils", "virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:5.1.4"],\
+          ["@svgr/core", "npm:8.1.0"],\
+          ["@svgr/plugin-jsx", "virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:8.1.0"],\
+          ["@types/vite", null],\
+          ["vite", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:5.4.11"]\
+        ],\
+        "packagePeers": [\
+          "@types/vite",\
+          "vite"\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["virtual:6a882a97ee0164e067d8bcc3f6b0899760d538a6e0847b87bb2896738d16c6892d16f3f70a42a47ed4582ec47e8d6e42930131a156f7bd65af01f2a6fb4ad046#npm:4.2.0", {\
         "packageLocation": "./.yarn/__virtual__/vite-plugin-svgr-virtual-f1736ba4e5/3/Users/예찬/AppData/Local/Yarn/Berry/cache/vite-plugin-svgr-npm-4.2.0-e0c6a7a1f0-10c0.zip/node_modules/vite-plugin-svgr/",\
         "packageDependencies": [\
           ["vite-plugin-svgr", "virtual:6a882a97ee0164e067d8bcc3f6b0899760d538a6e0847b87bb2896738d16c6892d16f3f70a42a47ed4582ec47e8d6e42930131a156f7bd65af01f2a6fb4ad046#npm:4.2.0"],\
           ["@rollup/pluginutils", "virtual:f1736ba4e5611e8911a04ce5e3f39f983ccb73d8ff147ce8f597eb8da2b2f7f52fee51c8ed1f3a838e16c8745adf0aca6f1cc8c7c0c5ced58e7018f07237bbe2#npm:5.1.2"],\
           ["@svgr/core", "npm:8.1.0"],\
-          ["@svgr/plugin-jsx", "virtual:f1736ba4e5611e8911a04ce5e3f39f983ccb73d8ff147ce8f597eb8da2b2f7f52fee51c8ed1f3a838e16c8745adf0aca6f1cc8c7c0c5ced58e7018f07237bbe2#npm:8.1.0"],\
+          ["@svgr/plugin-jsx", "virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:8.1.0"],\
           ["@types/vite", null],\
           ["vite", "virtual:6a882a97ee0164e067d8bcc3f6b0899760d538a6e0847b87bb2896738d16c6892d16f3f70a42a47ed4582ec47e8d6e42930131a156f7bd65af01f2a6fb4ad046#npm:5.4.9"]\
         ],\
