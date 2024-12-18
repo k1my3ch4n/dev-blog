@@ -6,6 +6,7 @@ import Link from '@components/Link';
 import List from '@components/List';
 import Text from '@components/Text';
 import Title from '@components/Title';
+import { ReactComponent as MainPhoto } from '@images/mainPhoto.svg';
 import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
@@ -23,7 +24,7 @@ const Main = () => {
         <Header>🙎‍♂️ Who Am I ?</Header>
         <div className={styles.splitGrid}>
           <div>
-            <div>img</div>
+            <MainPhoto className={styles.mainPhoto} />
             <Text>🔥 김예찬</Text>
             <Text>✉️ k1my3ch4n@gmail.com</Text>
             <Text>📱 010-2695-7092</Text>
