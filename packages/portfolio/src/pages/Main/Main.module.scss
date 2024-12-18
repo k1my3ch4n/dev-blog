@@ -6,19 +6,13 @@
   align-items: flex-start;
 }
 
-.splitGrid {
+.mainPhoto {
   width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 3fr;
+  height: auto;
 
-  .mainPhoto {
-    width: 100%;
-    height: auto;
+  max-width: 200px;
 
-    max-width: 200px;
-
-    border-radius: 20px;
-  }
+  border-radius: 20px;
 }
 
 .table {
