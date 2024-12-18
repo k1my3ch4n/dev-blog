@@ -1,5 +1,5 @@
-import Tag from '@src/components/Tag';
 import styles from './MainPost.module.scss';
+import Tag from '@components/Tag';
 
 interface MainPostProps {
   onClick: () => void;

@@ -5,6 +5,7 @@ import Link from '@components/Link';
 import List from '@components/List';
 import Text from '@components/Text';
 import Header from '@components/Header';
+import Divider from '@components/Divider';
 import Highlight from '@components/Highlight';
 import SplitGrid from '@components/SplitGrid';
 
@@ -12,6 +13,7 @@ const Profile = () => {
   return (
     <>
       <Header>🔎 Profile</Header>
+      <Divider />
       <Header size="s">경력 (총 2년)</Header>
       <SplitGrid
         lhs={
