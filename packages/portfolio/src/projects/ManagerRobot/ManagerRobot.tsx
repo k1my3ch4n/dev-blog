@@ -1,12 +1,12 @@
-import Bold from '../../components/Bold';
-import Header from '../../components/Header';
-import Highlight from '../../components/Highlight';
-import Link from '../../components/Link';
-import List from '../../components/List';
-import Text from '../../components/Text';
-import Title from '../../components/Title';
+import Bold from '@components/Bold';
+import Link from '@components/Link';
+import List from '@components/List';
+import Text from '@components/Text';
+import Title from '@components/Title';
+import Header from '@components/Header';
+import Highlight from '@components/Highlight';
 
-const project = () => {
+const ManagerRobot = () => {
   return (
     <>
       <Title title="🤖 관리자용 로봇 관제 웹 프로젝트" />
@@ -51,4 +51,4 @@ const project = () => {
   );
 };
 
-export default project;
+export default ManagerRobot;
