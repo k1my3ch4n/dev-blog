@@ -3,6 +3,8 @@ import styles from './Projects.module.scss';
 
 import Header from '@components/Header';
 import Divider from '@components/Divider';
+import PageBox from '@components/PageBox';
+import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -15,11 +17,17 @@ const Projects = () => {
     <>
       <Header>👩🏻‍💻 Projects</Header>
       <Divider />
-      <div className={styles.box} onClick={() => handleClick('1')}>
-        1
-      </div>
-      <div className={styles.box} onClick={() => handleClick('2')}>
-        2
+      <div className={styles.boxWrapper}>
+        <PageBox
+          Thumbnail={TwinnyLogo}
+          title="유저용 작업 관제 웹 프로젝트 ( 오더피킹 )"
+          onClick={() => handleClick('1')}
+        />
+        <PageBox
+          Thumbnail={TwinnyLogo}
+          title="관리자용 로봇 관제 웹 프로젝트"
+          onClick={() => handleClick('2')}
+        />
       </div>
     </>
   );
