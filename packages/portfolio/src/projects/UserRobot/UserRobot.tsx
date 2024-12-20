@@ -5,12 +5,13 @@ import Title from '@components/Title';
 import Header from '@components/Header';
 import Highlight from '@components/Highlight';
 import NumberList from '@components/NumberList';
+import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 
 const UserRobot = () => {
   return (
     <>
       <Title title="🤖 유저용 작업 관제 웹 프로젝트 ( 오더피킹 )" />
-      <div>img</div>
+      <TwinnyLogo width="100%" height="auto" />
       <Header size="s">기간</Header>
       <Text>
         <Highlight>2023.01 ~ 2024.04</Highlight>
