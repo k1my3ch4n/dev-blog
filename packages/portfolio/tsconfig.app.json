@@ -28,6 +28,7 @@
       "@images/*": ["./src/assets/images/*"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
+      "@hooks/*": ["./src/hooks/*"],
       "@projects/*": ["./src/projects/*"]
     }
   },

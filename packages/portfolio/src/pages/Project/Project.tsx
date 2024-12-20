@@ -1,7 +1,10 @@
-import ManagerRobot from '@projects/ManagerRobot';
-import UserRobot from '@projects/UserRobot';
-import HomeButton from '@components/HomeButton';
 import { useParams } from 'react-router-dom';
+
+import UserRobot from '@projects/UserRobot';
+import ManagerRobot from '@projects/ManagerRobot';
+
+import HomeButton from '@components/HomeButton';
+import ScrollToTopButton from '@components/ScrollToTopButton';
 
 const PROJECT_MAP: { [key: string]: JSX.Element } = {
   managerRobot: <ManagerRobot />,
@@ -17,6 +20,7 @@ const Project = () => {
     <>
       <HomeButton />
       {SelectedProject}
+      <ScrollToTopButton />
     </>
   );
 };
