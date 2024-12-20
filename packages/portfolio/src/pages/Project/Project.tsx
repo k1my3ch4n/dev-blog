@@ -1,5 +1,5 @@
-import ManagerRobot from '@src/projects/ManagerRobot';
-import UserRobot from '@src/projects/UserRobot';
+import ManagerRobot from '@projects/ManagerRobot';
+import UserRobot from '@projects/UserRobot';
 import { useParams } from 'react-router-dom';
 
 const PROJECT_MAP: { [key: string]: JSX.Element } = {
