@@ -1,15 +1,15 @@
-import Bold from '../../components/Bold';
-import Header from '../../components/Header';
-import Highlight from '../../components/Highlight';
-import List from '../../components/List';
-import NumberList from '../../components/NumberList';
-import Text from '../../components/Text';
-import Title from '../../components/Title';
+import Bold from '@components/Bold';
+import List from '@components/List';
+import Text from '@components/Text';
+import Title from '@components/Title';
+import Header from '@components/Header';
+import Highlight from '@components/Highlight';
+import NumberList from '@components/NumberList';
 
-const project = () => {
+const UserRobot = () => {
   return (
     <>
-      <Title title="🤖 유저용 작업 관제 웹 프로덕트 ( 오더피킹 )" />
+      <Title title="🤖 유저용 작업 관제 웹 프로젝트 ( 오더피킹 )" />
       <div>img</div>
       <Header size="s">기간</Header>
       <Text>
@@ -154,4 +154,4 @@ const project = () => {
   );
 };
 
-export default project;
+export default UserRobot;
