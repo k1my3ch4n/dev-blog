@@ -1,0 +1,13 @@
+.tableBody {
+  display: table-row;
+  white-space: wrap;
+  word-break: break-all;
+}
+
+.highlight {
+  white-space: nowrap;
+}
+
+.highlight + .highlight {
+  margin-left: 2px;
+}

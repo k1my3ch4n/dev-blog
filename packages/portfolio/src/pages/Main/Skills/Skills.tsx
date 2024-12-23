@@ -2,6 +2,24 @@ import styles from './Skills.module.scss';
 
 import Header from '@components/Header';
 import Divider from '@components/Divider';
+import TableBody from '@components/TableBody';
+import TableHeader from '@components/TableHeader';
+
+const SKILL_HEADER = ['Category', '기능 구현에 자신이 있어요.', '지식은 있지만 , 경험은 부족해요.'];
+
+const SKILL_FRONTEND = [
+  ['Typescript', 'React', 'Vite', 'Recoil', 'Sass', 'Apollo', 'Client', 'Storybook'],
+  ['NextJs', 'Redux'],
+];
+
+const SKILL_BACKEND = [['GraphQL', 'Rest API'], ['AWS']];
+
+const SKILL_TESTING = [['Jest', 'React Testing Library', 'MSW (Mock Service Worker)'], ['Vitest']];
+
+const SKILL_OTHERS = [
+  ['Git', 'Github', 'Github Actions', 'Yarn PnP', 'yarn workspaces', 'monorepo', 'Notion', 'Figma'],
+  ['Docker'],
+];
 
 const Skills = () => {
   return (
@@ -9,39 +27,11 @@ const Skills = () => {
       <Header>⚒️ Skills</Header>
       <Divider />
       <div className={styles.table}>
-        <div className={styles.tableHeader}>
-          <div className={styles.cell}>Category</div>
-          <div className={styles.cell}>기능 구현에 자신이 있어요.</div>
-          <div className={styles.cell}>지식은 있지만 , 경험은 부족해요.</div>
-        </div>
-
-        <div className={styles.tableBody}>
-          <div className={styles.cell}>Frontend</div>
-          <div className={styles.cell}>
-            Typescript React Vite Recoil Sass Apollo Client Storybook
-          </div>
-          <div className={styles.cell}>NextJs Redux</div>
-        </div>
-
-        <div className={styles.tableBody}>
-          <div className={styles.cell}>Backend</div>
-          <div className={styles.cell}>GraphQL Rest API</div>
-          <div className={styles.cell}>AWS</div>
-        </div>
-
-        <div className={styles.tableBody}>
-          <div className={styles.cell}>Testing</div>
-          <div className={styles.cell}>Jest React Testing Library MSW (Mock Service Worker)</div>
-          <div className={styles.cell}>Vitest</div>
-        </div>
-
-        <div className={styles.tableBody}>
-          <div className={styles.cell}>Tools / ETC</div>
-          <div className={styles.cell}>
-            Git Github Github Actions Yarn PnP yarn workspaces monorepo Notion Figma
-          </div>
-          <div className={styles.cell}>Docker</div>
-        </div>
+        <TableHeader headers={SKILL_HEADER} />
+        <TableBody columnHeader="Frontend" columnArrays={SKILL_FRONTEND} />
+        <TableBody columnHeader="Backend" columnArrays={SKILL_BACKEND} />
+        <TableBody columnHeader="Testing" columnArrays={SKILL_TESTING} />
+        <TableBody columnHeader="Others" columnArrays={SKILL_OTHERS} />
       </div>
     </>
   );
