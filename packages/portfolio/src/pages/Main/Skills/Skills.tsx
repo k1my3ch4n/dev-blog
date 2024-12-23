@@ -4,6 +4,7 @@ import Header from '@components/Header';
 import Divider from '@components/Divider';
 import Highlight from '@components/Highlight';
 import TableCell from '@components/TableCell';
+import TableHeader from '@components/TableHeader';
 
 const SKILL_HEADER = ['Category', '기능 구현에 자신이 있어요.', '지식은 있지만 , 경험은 부족해요.'];
 
@@ -42,11 +43,7 @@ const Skills = () => {
       <Header>⚒️ Skills</Header>
       <Divider />
       <div className={styles.table}>
-        <div className={styles.tableHeader}>
-          {SKILL_HEADER.map((header) => {
-            return <TableCell>{header}</TableCell>;
-          })}
-        </div>
+        <TableHeader headers={SKILL_HEADER} />
 
         <div className={styles.tableBody}>
           <div className={styles.cell}>Frontend</div>
