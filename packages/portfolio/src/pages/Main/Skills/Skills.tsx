@@ -14,10 +14,7 @@ const SKILL_FRONTEND = [
 
 const SKILL_BACKEND = [['GraphQL', 'Rest API'], ['AWS']];
 
-const SKILL_TESTING = [
-  ['Jest', 'React Testing Library', 'MSW (Mock Service Worker)'],
-  ['Vitest', 'Cypress'],
-];
+const SKILL_TESTING = [['Jest', 'React Testing Library', 'MSW (Mock Service Worker)'], ['Vitest']];
 
 const SKILL_OTHERS = [
   ['Git', 'Github', 'Github Actions', 'Yarn PnP', 'yarn workspaces', 'monorepo', 'Notion', 'Figma'],
