@@ -2,40 +2,27 @@ import styles from './Skills.module.scss';
 
 import Header from '@components/Header';
 import Divider from '@components/Divider';
-import Highlight from '@components/Highlight';
-import TableCell from '@components/TableCell';
+import TableBody from '@components/TableBody';
 import TableHeader from '@components/TableHeader';
 
 const SKILL_HEADER = ['Category', '기능 구현에 자신이 있어요.', '지식은 있지만 , 경험은 부족해요.'];
 
-const SKILL_FRONTEND = {
-  highLevel: ['Typescript', 'React', 'Vite', 'Recoil', 'Sass', 'Apollo', 'Client', 'Storybook'],
-  lowLevel: ['NextJs', 'Redux'],
-};
+const SKILL_FRONTEND = [
+  ['Typescript', 'React', 'Vite', 'Recoil', 'Sass', 'Apollo', 'Client', 'Storybook'],
+  ['NextJs', 'Redux'],
+];
 
-const SKILL_BACKEND = {
-  highLevel: ['GraphQL', 'Rest API'],
-  lowLevel: ['AWS'],
-};
+const SKILL_BACKEND = [['GraphQL', 'Rest API'], ['AWS']];
 
-const SKILL_TESTING = {
-  highLevel: ['Jest', 'React Testing Library', 'MSW (Mock Service Worker)'],
-  lowLevel: ['Vitest', 'Cypress'],
-};
+const SKILL_TESTING = [
+  ['Jest', 'React Testing Library', 'MSW (Mock Service Worker)'],
+  ['Vitest', 'Cypress'],
+];
 
-const SKILL_OTHERS = {
-  highLevel: [
-    'Git',
-    'Github',
-    'Github Actions',
-    'Yarn PnP',
-    'yarn workspaces',
-    'monorepo',
-    'Notion',
-    'Figma',
-  ],
-  lowLevel: ['Docker'],
-};
+const SKILL_OTHERS = [
+  ['Git', 'Github', 'Github Actions', 'Yarn PnP', 'yarn workspaces', 'monorepo', 'Notion', 'Figma'],
+  ['Docker'],
+];
 
 const Skills = () => {
   return (
@@ -44,74 +31,10 @@ const Skills = () => {
       <Divider />
       <div className={styles.table}>
         <TableHeader headers={SKILL_HEADER} />
-
-        <div className={styles.tableBody}>
-          <div className={styles.cell}>Frontend</div>
-          {Object.values(SKILL_FRONTEND).map((skills, index) => {
-            return (
-              <TableCell key={index}>
-                {skills.map((skill, index) => {
-                  return (
-                    <Highlight key={index} className={styles.highlight}>
-                      {skill}
-                    </Highlight>
-                  );
-                })}
-              </TableCell>
-            );
-          })}
-        </div>
-
-        <div className={styles.tableBody}>
-          <div className={styles.cell}>Backend</div>
-          {Object.values(SKILL_BACKEND).map((skills, index) => {
-            return (
-              <TableCell key={index}>
-                {skills.map((skill, index) => {
-                  return (
-                    <Highlight key={index} className={styles.highlight}>
-                      {skill}
-                    </Highlight>
-                  );
-                })}
-              </TableCell>
-            );
-          })}
-        </div>
-
-        <div className={styles.tableBody}>
-          <div className={styles.cell}>Testing</div>
-          {Object.values(SKILL_TESTING).map((skills, index) => {
-            return (
-              <TableCell key={index}>
-                {skills.map((skill, index) => {
-                  return (
-                    <Highlight key={index} className={styles.highlight}>
-                      {skill}
-                    </Highlight>
-                  );
-                })}
-              </TableCell>
-            );
-          })}
-        </div>
-
-        <div className={styles.tableBody}>
-          <div className={styles.cell}>Others</div>
-          {Object.values(SKILL_OTHERS).map((skills, index) => {
-            return (
-              <TableCell key={index}>
-                {skills.map((skill, index) => {
-                  return (
-                    <Highlight key={index} className={styles.highlight}>
-                      {skill}
-                    </Highlight>
-                  );
-                })}
-              </TableCell>
-            );
-          })}
-        </div>
+        <TableBody columnHeader="Frontend" columnArrays={SKILL_FRONTEND} />
+        <TableBody columnHeader="Backend" columnArrays={SKILL_BACKEND} />
+        <TableBody columnHeader="Testing" columnArrays={SKILL_TESTING} />
+        <TableBody columnHeader="Others" columnArrays={SKILL_OTHERS} />
       </div>
     </>
   );
