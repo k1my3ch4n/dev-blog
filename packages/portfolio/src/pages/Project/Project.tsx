@@ -1,6 +1,10 @@
-import ManagerRobot from '@projects/ManagerRobot';
-import UserRobot from '@projects/UserRobot';
 import { useParams } from 'react-router-dom';
+
+import UserRobot from '@projects/UserRobot';
+import ManagerRobot from '@projects/ManagerRobot';
+
+import HomeButton from '@components/HomeButton';
+import ScrollToTopButton from '@components/ScrollToTopButton';
 
 const PROJECT_MAP: { [key: string]: JSX.Element } = {
   managerRobot: <ManagerRobot />,
@@ -12,7 +16,13 @@ const Project = () => {
 
   const SelectedProject = projectName ? PROJECT_MAP[projectName] : <div>error</div>;
 
-  return <div>{SelectedProject}</div>;
+  return (
+    <>
+      <HomeButton />
+      {SelectedProject}
+      <ScrollToTopButton />
+    </>
+  );
 };
 
 export default Project;

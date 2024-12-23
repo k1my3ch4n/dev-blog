@@ -5,12 +5,13 @@ import Text from '@components/Text';
 import Title from '@components/Title';
 import Header from '@components/Header';
 import Highlight from '@components/Highlight';
+import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 
 const ManagerRobot = () => {
   return (
     <>
       <Title title="🤖 관리자용 로봇 관제 웹 프로젝트" />
-      <div>img</div>
+      <TwinnyLogo width="100%" height="auto" />
       <Header size="s">기간</Header>
       <Text>
         <Highlight>2022.04 ~ 2023.01</Highlight>

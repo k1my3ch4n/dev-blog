@@ -11,6 +11,7 @@ const Projects = () => {
 
   const handleClick = (projectName: string) => {
     navigate(`/project/${projectName}`);
+    window.scrollTo(0, 0);
   };
 
   return (
