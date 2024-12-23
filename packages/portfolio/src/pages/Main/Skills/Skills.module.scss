@@ -5,6 +5,9 @@
 
   .tableHeader {
     display: table-row;
+    background-color: rgba(207, 207, 207, 0.79);
+    font-weight: 600;
+    white-space: nowrap;
   }
 
   .tableBody {
@@ -15,5 +18,10 @@
     display: table-cell;
     border: 1px solid black;
     padding: 10px;
+    vertical-align: middle;
   }
+}
+
+.highlight + .highlight {
+  margin-left: 2px;
 }
