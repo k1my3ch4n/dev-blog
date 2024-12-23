@@ -2,7 +2,8 @@ import styles from './Skills.module.scss';
 
 import Header from '@components/Header';
 import Divider from '@components/Divider';
-import Highlight from '@src/components/Highlight';
+import Highlight from '@components/Highlight';
+import TableCell from '@components/TableCell';
 
 const SKILL_HEADER = ['Category', '기능 구현에 자신이 있어요.', '지식은 있지만 , 경험은 부족해요.'];
 
@@ -43,58 +44,74 @@ const Skills = () => {
       <div className={styles.table}>
         <div className={styles.tableHeader}>
           {SKILL_HEADER.map((header) => {
-            return <div className={styles.cell}>{header}</div>;
+            return <TableCell>{header}</TableCell>;
           })}
         </div>
 
         <div className={styles.tableBody}>
           <div className={styles.cell}>Frontend</div>
-          {Object.values(SKILL_FRONTEND).map((skills) => {
+          {Object.values(SKILL_FRONTEND).map((skills, index) => {
             return (
-              <div className={styles.cell}>
-                {skills.map((skill) => {
-                  return <Highlight className={styles.highlight}>{skill}</Highlight>;
+              <TableCell key={index}>
+                {skills.map((skill, index) => {
+                  return (
+                    <Highlight key={index} className={styles.highlight}>
+                      {skill}
+                    </Highlight>
+                  );
                 })}
-              </div>
+              </TableCell>
             );
           })}
         </div>
 
         <div className={styles.tableBody}>
           <div className={styles.cell}>Backend</div>
-          {Object.values(SKILL_BACKEND).map((skills) => {
+          {Object.values(SKILL_BACKEND).map((skills, index) => {
             return (
-              <div className={styles.cell}>
-                {skills.map((skill) => {
-                  return <Highlight className={styles.highlight}>{skill}</Highlight>;
+              <TableCell key={index}>
+                {skills.map((skill, index) => {
+                  return (
+                    <Highlight key={index} className={styles.highlight}>
+                      {skill}
+                    </Highlight>
+                  );
                 })}
-              </div>
+              </TableCell>
             );
           })}
         </div>
 
         <div className={styles.tableBody}>
           <div className={styles.cell}>Testing</div>
-          {Object.values(SKILL_TESTING).map((skills) => {
+          {Object.values(SKILL_TESTING).map((skills, index) => {
             return (
-              <div className={styles.cell}>
-                {skills.map((skill) => {
-                  return <Highlight className={styles.highlight}>{skill}</Highlight>;
+              <TableCell key={index}>
+                {skills.map((skill, index) => {
+                  return (
+                    <Highlight key={index} className={styles.highlight}>
+                      {skill}
+                    </Highlight>
+                  );
                 })}
-              </div>
+              </TableCell>
             );
           })}
         </div>
 
         <div className={styles.tableBody}>
           <div className={styles.cell}>Others</div>
-          {Object.values(SKILL_OTHERS).map((skills) => {
+          {Object.values(SKILL_OTHERS).map((skills, index) => {
             return (
-              <div className={styles.cell}>
-                {skills.map((skill) => {
-                  return <Highlight className={styles.highlight}>{skill}</Highlight>;
+              <TableCell key={index}>
+                {skills.map((skill, index) => {
+                  return (
+                    <Highlight key={index} className={styles.highlight}>
+                      {skill}
+                    </Highlight>
+                  );
                 })}
-              </div>
+              </TableCell>
             );
           })}
         </div>
