@@ -12,6 +12,8 @@
 
   .tableBody {
     display: table-row;
+    white-space: wrap;
+    word-break: break-all;
   }
 
   .cell {
@@ -20,6 +22,10 @@
     padding: 10px;
     vertical-align: middle;
   }
+}
+
+.highlight {
+  white-space: nowrap;
 }
 
 .highlight + .highlight {
