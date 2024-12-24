@@ -8,7 +8,7 @@
   },
   "scripts": {
     "v1": "yarn workspace v1",
-    "core": "yarn workspace core",
+    "core": "yarn workspace @monorepo/core",
     "server": "yarn workspace server",
     "portfolio": "yarn workspace portfolio",
     "typeCheck:v1": "tsc -p 'packages/v1/ -w",
