@@ -30,17 +30,22 @@
     "vite-plugin-dts": "^4.4.0",
     "vite-plugin-lib-inject-css": "^2.1.1"
   },
-  "types": "./dist/index.d.ts",
+  "types": "./index.d.ts",
   "exports": {
     "./components": {
       "import": "./dist/components.js",
       "require": "./dist/components.cjs"
+    },
+    "./hooks": {
+      "import": "./dist/hooks.js",
+      "require": "./dist/hooks.cjs"
     }
   },
   "files": [
     "dist/*",
     "index.d.ts",
     "components.d.ts",
+    "hooks.d.ts",
     "src/**/*.scss"
   ]
 }

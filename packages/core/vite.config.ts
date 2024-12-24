@@ -22,6 +22,7 @@ export default defineConfig({
     lib: {
       entry: {
         components: './src/components/index.ts',
+        hooks: './src/hooks/index.ts',
       },
       formats: ['es', 'cjs'],
     },
