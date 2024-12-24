@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "monorepo",
   "packageManager": "yarn@4.4.1",
   "workspaces": {
     "packages": [
