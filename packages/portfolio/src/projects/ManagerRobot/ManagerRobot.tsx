@@ -1,6 +1,5 @@
-import { Bold, Link } from '@monorepo/core/components';
+import { Bold, Link, Text } from '@monorepo/core/components';
 import List from '@components/List';
-import Text from '@components/Text';
 import Title from '@components/Title';
 import Header from '@components/Header';
 import Highlight from '@components/Highlight';

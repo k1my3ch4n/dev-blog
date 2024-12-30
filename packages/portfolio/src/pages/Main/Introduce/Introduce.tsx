@@ -1,8 +1,9 @@
 import styles from './Introduce.module.scss';
 import { ReactComponent as MainPhoto } from '@images/mainPhoto.svg';
 
+import { Text } from '@monorepo/core/components';
+
 import List from '@components/List';
-import Text from '@components/Text';
 import Header from '@components/Header';
 import Divider from '@components/Divider';
 import SplitGrid from '@components/SplitGrid';
