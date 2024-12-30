@@ -4,8 +4,8 @@ import TableCell from '@components/TableCell';
 const TableHeader = ({ headers }: { headers: string[] }) => {
   return (
     <div className={styles.tableHeader}>
-      {headers.map((header) => {
-        return <TableCell>{header}</TableCell>;
+      {headers.map((header, index) => {
+        return <TableCell key={index}>{header}</TableCell>;
       })}
     </div>
   );

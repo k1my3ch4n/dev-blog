@@ -1,8 +1,6 @@
 import styles from './Main.module.scss';
 
-import { Title } from '@monorepo/core/components';
-
-import Header from '@components/Header';
+import { Title, Header } from '@monorepo/core/components';
 
 import Skills from './Skills';
 import Profile from './Profile';
