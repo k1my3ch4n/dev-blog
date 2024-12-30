@@ -1,6 +1,6 @@
 import styles from './Link.module.scss';
 
-const Link = ({ link, children }: { link: string; children: React.ReactNode }) => {
+export const Link = ({ link, children }: { link: string; children: React.ReactNode }) => {
   const handleClick = () => {
     window.open(link, '_blank');
   };
@@ -11,5 +11,3 @@ const Link = ({ link, children }: { link: string; children: React.ReactNode }) =
     </span>
   );
 };
-
-export default Link;
