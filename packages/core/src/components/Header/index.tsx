@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 
-const Header = ({
+export const Header = ({
   children,
   size = 'l',
 }: {
@@ -13,5 +13,3 @@ const Header = ({
     </div>
   );
 };
-
-export default Header;

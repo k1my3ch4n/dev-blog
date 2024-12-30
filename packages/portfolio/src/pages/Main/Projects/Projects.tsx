@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './Projects.module.scss';
 
-import Header from '@components/Header';
-import Divider from '@components/Divider';
+import { Divider, Header } from '@monorepo/core/components';
+
 import PageBox from '@components/PageBox';
 import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 

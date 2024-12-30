@@ -1,7 +1,7 @@
 import styles from './Skills.module.scss';
 
-import Header from '@components/Header';
-import Divider from '@components/Divider';
+import { Divider, Header } from '@monorepo/core/components';
+
 import TableBody from '@components/TableBody';
 import TableHeader from '@components/TableHeader';
 
