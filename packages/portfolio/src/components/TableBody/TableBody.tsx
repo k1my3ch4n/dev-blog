@@ -1,6 +1,7 @@
+import { Highlight } from '@monorepo/core/components';
+
 import styles from './TableBody.module.scss';
 import TableCell from '@components/TableCell';
-import Highlight from '@components/Highlight';
 
 // todo : 현재는 한 페이지에서만 사용되어서 그에 맞춰서 적용. 수정 예정
 

@@ -1,6 +1,5 @@
-import { Bold, Text, Title, Header } from '@monorepo/core/components';
+import { Bold, Text, Title, Header, Highlight } from '@monorepo/core/components';
 import List from '@components/List';
-import Highlight from '@components/Highlight';
 import NumberList from '@components/NumberList';
 import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 
