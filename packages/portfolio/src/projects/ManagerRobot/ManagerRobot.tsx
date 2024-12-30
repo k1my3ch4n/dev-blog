@@ -1,5 +1,4 @@
-import { Bold, Link, Text, Title, Header, Highlight } from '@monorepo/core/components';
-import List from '@components/List';
+import { Bold, Link, Text, Title, Header, Highlight, List } from '@monorepo/core/components';
 import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 
 const ManagerRobot = () => {
