@@ -1,4 +1,4 @@
-import Bold from '@components/Bold';
+import { Bold } from '@monorepo/core/components';
 import List from '@components/List';
 import Text from '@components/Text';
 import Title from '@components/Title';
