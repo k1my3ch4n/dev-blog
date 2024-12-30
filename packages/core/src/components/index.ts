@@ -6,3 +6,4 @@ export { Title } from './Title';
 export { Header } from './Header';
 export { Highlight } from './Highlight';
 export { List } from './List';
+export { NumberList } from './NumberList';
