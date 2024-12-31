@@ -3652,6 +3652,7 @@ __metadata:
   resolution: "blog@workspace:packages/blog"
   dependencies:
     "@eslint/js": "npm:^9.17.0"
+    "@monorepo/core": "workspace:^"
     "@types/react": "npm:^18.3.18"
     "@types/react-dom": "npm:^18.3.5"
     "@vitejs/plugin-react": "npm:^4.3.4"
@@ -3661,6 +3662,7 @@ __metadata:
     globals: "npm:^15.14.0"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    sass: "npm:^1.83.0"
     typescript: "npm:~5.6.2"
     typescript-eslint: "npm:^8.18.2"
     vite: "npm:^6.0.5"
