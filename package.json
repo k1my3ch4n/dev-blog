@@ -9,6 +9,7 @@
   "scripts": {
     "v1": "yarn workspace v1",
     "core": "yarn workspace @monorepo/core",
+    "blog": "yarn workspace blog",
     "server": "yarn workspace server",
     "portfolio": "yarn workspace portfolio",
     "typeCheck:v1": "tsc -p 'packages/v1/ -w",
@@ -29,6 +30,9 @@
     },
     {
       "path": "packages/core"
+    },
+    {
+      "path": "packages/blog"
     },
     {
       "path": "packages/server"
