@@ -1,6 +1,6 @@
 import PageBox from './PageBox';
+import Bold from './Bold';
 
-export { Bold } from './Bold';
 export { Link } from './Link';
 export { Text } from './Text';
 export { Divider } from './Divider';
@@ -9,4 +9,4 @@ export { Header } from './Header';
 export { Highlight } from './Highlight';
 export { List } from './List';
 export { NumberList } from './NumberList';
-export { PageBox };
+export { PageBox, Bold };
