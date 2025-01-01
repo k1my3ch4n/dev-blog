@@ -3,10 +3,10 @@ import Bold from './Bold';
 import Divider from './Divider';
 import Header from './Header';
 import Highlight from './Highlight';
+import Link from './Link';
 
-export { Link } from './Link';
 export { Text } from './Text';
 export { Title } from './Title';
 export { List } from './List';
 export { NumberList } from './NumberList';
-export { PageBox, Bold, Divider, Header, Highlight };
+export { PageBox, Bold, Divider, Header, Highlight, Link };
