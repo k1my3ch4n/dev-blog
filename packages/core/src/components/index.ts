@@ -4,9 +4,9 @@ import Divider from './Divider';
 import Header from './Header';
 import Highlight from './Highlight';
 import Link from './Link';
+import List from './List';
+import NumberList from './NumberList';
+import Text from './Text';
 
-export { Text } from './Text';
 export { Title } from './Title';
-export { List } from './List';
-export { NumberList } from './NumberList';
-export { PageBox, Bold, Divider, Header, Highlight, Link };
+export { Text, PageBox, Bold, Divider, Header, Highlight, Link, List, NumberList };
