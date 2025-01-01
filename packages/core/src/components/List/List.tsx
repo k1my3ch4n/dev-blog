@@ -6,13 +6,7 @@ const LIST_SPOTS = {
   s: '▪',
 };
 
-export const List = ({
-  spot = 'l',
-  children,
-}: {
-  spot?: 'l' | 'm' | 's';
-  children: React.ReactNode;
-}) => {
+const List = ({ spot = 'l', children }: { spot?: 'l' | 'm' | 's'; children: React.ReactNode }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.spot}>{LIST_SPOTS[spot]}</div>
@@ -20,3 +14,5 @@ export const List = ({
     </div>
   );
 };
+
+export default List;

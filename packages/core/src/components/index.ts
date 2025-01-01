@@ -1,9 +1,12 @@
-export { Bold } from './Bold';
-export { Link } from './Link';
-export { Text } from './Text';
-export { Divider } from './Divider';
-export { Title } from './Title';
-export { Header } from './Header';
-export { Highlight } from './Highlight';
-export { List } from './List';
-export { NumberList } from './NumberList';
+import PageBox from './PageBox';
+import Bold from './Bold';
+import Divider from './Divider';
+import Header from './Header';
+import Highlight from './Highlight';
+import Link from './Link';
+import List from './List';
+import NumberList from './NumberList';
+import Text from './Text';
+import Title from './Title';
+
+export { Title, Text, PageBox, Bold, Divider, Header, Highlight, Link, List, NumberList };
