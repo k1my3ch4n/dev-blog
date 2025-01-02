@@ -1,10 +1,10 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import Layout from '@components/Layout';
+import MainLayout from '@components/MainLayout';
 
 export const router = createBrowserRouter([
   {
-    Component: Layout,
+    Component: MainLayout,
     children: [
       {
         path: '',
