@@ -24,7 +24,11 @@
 
     "paths": {
       "@src/*": ["./src/*"],
-      "@styles/*": ["./src/assets/styles/*"]
+      "@styles/*": ["./src/assets/styles/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"]
+      // "@hooks/*": ["./src/hooks/*"],
+      // "@projects/*": ["./src/projects/*"]
     }
   },
   "include": ["src"]
