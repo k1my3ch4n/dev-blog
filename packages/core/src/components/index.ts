@@ -8,5 +8,6 @@ import List from './List';
 import NumberList from './NumberList';
 import Text from './Text';
 import Title from './Title';
+import Layout from './Layout';
 
-export { Title, Text, PageBox, Bold, Divider, Header, Highlight, Link, List, NumberList };
+export { Title, Text, PageBox, Bold, Divider, Header, Highlight, Link, List, NumberList, Layout };

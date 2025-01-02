@@ -1,15 +1,15 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import styles from './Layout.module.scss';
+import { Layout } from '@monorepo/core/components';
 
-const Layout = () => {
+const MainLayout = () => {
   return (
-    <div className={styles.wrapper}>
+    <Layout>
       <Suspense>
         <Outlet></Outlet>
       </Suspense>
-    </div>
+    </Layout>
   );
 };
 
-export default Layout;
+export default MainLayout;
