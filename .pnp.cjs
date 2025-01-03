@@ -3033,10 +3033,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:8.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/@svgr-plugin-jsx-virtual-fe6e34d8f4/3/Users/예찬/AppData/Local/Yarn/Berry/cache/@svgr-plugin-jsx-npm-8.1.0-e2710753df-10c0.zip/node_modules/@svgr/plugin-jsx/",\
+      ["virtual:74ea3004687caf150e3a0bcda00261bc1f19ecc8ae23fea8c3abe1aa4d4ec70a61a0a588985a5cdfb232a350bd7a1af45e119eb513f12c7c9e3d5fd1e64a9694#npm:8.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/@svgr-plugin-jsx-virtual-eea61935a4/3/Users/예찬/AppData/Local/Yarn/Berry/cache/@svgr-plugin-jsx-npm-8.1.0-e2710753df-10c0.zip/node_modules/@svgr/plugin-jsx/",\
         "packageDependencies": [\
-          ["@svgr/plugin-jsx", "virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:8.1.0"],\
+          ["@svgr/plugin-jsx", "virtual:74ea3004687caf150e3a0bcda00261bc1f19ecc8ae23fea8c3abe1aa4d4ec70a61a0a588985a5cdfb232a350bd7a1af45e119eb513f12c7c9e3d5fd1e64a9694#npm:8.1.0"],\
           ["@babel/core", "npm:7.25.8"],\
           ["@svgr/babel-preset", "virtual:77cc138b8f03e76bc81b53d7c536b91810383e8b8e9f294aac9f969daaf6fd5a72e29c2099e3025b537aac701c45d44c7e6af1647a2799c9f61d4f4f9312b7a3#npm:8.1.0"],\
           ["@svgr/core", "npm:8.1.0"],\
@@ -4761,6 +4761,7 @@ const RAW_RUNTIME_STATE =
           ["typescript", "patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"],\
           ["typescript-eslint", "virtual:af6803a32ca9dda5a50dffc1a60503122cfd52a6e7764c1ce89c3a698bf58a682c86d3e259f0522b6c2863945f870021981a0a060aea02e3278e6235ec7637f9#npm:8.18.2"],\
           ["vite", "virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:6.0.5"],\
+          ["vite-plugin-svgr", "virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:4.3.0"],\
           ["vite-tsconfig-paths", "virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:5.1.4"]\
         ],\
         "linkType": "SOFT"\
@@ -10008,7 +10009,7 @@ const RAW_RUNTIME_STATE =
           ["vite-plugin-svgr", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:4.3.0"],\
           ["@rollup/pluginutils", "virtual:334a3ca1b9feeb29dbc0b7b5a242fde1ae7cbe2c86295af3f303f1be64f12ddc6ff0e3039e86c8a4834b515f1d0421e3d2676b0e2fca6ccdf0f488ad51a88098#npm:5.1.4"],\
           ["@svgr/core", "npm:8.1.0"],\
-          ["@svgr/plugin-jsx", "virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:8.1.0"],\
+          ["@svgr/plugin-jsx", "virtual:74ea3004687caf150e3a0bcda00261bc1f19ecc8ae23fea8c3abe1aa4d4ec70a61a0a588985a5cdfb232a350bd7a1af45e119eb513f12c7c9e3d5fd1e64a9694#npm:8.1.0"],\
           ["@types/vite", null],\
           ["vite", "virtual:5bf65773342ed7f70d9357b714b3dc3085b56606c51565be47f4b80ca0e8752a2ccd39db23c4fdfbb07c6c3087ab282dcb0992fb16691d65651039101a93d50f#npm:5.4.11"]\
         ],\
@@ -10024,9 +10025,25 @@ const RAW_RUNTIME_STATE =
           ["vite-plugin-svgr", "virtual:6a882a97ee0164e067d8bcc3f6b0899760d538a6e0847b87bb2896738d16c6892d16f3f70a42a47ed4582ec47e8d6e42930131a156f7bd65af01f2a6fb4ad046#npm:4.2.0"],\
           ["@rollup/pluginutils", "virtual:f1736ba4e5611e8911a04ce5e3f39f983ccb73d8ff147ce8f597eb8da2b2f7f52fee51c8ed1f3a838e16c8745adf0aca6f1cc8c7c0c5ced58e7018f07237bbe2#npm:5.1.2"],\
           ["@svgr/core", "npm:8.1.0"],\
-          ["@svgr/plugin-jsx", "virtual:3616d1293446c3c55a28b9cc858378df6cf8034ee9a6dc785c297d8a80a371e59af02552ffab7b2de737b33239a902a7d64904d64c0ed0cb75379afb6eb7be1a#npm:8.1.0"],\
+          ["@svgr/plugin-jsx", "virtual:74ea3004687caf150e3a0bcda00261bc1f19ecc8ae23fea8c3abe1aa4d4ec70a61a0a588985a5cdfb232a350bd7a1af45e119eb513f12c7c9e3d5fd1e64a9694#npm:8.1.0"],\
           ["@types/vite", null],\
           ["vite", "virtual:6a882a97ee0164e067d8bcc3f6b0899760d538a6e0847b87bb2896738d16c6892d16f3f70a42a47ed4582ec47e8d6e42930131a156f7bd65af01f2a6fb4ad046#npm:5.4.9"]\
+        ],\
+        "packagePeers": [\
+          "@types/vite",\
+          "vite"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:4.3.0", {\
+        "packageLocation": "./.yarn/__virtual__/vite-plugin-svgr-virtual-74ea300468/3/Users/예찬/AppData/Local/Yarn/Berry/cache/vite-plugin-svgr-npm-4.3.0-ded8bb690b-10c0.zip/node_modules/vite-plugin-svgr/",\
+        "packageDependencies": [\
+          ["vite-plugin-svgr", "virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:4.3.0"],\
+          ["@rollup/pluginutils", "virtual:334a3ca1b9feeb29dbc0b7b5a242fde1ae7cbe2c86295af3f303f1be64f12ddc6ff0e3039e86c8a4834b515f1d0421e3d2676b0e2fca6ccdf0f488ad51a88098#npm:5.1.4"],\
+          ["@svgr/core", "npm:8.1.0"],\
+          ["@svgr/plugin-jsx", "virtual:74ea3004687caf150e3a0bcda00261bc1f19ecc8ae23fea8c3abe1aa4d4ec70a61a0a588985a5cdfb232a350bd7a1af45e119eb513f12c7c9e3d5fd1e64a9694#npm:8.1.0"],\
+          ["@types/vite", null],\
+          ["vite", "virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:6.0.5"]\
         ],\
         "packagePeers": [\
           "@types/vite",\
