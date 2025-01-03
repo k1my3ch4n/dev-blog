@@ -10,6 +10,19 @@ export const router = createBrowserRouter([
         path: '',
         Component: lazy(() => import('./pages/Main')),
       },
+      {
+        path: '/',
+        children: [
+          {
+            path: 'blog',
+            Component: lazy(() => import('./pages/Blog')),
+          },
+          {
+            path: 'blog/:postId',
+            Component: lazy(() => import('./pages/BlogPost')),
+          },
+        ],
+      },
     ],
   },
 ]);
