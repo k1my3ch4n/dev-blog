@@ -17,3 +17,11 @@
 
   border-radius: 20px;
 }
+
+.boxWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}

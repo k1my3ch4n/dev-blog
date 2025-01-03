@@ -1,9 +1,18 @@
 import styles from './Main.module.scss';
+import { useNavigate } from 'react-router-dom';
 import { ReactComponent as MainPhoto } from '@images/mainPhoto.svg';
+import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 
-import { Header, Title, SplitGrid, Text, Divider, Link } from '@monorepo/core/components';
+import { Header, Title, SplitGrid, Text, Divider, Link, PageBox } from '@monorepo/core/components';
 
 const Main = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (projectName: string) => {
+    navigate(`/project/${projectName}`);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <Title title="📘 K1MY3CH4N's Blog" />
@@ -30,7 +39,15 @@ const Main = () => {
         rhsClassName={styles.rhs}
       />
       <Title title="프로젝트" />
+      <Divider />
       <Title title="블로그" />
+      <Divider />
+      <div className={styles.boxWrapper}>
+        <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
+        <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
+        <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
+        <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
+      </div>
       <Title title="ETC" />
     </>
   );
