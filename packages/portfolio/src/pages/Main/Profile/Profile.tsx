@@ -1,8 +1,7 @@
 import styles from './Profile.module.scss';
 import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 
-import { Link, Text, Divider, Header, Highlight, List } from '@monorepo/core/components';
-import SplitGrid from '@components/SplitGrid';
+import { Link, Text, Divider, Header, Highlight, List, SplitGrid } from '@monorepo/core/components';
 
 const Profile = () => {
   return (
