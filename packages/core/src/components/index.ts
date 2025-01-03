@@ -9,5 +9,19 @@ import NumberList from './NumberList';
 import Text from './Text';
 import Title from './Title';
 import Layout from './Layout';
+import SplitGrid from './SplitGrid';
 
-export { Title, Text, PageBox, Bold, Divider, Header, Highlight, Link, List, NumberList, Layout };
+export {
+  Title,
+  SplitGrid,
+  Text,
+  PageBox,
+  Bold,
+  Divider,
+  Header,
+  Highlight,
+  Link,
+  List,
+  NumberList,
+  Layout,
+};
