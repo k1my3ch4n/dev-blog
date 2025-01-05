@@ -40,7 +40,12 @@ const Main = () => {
       />
       <Title title="프로젝트" />
       <Divider />
-      <Title title="블로그" />
+      <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
+
+      <div className={styles.blogTitle}>
+        <Title title="블로그" />
+        <Link link="/blog">전체보기</Link>
+      </div>
       <Divider />
       <div className={styles.boxWrapper}>
         <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
