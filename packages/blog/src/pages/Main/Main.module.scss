@@ -25,3 +25,10 @@
   gap: 10px;
   flex-wrap: wrap;
 }
+
+.blogTitle {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+}

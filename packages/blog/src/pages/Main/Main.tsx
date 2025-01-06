@@ -38,9 +38,20 @@ const Main = () => {
         }
         rhsClassName={styles.rhs}
       />
-      <Title title="프로젝트" />
+      <Title title="개인 프로젝트" />
       <Divider />
-      <Title title="블로그" />
+      <PageBox
+        Thumbnail={TwinnyLogo}
+        title="Monorepo로 블로그 및 포트폴리오 페이지 생성"
+        // 블로그 github 주소 추가 예정
+        // https://github.com/k1my3ch4n/dev-blog
+        onClick={() => handleClick('userRobot')}
+      />
+
+      <div className={styles.blogTitle}>
+        <Title title="블로그" />
+        <Link link="/blog">전체보기</Link>
+      </div>
       <Divider />
       <div className={styles.boxWrapper}>
         <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
