@@ -1,7 +1,6 @@
 import styles from './Blog.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { Divider, Header, Highlight, Title } from '@monorepo/core/components';
-import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 
 const BLOG_POST_DATA = [
   {
