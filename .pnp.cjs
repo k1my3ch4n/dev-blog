@@ -4753,6 +4753,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-hooks", "virtual:af6803a32ca9dda5a50dffc1a60503122cfd52a6e7764c1ce89c3a698bf58a682c86d3e259f0522b6c2863945f870021981a0a060aea02e3278e6235ec7637f9#npm:5.0.0"],\
           ["eslint-plugin-react-refresh", "virtual:af6803a32ca9dda5a50dffc1a60503122cfd52a6e7764c1ce89c3a698bf58a682c86d3e259f0522b6c2863945f870021981a0a060aea02e3278e6235ec7637f9#npm:0.4.16"],\
           ["globals", "npm:15.14.0"],\
+          ["markdown-to-jsx", "virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:7.7.2"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:af6803a32ca9dda5a50dffc1a60503122cfd52a6e7764c1ce89c3a698bf58a682c86d3e259f0522b6c2863945f870021981a0a060aea02e3278e6235ec7637f9#npm:18.3.1"],\
           ["react-router-dom", "virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:7.1.1"],\
@@ -7256,11 +7257,31 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:7.7.2", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/markdown-to-jsx-npm-7.7.2-82a7b1485d-10c0.zip/node_modules/markdown-to-jsx/",\
+        "packageDependencies": [\
+          ["markdown-to-jsx", "npm:7.7.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:6a882a97ee0164e067d8bcc3f6b0899760d538a6e0847b87bb2896738d16c6892d16f3f70a42a47ed4582ec47e8d6e42930131a156f7bd65af01f2a6fb4ad046#npm:7.5.0", {\
         "packageLocation": "./.yarn/__virtual__/markdown-to-jsx-virtual-837b0c7db1/3/Users/예찬/AppData/Local/Yarn/Berry/cache/markdown-to-jsx-npm-7.5.0-b0a5a37db0-10c0.zip/node_modules/markdown-to-jsx/",\
         "packageDependencies": [\
           ["markdown-to-jsx", "virtual:6a882a97ee0164e067d8bcc3f6b0899760d538a6e0847b87bb2896738d16c6892d16f3f70a42a47ed4582ec47e8d6e42930131a156f7bd65af01f2a6fb4ad046#npm:7.5.0"],\
           ["@types/react", "npm:18.3.11"],\
+          ["react", "npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:7.7.2", {\
+        "packageLocation": "./.yarn/__virtual__/markdown-to-jsx-virtual-93ca324c45/3/Users/예찬/AppData/Local/Yarn/Berry/cache/markdown-to-jsx-npm-7.7.2-82a7b1485d-10c0.zip/node_modules/markdown-to-jsx/",\
+        "packageDependencies": [\
+          ["markdown-to-jsx", "virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:7.7.2"],\
+          ["@types/react", "npm:18.3.18"],\
           ["react", "npm:18.3.1"]\
         ],\
         "packagePeers": [\
