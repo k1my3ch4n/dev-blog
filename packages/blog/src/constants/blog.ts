@@ -3,11 +3,16 @@ import { ReactComponent as Layout } from '@images/layout.svg';
 import { ReactComponent as GithubActions1 } from '@images/githubActions1.svg';
 import { ReactComponent as GithubActions2 } from '@images/githubActions2.svg';
 import { ReactComponent as GithubActions3 } from '@images/githubActions3.svg';
+
 import { ReactComponent as YarnWorkspaceMonorepo1 } from '@images/yarnWorkspaceMonorepo1.svg';
 import { ReactComponent as YarnWorkspaceMonorepo2 } from '@images/yarnWorkspaceMonorepo2.svg';
 import { ReactComponent as YarnWorkspaceMonorepo3 } from '@images/yarnWorkspaceMonorepo3.svg';
 import { ReactComponent as YarnWorkspaceMonorepo4 } from '@images/yarnWorkspaceMonorepo4.svg';
 import { ReactComponent as YarnWorkspaceMonorepo5 } from '@images/yarnWorkspaceMonorepo5.svg';
+
+import { ReactComponent as Msw1 } from '@images/msw1.svg';
+import { ReactComponent as Msw2 } from '@images/msw2.svg';
+import { ReactComponent as Msw3 } from '@images/msw3.svg';
 
 export const BLOG_POST_DATA = [
   {
@@ -15,6 +20,32 @@ export const BLOG_POST_DATA = [
     title: '포스트 제목 포스트 제목 포스트 제목 포스트 제목',
     tags: ['태그 1', '태그 2'],
     postId: '',
+  },
+  //   {
+  //     thumbnail: '',
+  //     title: 'msw ( mock service worker ) 를 이용한 API mocking #4 ( jest vs vitest )',
+  //     tags: ['msw', 'mock service worker', 'monorepo'],
+  //     postId: '',
+  //   },
+  // msw 4번은 보류
+  {
+    thumbnail: Msw3,
+    title: 'msw ( mock service worker ) 를 이용한 API mocking #3 ( storybook 작성 )',
+    tags: ['msw', 'mock service worker', 'storybook'],
+    postId: 'msw-3',
+  },
+  {
+    thumbnail: Msw2,
+    title:
+      'msw ( mock service worker ) 를 이용한 API mocking #2 ( jest 를 이용한 테스트 코드 작성 )',
+    tags: ['msw', 'mock service worker', 'jest', 'react testing library', 'vitest'],
+    postId: 'msw-2',
+  },
+  {
+    thumbnail: Msw1,
+    title: 'msw ( mock service worker ) 를 이용한 API mocking #1 ( msw 기본 설정 )',
+    tags: ['msw', 'mock service worker'],
+    postId: 'msw-1',
   },
   {
     thumbnail: YarnWorkspaceMonorepo5,
