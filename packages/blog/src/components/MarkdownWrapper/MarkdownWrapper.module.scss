@@ -1,17 +1,17 @@
 .wrapper {
   width: 100%;
-  // @include font($size: 20px);
+  @include font($size: 20px);
   line-height: 1.5;
 
-  // h2 {
-  //   @include font($size: 32px, $weight: 700);
-  //   margin: 16px 0;
-  // }
+  h2 {
+    @include font($size: 32px, $weight: 700);
+    margin: 16px 0;
+  }
 
-  // h3 {
-  //   @include font($size: 24px, $weight: 700);
-  //   margin: 16px 0;
-  // }
+  h3 {
+    @include font($size: 24px, $weight: 700);
+    margin: 16px 0;
+  }
 
   img {
     max-width: 100%;
@@ -19,9 +19,9 @@
     border: 1px solid black;
   }
 
-  // a {
-  //   @include font($size: 20px, $weight: 600);
-  // }
+  a {
+    @include font($size: 20px, $weight: 600);
+  }
 
   ul,
   ol {
@@ -29,7 +29,7 @@
   }
 
   code {
-    // @include font($weight: 600);
+    @include font($weight: 600);
     padding: 2px;
     background-color: lightgray;
   }
@@ -45,7 +45,7 @@
     }
 
     .preLanguage {
-      // @include font($size: 12px, $weight: 400);
+      @include font($size: 12px, $weight: 400);
       position: absolute;
       right: 10px;
     }

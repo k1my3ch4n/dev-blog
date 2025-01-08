@@ -1,18 +1,17 @@
-// TODO : 이미지 import 수정해야함
-import { ReactComponent as Layout } from '@images/layout.svg';
-import { ReactComponent as GithubActions1 } from '@images/githubActions1.svg';
-import { ReactComponent as GithubActions2 } from '@images/githubActions2.svg';
-import { ReactComponent as GithubActions3 } from '@images/githubActions3.svg';
-
-import { ReactComponent as YarnWorkspaceMonorepo1 } from '@images/yarnWorkspaceMonorepo1.svg';
-import { ReactComponent as YarnWorkspaceMonorepo2 } from '@images/yarnWorkspaceMonorepo2.svg';
-import { ReactComponent as YarnWorkspaceMonorepo3 } from '@images/yarnWorkspaceMonorepo3.svg';
-import { ReactComponent as YarnWorkspaceMonorepo4 } from '@images/yarnWorkspaceMonorepo4.svg';
-import { ReactComponent as YarnWorkspaceMonorepo5 } from '@images/yarnWorkspaceMonorepo5.svg';
-
-import { ReactComponent as Msw1 } from '@images/msw1.svg';
-import { ReactComponent as Msw2 } from '@images/msw2.svg';
-import { ReactComponent as Msw3 } from '@images/msw3.svg';
+import {
+  YarnBerryPnp,
+  GithubActions1,
+  GithubActions2,
+  GithubActions3,
+  YarnWorkspaceMonorepo1,
+  YarnWorkspaceMonorepo2,
+  YarnWorkspaceMonorepo3,
+  YarnWorkspaceMonorepo4,
+  YarnWorkspaceMonorepo5,
+  Msw1,
+  Msw2,
+  Msw3,
+} from '@images/index';
 
 export const BLOG_POST_DATA = [
   //   {
@@ -96,7 +95,7 @@ export const BLOG_POST_DATA = [
     postId: 'github-actions-1',
   },
   {
-    Thumbnail: Layout,
+    Thumbnail: YarnBerryPnp,
     title: 'yarn berry pnp 적용기',
     tags: ['pnp', 'vite', 'yarn berry'],
     postId: 'yarn-berry-pnp-1',

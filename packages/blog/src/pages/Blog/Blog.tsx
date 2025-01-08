@@ -19,7 +19,7 @@ const Blog = () => {
 
         return (
           <div className={styles.post} key={index} onClick={() => handleClick(postId)}>
-            <div className={styles.thumbnail}>{<Thumbnail />}</div>
+            <div className={styles.thumbnail}>{<Thumbnail className={styles.image} />}</div>
             <div className={styles.title}>
               <Header size="m">{title}</Header>
               <div className={styles.tags}>

@@ -14,17 +14,17 @@ export default defineConfig({
       include: '**/*.svg',
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@styles/util.scss";`,
+      },
+    },
+  },
   resolve: {
     alias: {
       '@styles': path.resolve(__dirname, 'src/assets/styles'),
       '@images': path.resolve(__dirname, 'src/assets/images'),
-    },
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use "@styles/util.scss";`,
-      },
     },
   },
   assetsInclude: ['**/*.md'],

@@ -1,7 +1,6 @@
 import styles from './Main.module.scss';
 import { useNavigate } from 'react-router-dom';
-import { ReactComponent as MainPhoto } from '@images/mainPhoto.svg';
-import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
+import { MainPhoto, TwinnyLogo } from '@images/index';
 
 import { Header, Title, SplitGrid, Text, Divider, Link, PageBox } from '@monorepo/core/components';
 
