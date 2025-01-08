@@ -28,7 +28,7 @@ jobs:
 
       - name: Install dependency
         id: install_dependency
-        run: yarn install 2> >(tee log_${{ github.run_id }}.txt)
+        run: yarn install --immutable 2> >(tee log_${{ github.run_id }}.txt)
 
       #   - name: Set Environment File
       #   - name: Run test
