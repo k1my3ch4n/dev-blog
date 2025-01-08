@@ -1,6 +1,6 @@
-# ! v1 패키지의 c1 진행
+# ! blog 패키지의 c1 진행
 
-name: v1_ci
+name: blog_ci
 
 on:
   workflow_call:
