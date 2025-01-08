@@ -1,6 +1,6 @@
 import styles from './Main.module.scss';
 import { useNavigate } from 'react-router-dom';
-import { MainPhoto, TwinnyLogo } from '@images/index';
+import { MainLogo, MainPhoto, TwinnyLogo } from '@images/index';
 
 import { Header, Title, SplitGrid, Text, Divider, Link, PageBox } from '@monorepo/core/components';
 
@@ -10,6 +10,10 @@ const Main = () => {
   const handleClick = (projectName: string) => {
     navigate(`/project/${projectName}`);
     window.scrollTo(0, 0);
+  };
+
+  const handleBlogClick = (link: string) => {
+    window.open(link, '_blank');
   };
 
   return (
@@ -40,11 +44,9 @@ const Main = () => {
       <Title title="개인 프로젝트" />
       <Divider />
       <PageBox
-        Thumbnail={TwinnyLogo}
+        Thumbnail={MainLogo}
         title="Monorepo로 블로그 및 포트폴리오 페이지 생성"
-        // 블로그 github 주소 추가 예정
-        // https://github.com/k1my3ch4n/dev-blog
-        onClick={() => handleClick('userRobot')}
+        onClick={() => handleBlogClick('https://github.com/k1my3ch4n/dev-blog/blob/main/README.md')}
       />
 
       <div className={styles.blogTitle}>
