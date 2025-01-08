@@ -1,6 +1,3 @@
-// todo : 삭제 예정
-export { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
-
 // main logo
 export { ReactComponent as MainLogo } from '@images/mainLogo.svg';
 

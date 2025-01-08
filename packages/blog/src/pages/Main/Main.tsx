@@ -1,20 +1,24 @@
 import styles from './Main.module.scss';
 import { useNavigate } from 'react-router-dom';
-import { MainLogo, MainPhoto, TwinnyLogo } from '@images/index';
+import { MainLogo, MainPhoto } from '@images/index';
 
 import { Header, Title, SplitGrid, Text, Divider, Link, PageBox } from '@monorepo/core/components';
+import { BLOG_POST_DATA } from '@src/constants/blog';
 
 const Main = () => {
   const navigate = useNavigate();
 
-  const handleClick = (projectName: string) => {
-    navigate(`/project/${projectName}`);
+  // todo : handleClick 수정 예정
+  const handleClick = (postId: string) => {
+    navigate(`/blog/${postId}`);
     window.scrollTo(0, 0);
   };
 
   const handleBlogClick = (link: string) => {
     window.open(link, '_blank');
   };
+
+  const postData = BLOG_POST_DATA.slice(0, 4);
 
   return (
     <>
@@ -55,10 +59,13 @@ const Main = () => {
       </div>
       <Divider />
       <div className={styles.boxWrapper}>
-        <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
-        <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
-        <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
-        <PageBox Thumbnail={TwinnyLogo} title="테스트용" onClick={() => handleClick('userRobot')} />
+        {postData.map((data, index) => {
+          const { title, postId, Thumbnail } = data;
+
+          return (
+            <PageBox Thumbnail={Thumbnail} title={title} onClick={() => handleClick(postId)} />
+          );
+        })}
       </div>
       <Title title="ETC" />
     </>
