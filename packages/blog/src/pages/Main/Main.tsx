@@ -1,10 +1,10 @@
 import styles from './Main.module.scss';
 import { useNavigate } from 'react-router-dom';
-import { MainLogo } from '@images/index';
 
 import { Title, Divider, Link, PageBox } from '@monorepo/core/components';
 import { BLOG_POST_DATA } from '@src/constants/blog';
 import Introduce from './Introduce';
+import Projects from './Projects';
 
 const Main = () => {
   const navigate = useNavigate();
@@ -15,22 +15,12 @@ const Main = () => {
     window.scrollTo(0, 0);
   };
 
-  const handleBlogClick = (link: string) => {
-    window.open(link, '_blank');
-  };
-
   const postData = BLOG_POST_DATA.slice(0, 4);
 
   return (
     <>
       <Introduce />
-      <Title title="개인 프로젝트" />
-      <Divider />
-      <PageBox
-        Thumbnail={MainLogo}
-        title="Monorepo로 블로그 및 포트폴리오 페이지 생성"
-        onClick={() => handleBlogClick('https://github.com/k1my3ch4n/dev-blog/blob/main/README.md')}
-      />
+      <Projects />
 
       <div className={styles.blogTitle}>
         <Title title="블로그" />
