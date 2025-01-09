@@ -1,6 +1,8 @@
-// todo : 삭제 예정
+// main logo
+export { ReactComponent as MainLogo } from '@images/mainLogo.svg';
+
+// main photo
 export { ReactComponent as MainPhoto } from '@images/mainPhoto.svg';
-export { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 
 // blog post
 export { ReactComponent as YarnBerryPnp } from '@images/yarnBerryPnp.svg';

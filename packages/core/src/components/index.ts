@@ -10,6 +10,7 @@ import Text from './Text';
 import Title from './Title';
 import Layout from './Layout';
 import SplitGrid from './SplitGrid';
+import HomeButton from './HomeButton';
 
 export {
   Title,
@@ -24,4 +25,5 @@ export {
   List,
   NumberList,
   Layout,
+  HomeButton,
 };

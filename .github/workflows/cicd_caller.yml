@@ -19,8 +19,8 @@ jobs:
     if: github.event.pull_request.state != 'closed'
     runs-on: ubuntu-latest
     outputs:
-      v1: ${{ steps.filter.outputs.v1 }}
-      v2: ${{ steps.filter.outputs.v2 }}
+      blog: ${{ steps.filter.outputs.blog }}
+      portfolio: ${{ steps.filter.outputs.portfolio }}
     steps:
       - uses: actions/checkout@v3
 
@@ -28,20 +28,20 @@ jobs:
         id: filter
         with:
           filters: |
-            v1:
-              - 'packages/v1/**'
-            v2: 
-              - 'packages/v2/**'
+            blog:
+              - 'packages/blog/**'
+            portfolio: 
+              - 'packages/portfolio/**'
 
-  # v1_ci
-  v1_ci:
+  # blog_ci
+  blog_ci:
     needs: changes
-    if: needs.changes.outputs.v1 == 'true'
-    uses: ./.github/workflows/v1_ci.yml
+    if: needs.changes.outputs.blog == 'true'
+    uses: ./.github/workflows/blog_ci.yml
     secrets: inherit
-#   v1_cd
-#   v1_cd:
+#   blog_cd
+#   blog_cd:
 #     needs: changes
-#     if: needs.v1_ci.result == 'success' && contains(github.event.pull_request.labels.*.name, 'action:v1_cd')
-#     uses: ./.github/workflows/v1_cd.yml
+#     if: needs.blog_ci.result == 'success' && contains(github.event.pull_request.labels.*.name, 'action:blog_cd')
+#     uses: ./.github/workflows/blog_cd.yml
 #     secrets: inherit
