@@ -1,0 +1,19 @@
+.wrapper {
+  margin-bottom: 20px;
+}
+
+.mainPhoto {
+  width: 100%;
+  height: auto;
+
+  max-width: 200px;
+
+  border-radius: 20px;
+}
+
+.rhs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
