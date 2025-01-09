@@ -1,6 +1,6 @@
 import { Divider, Link, PageBox, Title } from '@monorepo/core/components';
 import styles from './Blog.module.scss';
-import { BLOG_POST_DATA } from '@src/constants/blog';
+import { BLOG_POST_DATA } from '@constants/blog';
 import { useNavigate } from 'react-router-dom';
 
 const Blog = () => {

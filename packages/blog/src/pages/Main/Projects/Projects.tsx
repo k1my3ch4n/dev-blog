@@ -1,6 +1,6 @@
 import styles from './Projects.module.scss';
 import { Divider, PageBox, Title } from '@monorepo/core/components';
-import { MainLogo } from '@src/assets/images';
+import { MainLogo } from '@images';
 
 const Projects = () => {
   const handleClick = (link: string) => {

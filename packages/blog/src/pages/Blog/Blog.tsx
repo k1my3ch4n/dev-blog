@@ -1,7 +1,7 @@
 import styles from './Blog.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { Divider, Header, Highlight, Title } from '@monorepo/core/components';
-import { BLOG_POST_DATA } from '@src/constants/blog';
+import { BLOG_POST_DATA } from '@constants/blog';
 
 const Blog = () => {
   const navigate = useNavigate();

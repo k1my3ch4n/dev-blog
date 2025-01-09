@@ -1,9 +1,9 @@
 import { Highlight, Title } from '@monorepo/core/components';
 import styles from './BlogPost.module.scss';
 
-import MarkdownWrapper from '@src/components/MarkdownWrapper';
-import { BLOG_POST_DATA } from '@src/constants/blog';
-import useGetMarkdown from '@src/hooks/useGetMarkdown';
+import MarkdownWrapper from '@components/MarkdownWrapper';
+import { BLOG_POST_DATA } from '@constants/blog';
+import useGetMarkdown from '@hooks/useGetMarkdown';
 import { useParams } from 'react-router-dom';
 
 const BlogPost = () => {

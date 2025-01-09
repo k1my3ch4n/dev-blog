@@ -11,7 +11,7 @@ import {
   Msw1,
   Msw2,
   Msw3,
-} from '@images/index';
+} from '@images';
 
 export const BLOG_POST_DATA = [
   //   {

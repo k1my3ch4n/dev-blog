@@ -1,6 +1,6 @@
 import { Divider, Header, Link, SplitGrid, Text, Title } from '@monorepo/core/components';
 import styles from './Introduce.module.scss';
-import { MainPhoto } from '@src/assets/images';
+import { MainPhoto } from '@images';
 
 const Introduce = () => {
   return (
