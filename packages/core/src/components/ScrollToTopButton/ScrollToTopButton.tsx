@@ -1,6 +1,6 @@
 import styles from './ScrollToTopButton.module.scss';
 
-import { useScrollToTop } from '@monorepo/core/hooks';
+import { useScrollToTop } from '../../hooks/useScrollToTop';
 
 const ScrollToTopButton = () => {
   const { isVisible, scrollToTop } = useScrollToTop();

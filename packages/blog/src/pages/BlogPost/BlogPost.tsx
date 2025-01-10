@@ -1,17 +1,23 @@
-import { Highlight, Title } from '@monorepo/core/components';
+import { Highlight, HomeButton, ScrollToTopButton, Title } from '@monorepo/core/components';
 import styles from './BlogPost.module.scss';
 
-import MarkdownWrapper from '@src/components/MarkdownWrapper';
-import { BLOG_POST_DATA } from '@src/constants/blog';
-import useGetMarkdown from '@src/hooks/useGetMarkdown';
-import { useParams } from 'react-router-dom';
+import MarkdownWrapper from '@components/MarkdownWrapper';
+import { BLOG_POST_DATA } from '@constants/blog';
+import useGetMarkdown from '@hooks/useGetMarkdown';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const BlogPost = () => {
+  const navigate = useNavigate();
+
   const { postId } = useParams();
 
   const { markdown } = useGetMarkdown(postId);
 
   const postData = BLOG_POST_DATA.filter(({ postId }) => postId === postId);
+
+  const handleClick = () => {
+    navigate('/blog');
+  };
 
   // 데이터가 없는 경우 , 에러
   if (postData.length < 1) {
@@ -22,6 +28,7 @@ const BlogPost = () => {
 
   return (
     <>
+      <HomeButton onClick={handleClick} />
       <Title title={title} />
       <div className={styles.tags}>
         {tags.map((tag) => (
@@ -29,6 +36,7 @@ const BlogPost = () => {
         ))}
       </div>
       <MarkdownWrapper markdown={markdown} />;
+      <ScrollToTopButton />
     </>
   );
 };

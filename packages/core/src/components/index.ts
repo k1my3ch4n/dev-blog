@@ -11,6 +11,8 @@ import Title from './Title';
 import Layout from './Layout';
 import SplitGrid from './SplitGrid';
 import HomeButton from './HomeButton';
+import ScrollToTopButton from './ScrollToTopButton';
+import ImageBox from './ImageBox';
 
 export {
   Title,
@@ -26,4 +28,6 @@ export {
   NumberList,
   Layout,
   HomeButton,
+  ScrollToTopButton,
+  ImageBox,
 };

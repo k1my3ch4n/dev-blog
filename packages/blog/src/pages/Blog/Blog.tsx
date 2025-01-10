@@ -1,7 +1,7 @@
 import styles from './Blog.module.scss';
 import { useNavigate } from 'react-router-dom';
-import { Divider, Header, Highlight, Title } from '@monorepo/core/components';
-import { BLOG_POST_DATA } from '@src/constants/blog';
+import { Divider, Header, Highlight, Title, ImageBox } from '@monorepo/core/components';
+import { BLOG_POST_DATA } from '@constants/blog';
 
 const Blog = () => {
   const navigate = useNavigate();
@@ -19,7 +19,13 @@ const Blog = () => {
 
         return (
           <div className={styles.post} key={index} onClick={() => handleClick(postId)}>
-            <div className={styles.thumbnail}>{<Thumbnail className={styles.image} />}</div>
+            <ImageBox
+              wrapperClassName={styles.imageWrapper}
+              imageClassName={styles.image}
+              Image={Thumbnail}
+              width="200px"
+              height="150px"
+            />
             <div className={styles.title}>
               <Header size="m">{title}</Header>
               <div className={styles.tags}>
