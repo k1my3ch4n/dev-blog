@@ -1,4 +1,4 @@
-import { Divider, Header, Link, SplitGrid, Text, Title } from '@monorepo/core/components';
+import { Divider, Header, ImageBox, Link, SplitGrid, Text, Title } from '@monorepo/core/components';
 import styles from './Introduce.module.scss';
 import { MainPhoto } from '@images';
 
@@ -10,7 +10,12 @@ const Introduce = () => {
       <SplitGrid
         lhs={
           <>
-            <MainPhoto className={styles.mainPhoto} />
+            <ImageBox
+              Image={MainPhoto}
+              width="200px"
+              height="200px"
+              imageClassName={styles.image}
+            />
             <Text>🔥 김예찬</Text>
             <Text>✉️ k1my3ch4n@gmail.com</Text>
             <Text>📱 010-2695-7092</Text>
