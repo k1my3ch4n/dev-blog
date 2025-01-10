@@ -2,18 +2,13 @@
   display: flex;
   cursor: pointer;
 
-  .thumbnail {
-    width: 200px;
-    height: 150px;
-    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.16);
-    border-radius: 10px;
-    margin-right: 10px;
+  .imageWrapper {
+    margin-right: 20px;
+  }
 
-    .image {
-      width: 200px;
-      height: 150px;
-      border-radius: 10px;
-    }
+  .image {
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.16);
   }
 
   .title {
