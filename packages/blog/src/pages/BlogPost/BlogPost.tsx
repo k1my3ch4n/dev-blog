@@ -1,4 +1,4 @@
-import { Highlight, HomeButton, Title } from '@monorepo/core/components';
+import { Highlight, HomeButton, ScrollToTopButton, Title } from '@monorepo/core/components';
 import styles from './BlogPost.module.scss';
 
 import MarkdownWrapper from '@components/MarkdownWrapper';
@@ -36,6 +36,7 @@ const BlogPost = () => {
         ))}
       </div>
       <MarkdownWrapper markdown={markdown} />;
+      <ScrollToTopButton />
     </>
   );
 };
