@@ -15,12 +15,15 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    alias: [{ find: '@images', replacement: path.resolve(__dirname, 'src/assets/images') }],
+    alias: {
+      '@styles': path.resolve(__dirname, 'src/assets/styles'),
+      '@images': path.resolve(__dirname, 'src/assets/images'),
+    },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "./src/assets/styles/util.scss";`,
+        additionalData: `@use "@styles/util.scss";`,
       },
     },
   },
