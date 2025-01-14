@@ -9,12 +9,10 @@ COPY ../../.yarnrc.yml ./.yarnrc.yml
 COPY ../../.pnp.cjs ./.pnp.cjs
 COPY ../../.pnp.loader.mjs ./.pnp.loader.mjs
 
-# todo : 현재 불필요하게 전체 복사중
-
 COPY ./ ./
 
-RUN yarn install --immutable --mode=skip-build
-RUN yarn workspace portfolio build
+RUN node ./.yarn/releases/yarn-4.4.1.cjs install --immutable --mode=skip-build
+RUN node ./.yarn/releases/yarn-4.4.1.cjs workspace portfolio build
 
 FROM nginx:stable
 
