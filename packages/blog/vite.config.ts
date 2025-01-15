@@ -14,17 +14,19 @@ export default defineConfig({
       include: '**/*.svg',
     }),
   ],
+
+  resolve: {
+    alias: {
+      '@styles': path.resolve(__dirname, 'src/assets/styles'),
+      '@images': path.resolve(__dirname, 'src/assets/images'),
+    },
+  },
+  // todo : import -> use 로 변경 예정
   css: {
     preprocessorOptions: {
       scss: {
         additionalData: `@import "@styles/util.scss";`,
       },
-    },
-  },
-  resolve: {
-    alias: {
-      '@styles': path.resolve(__dirname, 'src/assets/styles'),
-      '@images': path.resolve(__dirname, 'src/assets/images'),
     },
   },
   assetsInclude: ['**/*.md'],
