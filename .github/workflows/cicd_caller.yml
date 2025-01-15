@@ -12,13 +12,13 @@ on:
       - synchronize
 
 # concurrency 설정 추가 예정
-# concurrency:
 
 jobs:
   changes:
     if: github.event.pull_request.state != 'closed'
     runs-on: ubuntu-latest
     outputs:
+      core: ${{ steps.filter.outputs.core }}
       blog: ${{ steps.filter.outputs.blog }}
       portfolio: ${{ steps.filter.outputs.portfolio }}
     steps:
@@ -28,20 +28,36 @@ jobs:
         id: filter
         with:
           filters: |
+            core:
+              - 'packages/core/**'
             blog:
               - 'packages/blog/**'
             portfolio: 
               - 'packages/portfolio/**'
 
-  # blog_ci
+  # blog
   blog_ci:
     needs: changes
     if: needs.changes.outputs.blog == 'true'
     uses: ./.github/workflows/blog_ci.yml
     secrets: inherit
-#   blog_cd
-#   blog_cd:
-#     needs: changes
-#     if: needs.blog_ci.result == 'success' && contains(github.event.pull_request.labels.*.name, 'action:blog_cd')
-#     uses: ./.github/workflows/blog_cd.yml
-#     secrets: inherit
+
+  # core
+  core_ci:
+    needs: changes
+    if: needs.changes.outputs.core == 'true'
+    uses: ./.github/workflows/core_ci.yml
+    secrets: inherit
+
+  # portfolio
+  portfolio_ci:
+    needs: changes
+    if: needs.changes.outputs.portfolio == 'true'
+    uses: ./.github/workflows/portfolio_ci.yml
+    secrets: inherit
+
+  # 실패
+  call_failure_summary:
+    needs: [blog_ci, core_ci, portfolio_ci]
+    if: ${{ always() && contains(needs.*.result, 'failure') }}
+    uses: ./.github/workflows/failure_summary.yml
