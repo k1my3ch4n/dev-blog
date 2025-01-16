@@ -1,4 +1,5 @@
 # ! blog 패키지의 c1 진행
+# ! 의존성 설치 및 빌드 진행
 
 name: blog_ci
 
@@ -9,10 +10,6 @@ jobs:
   integration:
     name: integration
     runs-on: ubuntu-latest
-    # 만약 분할하게 된다면 , 사용
-    # strategy:
-    #   matrix:
-    #     app-name: []
 
     steps:
       - name: Checkout
@@ -28,8 +25,29 @@ jobs:
 
       - name: Install dependency
         id: install_dependency
-        run: yarn install --immutable 2> >(tee log_${{ github.run_id }}.txt)
+        run: |
+          yarn install --immutable 2> >(tee log_${{ github.run_id }}.txt) ; \
+          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
       #   - name: Set Environment File
       #   - name: Run test
       #   - name: Get failed test title
+
+      - name: Run Build
+        id: run_build
+        run: |
+          yarn blog build 2> >(tee test_log) ; \
+          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
+
+      # - name: Get failed test title
+      #   if: failure()
+      #   run: cat test_log | grep FAIL > log_${{ github.run_id }}.txt
+
+      - name: Upload Log File
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: workflow_logs
+          path: log_${{ github.run_id }}.txt
+          if-no-files-found: error
+          retention-days: 1
