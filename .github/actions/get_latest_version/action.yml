@@ -12,7 +12,8 @@ outputs:
 runs:
   using: composite
   steps:
-    - id: get-tag
+    - name: Get Tag
+      id: get-tag
       shell: bash
       run: |
         git fetch --all --tags
