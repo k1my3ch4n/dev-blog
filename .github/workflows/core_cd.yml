@@ -41,7 +41,8 @@ jobs:
       # - name: Deploy
       # - name: Docker
 
-      - id: get-latest-version
+      - name: Get Latest Version
+        id: get-latest-version
         uses: ./.github/actions/get_latest_version
 
       - name: Upload Log File
