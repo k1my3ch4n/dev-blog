@@ -1,0 +1,55 @@
+# ! core 패키지의 ci 진행
+# ! 의존성 설치 및 빌드 진행
+
+# todo : 테스트 및 스토리북 진행 예정
+
+name: core_ci
+
+on:
+  workflow_call:
+
+jobs:
+  integration:
+    name: integration
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: git_checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        id: setup_node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: yarn
+
+      - name: Install dependency
+        id: install_dependency
+        run: |
+          yarn install --immutable 2> >(tee log_${{ github.run_id }}.txt) ; \
+          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
+
+      #   - name: Set Environment File
+      #   - name: Run test
+      #   - name: Get failed test title
+
+      - name: Run Build
+        id: run_build
+        run: |
+          yarn core build 2> >(tee test_log) ; \
+          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
+
+      # - name: Get failed test title
+      #   if: failure()
+      #   run: cat test_log | grep FAIL > log_${{ github.run_id }}.txt
+
+      - name: Upload Log File
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: workflow_logs
+          path: log_${{ github.run_id }}.txt
+          if-no-files-found: error
+          retention-days: 1
