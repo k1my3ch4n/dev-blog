@@ -1,7 +1,9 @@
-# ! blog 패키지의 ci 진행
+# ! core 패키지의 ci 진행
 # ! 의존성 설치 및 빌드 진행
 
-name: blog_ci
+# todo : 테스트 및 스토리북 진행 예정
+
+name: core_ci
 
 on:
   workflow_call:
@@ -36,7 +38,7 @@ jobs:
       - name: Run Build
         id: run_build
         run: |
-          yarn blog build 2> >(tee test_log) ; \
+          yarn core build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
       # - name: Get failed test title

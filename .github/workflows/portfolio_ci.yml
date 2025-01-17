@@ -1,7 +1,7 @@
-# ! blog 패키지의 ci 진행
+# ! portfolio 패키지의 ci 진행
 # ! 의존성 설치 및 빌드 진행
 
-name: blog_ci
+name: portfolio_ci
 
 on:
   workflow_call:
@@ -36,7 +36,7 @@ jobs:
       - name: Run Build
         id: run_build
         run: |
-          yarn blog build 2> >(tee test_log) ; \
+          yarn portfolio build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
       # - name: Get failed test title

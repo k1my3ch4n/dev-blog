@@ -1,0 +1,45 @@
+name: auto_versioning
+
+inputs:
+  previous:
+    required: true
+  package:
+    required: true
+  description:
+    required: true
+
+outputs:
+  new_version:
+    value: ${{ steps.versioning.outputs.new_version }}
+
+runs:
+  using: composite
+  steps:
+    - name: Commit Info
+      id: commit-info
+      shell: bash
+      run: |
+        echo "commit_id=$(echo `git log -n 1 --pretty=format:%H` | cut -c -12)" >> $GITHUB_OUTPUT
+        echo "username=$(echo `git log -n 1 --pretty=format:%an`)" >> $GITHUB_OUTPUT
+        echo "email=$(echo `git log -n 1 --pretty=format:%ae`)" >> $GITHUB_OUTPUT
+
+    - name: Versioning
+      shell: bash
+      run: |
+        version=$(echo ${{ inputs.previous }} | cut -d 'v' -f2)
+        major=$(echo $version | cut -d '.' -f1 )
+        minor=$(echo $version | cut -d '.' -f2 )
+        patch=$(echo $version | cut -d '.' -f3 )
+
+        _new_version=$(echo v$major.$minor.$((patch+1)))
+
+        echo "new version: $_new_version"
+        echo "new_version=$_new_version" >> $GITHUB_OUTPUT
+
+    - id: push-tags
+      shell: bash
+      run: |
+        git config --global user.name "${{ steps.commit-info.outputs.username }}"
+        git config --global user.email ${{ steps.commit-info.outputs.email }}
+        git tag -a ${{ inputs.package }}/${{ steps.versioning.outputs.new_version }} -m "${{inputs.description}}"
+        git push origin --tags

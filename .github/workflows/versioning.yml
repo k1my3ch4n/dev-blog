@@ -1,0 +1,106 @@
+# ! pr 머지 후 versioning 진행
+
+name: versioning
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  changes:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    outputs:
+      core: ${{ steps.filter.outputs.core }}
+      blog: ${{ steps.filter.outputs.blog }}
+      portfolio: ${{ steps.filter.outputs.portfolio }}
+
+    steps:
+      - name: Checkout
+        id: git_checkout
+        uses: actions/checkout@v3
+
+      - name: Paths Filter
+        id: paths_filter
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            core:
+              - 'packages/core/**'
+            blog:
+              - 'packages/blog/**'
+            portfolio: 
+              - 'packages/portfolio/**'
+
+  core_versioning:
+    needs: changes
+    if: needs.changes.outputs.core == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: git_checkout
+        uses: actions/checkout@v3
+
+      - name: Get Latest Version
+        id: get-latest-version
+        uses: ./.github/actions/get_latest_version
+        with:
+          package: core
+
+      - name: Update Version
+        id: update-version
+        if: github.ref_name == 'core'
+        uses: ./.github/actions/auto_versioning
+        with:
+          package: core
+          previous: ${{ steps.get-latest-version.outputs.version }}
+          description: ${{ github.event.pull_request.title }}
+
+  blog_versioning:
+    needs: changes
+    if: needs.changes.outputs.blog == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: git_checkout
+        uses: actions/checkout@v3
+
+      - name: Get Latest Version
+        id: get-latest-version
+        uses: ./.github/actions/get_latest_version
+        with:
+          package: blog
+
+      - name: Update Version
+        id: update-version
+        if: github.ref_name == 'blog'
+        uses: ./.github/actions/auto_versioning
+        with:
+          package: blog
+          previous: ${{ steps.get-latest-version.outputs.version }}
+          description: ${{ github.event.pull_request.title }}
+
+  portfolio_versioning:
+    needs: changes
+    if: needs.changes.outputs.portfolio == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: git_checkout
+        uses: actions/checkout@v3
+
+      - name: Get Latest Version
+        id: get-latest-version
+        uses: ./.github/actions/get_latest_version
+        with:
+          package: portfolio
+
+      - name: Update Version
+        id: update-version
+        if: github.ref_name == 'portfolio'
+        uses: ./.github/actions/auto_versioning
+        with:
+          package: portfolio
+          previous: ${{ steps.get-latest-version.outputs.version }}
+          description: ${{ github.event.pull_request.title }}

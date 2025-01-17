@@ -1,0 +1,25 @@
+# ! 버저닝을 위해 가장 마지막 버전을 가져오는 action
+
+name: get_latest_version
+
+inputs:
+  package:
+    required: true
+outputs:
+  version:
+    value: ${{ steps.get-tag.outputs.result }}
+
+runs:
+  using: composite
+  steps:
+    - name: Get Tag
+      id: get-tag
+      shell: bash
+      run: |
+        git fetch --all --tags
+
+        tag=$(echo `git tag -l --sort -v:refname "${{ inputs.package }}/v*" --merged HEAD | head -n 1` | cut -d/ -f2)
+
+        echo latest tag: $tag
+
+        echo "result=$tag" >> $GITHUB_OUTPUT
