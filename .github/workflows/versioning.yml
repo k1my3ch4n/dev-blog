@@ -12,9 +12,9 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     outputs:
-      core: ${{ steps.filter.outputs.core }}
-      blog: ${{ steps.filter.outputs.blog }}
-      portfolio: ${{ steps.filter.outputs.portfolio }}
+      core: ${{ steps.paths_filter.outputs.core }}
+      blog: ${{ steps.paths_filter.outputs.blog }}
+      portfolio: ${{ steps.paths_filter.outputs.portfolio }}
 
     steps:
       - name: Checkout
