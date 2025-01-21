@@ -1,3 +1,5 @@
+// todo : 이미지 스토리북 생성
+
 const ImageBox = ({
   Image,
   width,
