@@ -1,7 +1,7 @@
 import styles from './Layout.module.scss';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
-  return <div className={styles.wrapper}>{children}</div>;
+const Layout = ({ className, children }: { className?: string; children: React.ReactNode }) => {
+  return <div className={`${styles.wrapper} ${className}`}>{children}</div>;
 };
 
 export default Layout;
