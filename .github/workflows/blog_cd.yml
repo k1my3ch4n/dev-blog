@@ -39,6 +39,14 @@ jobs:
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
       # - name: Deploy
+      - name: Checkout code
+        uses: actions/checkout@v3 
+
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
       # - name: Docker
 
       - name: Upload Log File
