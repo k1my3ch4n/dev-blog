@@ -17,7 +17,7 @@
     "typeCheck:portfolio": "tsc -p 'packages/portfolio/ -w"
   },
   "dependencies": {
-    "typescript": "^5.5.4"
+    "typescript": "~5.6.2"
   },
   "devDependencies": {
     "@yarnpkg/pnpify": "^4.1.3",
