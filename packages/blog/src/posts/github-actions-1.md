@@ -64,7 +64,7 @@ jobs:
 
       - name: Setup node
         id: setup_node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: yarn
