@@ -71,7 +71,7 @@ jobs:
       - name: Deploy to Cloud Run
         id: deploy_to_cloud_run
         run: |
-          gcloud run deploy monorepo-blog
+          gcloud run deploy monorepo-blog \
             --image=${{secrets.GCP_REGION}}-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/blog/0115:$TAG \
             --region=${{secrets.GCP_REGION}} \
             --platform=managed \
