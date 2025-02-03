@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         id: git_checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Paths Filter
         id: paths_filter
@@ -40,7 +40,7 @@ jobs:
     steps:
       - name: Checkout
         id: git_checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get Latest Version
         id: get-latest-version
@@ -64,7 +64,7 @@ jobs:
     steps:
       - name: Checkout
         id: git_checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get Latest Version
         id: get-latest-version
@@ -88,7 +88,7 @@ jobs:
     steps:
       - name: Checkout
         id: git_checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get Latest Version
         id: get-latest-version

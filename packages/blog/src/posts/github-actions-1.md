@@ -60,11 +60,11 @@ jobs:
     steps:
       - name: Checkout
         id: git_checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup node
         id: setup_node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: yarn
