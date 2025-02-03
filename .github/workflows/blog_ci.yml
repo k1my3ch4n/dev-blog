@@ -64,7 +64,7 @@ jobs:
         run: |
           IMAGE_NAME="${{secrets.GCP_REGION}}-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/blog/0115:latest"
 
-          docker build -t $IMAGE_NAME .
+          docker build -t $IMAGE_NAME -f packages/blog/Dockerfile packages/blog
           docker push $IMAGE_NAME
 
       - name: Deploy to Cloud Run
