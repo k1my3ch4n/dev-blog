@@ -6,7 +6,7 @@ COPY package.json yarn.lock .yarnrc.yml ./
 COPY .yarn .yarn
 COPY .pnp.* ./
 
-COPY packages/blog ./packages/blog
+COPY ./ ./
 
 RUN node ./.yarn/releases/yarn-4.4.1.cjs install --immutable --mode=skip-build
 RUN node ./.yarn/releases/yarn-4.4.1.cjs workspace blog build
