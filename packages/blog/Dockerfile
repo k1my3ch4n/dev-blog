@@ -2,14 +2,11 @@ FROM node:20.11.0-alpine AS build
 
 WORKDIR /app
 
-COPY ../../package.json ./package.json
-COPY ../../yarn.lock ./yarn.lock
-COPY ../../.yarn ./.yarn 
-COPY ../../.yarnrc.yml ./.yarnrc.yml
-COPY ../../.pnp.cjs ./.pnp.cjs
-COPY ../../.pnp.loader.mjs ./.pnp.loader.mjs
+COPY package.json yarn.lock .yarnrc.yml ./
+COPY .yarn .yarn
+COPY .pnp.* ./
 
-COPY ./ ./
+COPY packages/blog ./packages/blog
 
 RUN node ./.yarn/releases/yarn-4.4.1.cjs install --immutable --mode=skip-build
 RUN node ./.yarn/releases/yarn-4.4.1.cjs workspace blog build
