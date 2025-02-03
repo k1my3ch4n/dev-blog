@@ -72,6 +72,7 @@ jobs:
         with:
           package: blog
 
+      # todo : 버전 업데이트 수정
       - name: Update Version
         id: update-version
         if: github.ref_name == 'blog'
