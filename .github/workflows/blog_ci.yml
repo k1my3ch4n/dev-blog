@@ -62,16 +62,17 @@ jobs:
       - name: Docker Build and Push Image
         id: docker_build_and_push_image
         run: |
-          IMAGE_NAME="${{secrets.GCP_REGION}}-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/blog/0115:latest"
+          IMAGE_NAME="${{secrets.GCP_REGION}}-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/blog/0115"
+          TAG=$(date +%Y%m%d%H%M%S)
 
-          docker build -t $IMAGE_NAME -f packages/blog/Dockerfile packages/blog
-          docker push $IMAGE_NAME
+          docker build -t $IMAGE_NAME:$TAG -f packages/blog/Dockerfile packages/blog
+          docker push $IMAGE_NAME:$TAG
 
       - name: Deploy to Cloud Run
         id: deploy_to_cloud_run
         run: |
           gcloud run deploy monorepo-blog
-            --image=${{secrets.GCP_REGION}}-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/blog/0115:latest \
+            --image=${{secrets.GCP_REGION}}-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/blog/0115:$TAG \
             --region=${{secrets.GCP_REGION}} \
             --platform=managed \
             --allow-unauthenticated
