@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.get-latest-version.outputs.version }}
-      # deployment:
 
     steps:
       - name: Checkout
@@ -38,8 +37,39 @@ jobs:
           yarn blog build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
-      # - name: Deploy
-      # - name: Docker
+      # 배포 부분은 추후에 따로 분리 예정
+      - name: Authenticate with Google Cloud
+        id: authenticate_with_google_cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{secrets.GCP_PROJECT_ID}}
+
+      - name: Configure Google Cloud
+        id: configure_google_cloud
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker
+        id: configure_docker
+        run: |
+          gcloud auth configure-docker ${{secrets.GCP_REGION}}-docker.pkg.dev
+
+      - name: Docker Build and Push Image
+        id: docker_build_and_push_image
+        run: |
+          IMAGE_NAME="${{secrets.GCP_REGION}}-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/blog/0115:latest"
+
+          docker build -t $IMAGE_NAME
+          docker push $IMAGE_NAME
+
+      - name: Deploy to Cloud Run
+        id: deploy_to_cloud_run
+        run: |
+          gcloud run deploy monorepo-blog
+            --image=${{secrets.GCP_REGION}}-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/blog/0115:latest \
+            --region=${{secrets.GCP_REGION}} \
+            --platform=managed \
+            --allow-unauthenticated
 
       - name: Upload Log File
         if: failure()
