@@ -148,7 +148,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: get-tags
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
