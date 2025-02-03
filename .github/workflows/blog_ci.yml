@@ -65,7 +65,7 @@ jobs:
           IMAGE_NAME="${{secrets.GCP_REGION}}-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/blog/0115"
           TAG=$(date +%Y%m%d%H%M%S)
 
-          docker build -t $IMAGE_NAME:$TAG -f packages/blog/Dockerfile packages/blog
+          docker build -t $IMAGE_NAME:$TAG -f packages/blog/Dockerfile .
           docker push $IMAGE_NAME:$TAG
 
       - name: Deploy to Cloud Run
