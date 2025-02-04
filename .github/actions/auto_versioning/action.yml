@@ -24,6 +24,7 @@ runs:
         echo "email=$(echo `git log -n 1 --pretty=format:%ae`)" >> $GITHUB_OUTPUT
 
     - name: Versioning
+      id: versioning
       shell: bash
       run: |
         version=$(echo ${{ inputs.previous }} | cut -d 'v' -f2)
