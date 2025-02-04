@@ -41,10 +41,6 @@ jobs:
           yarn blog build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
-      # - name: Get failed test title
-      #   if: failure()
-      #   run: cat test_log | grep FAIL > log_${{ github.run_id }}.txt
-
       - name: Upload Log File
         if: failure()
         uses: actions/upload-artifact@v4
