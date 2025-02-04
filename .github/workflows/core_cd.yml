@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.get-latest-version.outputs.version }}
-      # deployment:
 
     steps:
       - name: Checkout
@@ -37,13 +36,6 @@ jobs:
         run: |
           yarn core build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
-
-      # - name: Deploy
-      # - name: Docker
-
-      - name: Get Latest Version
-        id: get-latest-version
-        uses: ./.github/actions/get_latest_version
 
       - name: Upload Log File
         if: failure()

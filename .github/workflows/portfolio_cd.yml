@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.get-latest-version.outputs.version }}
-      # deployment:
 
     steps:
       - name: Checkout
@@ -32,18 +31,26 @@ jobs:
           yarn install --immutable 2> >(tee log_${{ github.run_id }}.txt) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
+      - name: Core Build
+        id: core_build
+        run: |
+          yarn core build 2> >(tee test_log) ; \
+          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
+
       - name: Run Build
         id: run_build
         run: |
           yarn portfolio build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
-      # - name: Deploy
-      # - name: Docker
-
-      - name: Get Latest Version
-        id: get-latest-version
-        uses: ./.github/actions/get_latest_version
+      - name: Auto Deploy
+        id: auto_deploy
+        uses: ./.github/actions/auto_deploy
+        with:
+          package: 'portfolio'
+          gcp_region: ${{ secrets.GCP_REGION }}
+          gcp_project_id: ${{ secrets.GCP_PROJECT_ID }}
+          gcp_service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
 
       - name: Upload Log File
         if: failure()
