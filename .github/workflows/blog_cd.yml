@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.get-latest-version.outputs.version }}
-      # deployment:
 
     steps:
       - name: Checkout
@@ -49,6 +48,9 @@ jobs:
         uses: ./.github/actions/auto_deploy
         with:
           package: 'blog'
+          gcp_region: ${{ secrets.GCP_REGION }}
+          gcp_project_id: ${{ secrets.GCP_PROJECT_ID }}
+          gcp_service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
 
       - name: Upload Log File
         if: failure()
