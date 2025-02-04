@@ -50,7 +50,6 @@ jobs:
 
       - name: Update Version
         id: update-version
-        if: github.ref_name == 'core'
         uses: ./.github/actions/auto_versioning
         with:
           package: core
@@ -72,10 +71,8 @@ jobs:
         with:
           package: blog
 
-      # todo : 버전 업데이트 수정
       - name: Update Version
         id: update-version
-        if: github.ref_name == 'blog'
         uses: ./.github/actions/auto_versioning
         with:
           package: blog
@@ -99,7 +96,6 @@ jobs:
 
       - name: Update Version
         id: update-version
-        if: github.ref_name == 'portfolio'
         uses: ./.github/actions/auto_versioning
         with:
           package: portfolio
