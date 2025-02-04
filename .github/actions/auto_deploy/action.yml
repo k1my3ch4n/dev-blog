@@ -27,6 +27,7 @@ runs:
       id: configure_docker
       run: |
         gcloud auth configure-docker ${{inputs.gcp_region}}-docker.pkg.dev
+      shell: bash
 
     - name: Docker Build and Push Image
       id: docker_build_and_push_image
@@ -35,6 +36,7 @@ runs:
 
         docker build -t $IMAGE_NAME:latest -f packages/blog/Dockerfile .
         docker push $IMAGE_NAME:latest
+      shell: bash
 
     - name: Deploy to Cloud Run
       id: deploy_to_cloud_run
@@ -44,3 +46,4 @@ runs:
           --region=${{inputs.gcp_region}} \
           --platform=managed \
           --allow-unauthenticated
+      shell: bash
