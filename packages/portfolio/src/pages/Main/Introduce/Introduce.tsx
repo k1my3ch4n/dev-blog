@@ -12,7 +12,7 @@ const Introduce = () => {
         lhs={
           <>
             <MainPhoto className={styles.mainPhoto} />
-            <Text>🔥 김예찬 </Text>
+            <Text>🔥 김예찬</Text>
             <Text>✉️ k1my3ch4n@gmail.com</Text>
             <Text>📱 010-2695-7092</Text>
             <Text>🏠 경기 성남시 분당구</Text>
