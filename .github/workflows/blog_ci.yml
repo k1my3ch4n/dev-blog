@@ -27,7 +27,7 @@ jobs:
         id: get-latest-version
         uses: ./.github/actions/get_latest_version
         with:
-          package: core
+          package: blog
 
       # - name: Install dependency
       #   id: install_dependency
