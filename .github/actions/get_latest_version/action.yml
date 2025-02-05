@@ -17,7 +17,7 @@ runs:
       run: |
         git fetch --all --tags
 
-        tag=$(echo `git tag -l --sort -v:refname "${{ inputs.package }}/v*" --merged HEAD | head -n 1` | cut -d/ -f2)
+        tag=$(echo `git tag -l --sort -v:refname "${{ inputs.package }}/v*" | head -n 1` | cut -d/ -f2)
 
         echo latest tag: $tag
 
