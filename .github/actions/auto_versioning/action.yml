@@ -7,6 +7,8 @@ inputs:
     required: true
   description:
     required: true
+  gh_pat:
+    required: true
 
 outputs:
   new_version:
@@ -43,7 +45,7 @@ runs:
         git config --global user.name "${{ steps.commit-info.outputs.username }}"
         git config --global user.email ${{ steps.commit-info.outputs.email }}
 
-        git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/k1my3ch4n/dev-blog.git
+        git remote set-url origin https://x-access-token:${{ inputs.gh_pat }}@github.com/k1my3ch4n/dev-blog.git
 
         git tag -a ${{ inputs.package }}/${{ steps.versioning.outputs.new_version }} -m "${{inputs.description}}"
         git push origin --tags

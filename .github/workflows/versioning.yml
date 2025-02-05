@@ -52,6 +52,7 @@ jobs:
         id: update-version
         uses: ./.github/actions/auto_versioning
         with:
+          gh_pat: ${{secrets.GH_PAT}}
           package: core
           previous: ${{ steps.get-latest-version.outputs.version }}
           description: ${{ github.event.pull_request.title }}
@@ -75,6 +76,7 @@ jobs:
         id: update-version
         uses: ./.github/actions/auto_versioning
         with:
+          gh_pat: ${{secrets.GH_PAT}}
           package: blog
           previous: ${{ steps.get-latest-version.outputs.version }}
           description: ${{ github.event.pull_request.title }}
@@ -98,6 +100,7 @@ jobs:
         id: update-version
         uses: ./.github/actions/auto_versioning
         with:
+          gh_pat: ${{secrets.GH_PAT}}
           package: portfolio
           previous: ${{ steps.get-latest-version.outputs.version }}
           description: ${{ github.event.pull_request.title }}
