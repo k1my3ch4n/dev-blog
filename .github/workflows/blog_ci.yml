@@ -23,29 +23,23 @@ jobs:
           node-version: '20'
           cache: yarn
 
-      - name: Get Latest Version
-        id: get-latest-version
-        uses: ./.github/actions/get_latest_version
-        with:
-          package: blog
+      - name: Install dependency
+        id: install_dependency
+        run: |
+          yarn install --immutable 2> >(tee log_${{ github.run_id }}.txt) ; \
+          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
-      # - name: Install dependency
-      #   id: install_dependency
-      #   run: |
-      #     yarn install --immutable 2> >(tee log_${{ github.run_id }}.txt) ; \
-      #     test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
+      - name: Core Build
+        id: core_build
+        run: |
+          yarn core build 2> >(tee test_log) ; \
+          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
-      # - name: Core Build
-      #   id: core_build
-      #   run: |
-      #     yarn core build 2> >(tee test_log) ; \
-      #     test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
-
-      # - name: Run Build
-      #   id: run_build
-      #   run: |
-      #     yarn blog build 2> >(tee test_log) ; \
-      #     test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
+      - name: Run Build
+        id: run_build
+        run: |
+          yarn blog build 2> >(tee test_log) ; \
+          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
       - name: Upload Log File
         if: failure()
