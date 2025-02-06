@@ -20,7 +20,9 @@
 
 <br>
 
-<img src='https://img.shields.io/badge/core-readme-633DE5?style=for-the-badge&labelColor=4C566A'>
+<a href='https://github.com/k1my3ch4n/dev-blog/blob/main/packages/core/README.md' target="_blank">
+    <img src='https://img.shields.io/badge/core-readme-633DE5?style=for-the-badge&labelColor=4C566A'>
+</a>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="rainbow" />
 
@@ -34,7 +36,7 @@ Monorepo 를 사용해서 블로그와 포트폴리오를 구현하는 프로젝
    node --version
    ```
 
-2. **yarn 버전 (== 4.4.1)**
+2. **yarn 버전 (4.4.1)**
    ```sh
    yarn --version
    ```
