@@ -11,6 +11,7 @@ import {
   Msw1,
   Msw2,
   Msw3,
+  WoowaTechCourse,
 } from '@images';
 
 export const BLOG_POST_DATA = [
@@ -27,6 +28,12 @@ export const BLOG_POST_DATA = [
   //     postId: '',
   //   },
   // msw 4번은 보류
+  {
+    Thumbnail: WoowaTechCourse,
+    title: '우아한 테크코스 프론트엔드 7기 프리코스 회고록',
+    tags: ['우아한 테크코스'],
+    postId: 'woowa-course',
+  },
   {
     Thumbnail: Msw3,
     title: 'msw ( mock service worker ) 를 이용한 API mocking #3 ( storybook 작성 )',

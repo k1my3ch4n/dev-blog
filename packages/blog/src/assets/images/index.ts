@@ -20,3 +20,5 @@ export { ReactComponent as YarnWorkspaceMonorepo5 } from './yarnWorkspaceMonorep
 export { ReactComponent as Msw1 } from './msw1.svg';
 export { ReactComponent as Msw2 } from './msw2.svg';
 export { ReactComponent as Msw3 } from './msw3.svg';
+
+export { ReactComponent as WoowaTechCourse } from './woowaTechCourse.svg';
