@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 const { Pool } = pg;
 
-// PostgreSQL 연결 설정
 const pool = new Pool({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
@@ -13,15 +12,20 @@ const pool = new Pool({
   port: Number(process.env.DB_PORT),
 });
 
-// 데이터베이스 초기화 (테이블 생성)
 export async function initDB() {
   const client = await pool.connect();
   try {
+    // 실행 시 테이블 삭제
+    await client.query(`
+      DROP TABLE IF EXISTS posts;
+    `);
+
     await client.query(`
       CREATE TABLE IF NOT EXISTS posts (
-        postId VARCHAR(255) PRIMARY KEY,
-        title VARCHAR(255) NOT NULL,
-        tags TEXT[] NOT NULL
+        id SERIAL PRIMARY KEY,
+        "postKey" TEXT NOT NULL,
+        title TEXT NOT NULL,
+        tags TEXT[] DEFAULT '{}'
       )
     `);
     console.log('Database initialized');
