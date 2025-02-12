@@ -1,11 +1,8 @@
 import { Divider, Header, ImageBox, Link, SplitGrid, Text, Title } from '@monorepo/core/components';
 import styles from './Introduce.module.scss';
 import { MainPhoto } from '@images';
-import useGetPosts from '@apis/useGetPosts';
 
 const Introduce = () => {
-  useGetPosts();
-
   return (
     <div className={styles.wrapper}>
       <Title title="📘 K1MY3CH4N's Blog" />
