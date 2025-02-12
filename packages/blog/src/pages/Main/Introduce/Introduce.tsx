@@ -1,7 +1,7 @@
 import { Divider, Header, ImageBox, Link, SplitGrid, Text, Title } from '@monorepo/core/components';
 import styles from './Introduce.module.scss';
 import { MainPhoto } from '@images';
-import useGetPosts from '@src/apis/useGetPosts/useGetPosts';
+import useGetPosts from '@apis/useGetPosts';
 
 const Introduce = () => {
   useGetPosts();

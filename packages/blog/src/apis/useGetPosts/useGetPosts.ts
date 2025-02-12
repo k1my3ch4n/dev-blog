@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client';
-import { GET_POSTS } from '@src/graphql/post';
+import { GET_POSTS } from '@graphql/post';
 
 const useGetPosts = () => {
   useQuery(GET_POSTS, {
@@ -7,7 +7,7 @@ const useGetPosts = () => {
       console.log(error);
     },
     onCompleted: (data) => {
-      console.log(data);
+      console.log(data.getPosts);
     },
   });
 };

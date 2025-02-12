@@ -24,6 +24,7 @@
 
     "paths": {
       "@src/*": ["./src/*"],
+      "@apis/*": ["./src/apis/*"],
       "@clients/*": ["./src/clients/*"],
       "@styles/*": ["./src/assets/styles/*"],
       "@images": ["./src/assets/images/index.ts"],
