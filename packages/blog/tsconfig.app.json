@@ -24,13 +24,15 @@
 
     "paths": {
       "@src/*": ["./src/*"],
+      "@apis/*": ["./src/apis/*"],
+      "@clients/*": ["./src/clients/*"],
       "@styles/*": ["./src/assets/styles/*"],
       "@images": ["./src/assets/images/index.ts"],
       "@components/*": ["./src/components/*"],
       "@constants/*": ["./src/constants/*"],
+      "@graphql/*": ["./src/graphql/*"],
       "@pages/*": ["./src/pages/*"],
       "@hooks/*": ["./src/hooks/*"]
-      // "@projects/*": ["./src/projects/*"]
     }
   },
   "include": ["src"]

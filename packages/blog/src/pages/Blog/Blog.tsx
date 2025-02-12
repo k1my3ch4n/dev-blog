@@ -1,42 +1,48 @@
 import styles from './Blog.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { Divider, Header, Highlight, Title, ImageBox } from '@monorepo/core/components';
-import { BLOG_POST_DATA } from '@constants/blog';
+import { BLOG_THUMBNAIL } from '@constants/blog';
+import useGetPosts from '@apis/useGetPosts';
 
 const Blog = () => {
   const navigate = useNavigate();
+
+  // todo : recoil 사용 예정
+  // todo : error , loading 추가 예정
+  const { postsData } = useGetPosts();
 
   return (
     <>
       <Title title="📘 K1MY3CH4N's Blog" />
       <Divider />
 
-      {BLOG_POST_DATA.map(({ Thumbnail, title, tags, postId }, index) => {
-        const handleClick = (projectName: string) => {
-          navigate(`/blog/${projectName}`);
-          window.scrollTo(0, 0);
-        };
+      {postsData?.map(
+        ({ title, tags, postKey }: { title: string; tags: string[]; postKey: string }, index) => {
+          const handleClick = (projectName: string) => {
+            navigate(`/blog/${projectName}`);
+            window.scrollTo(0, 0);
+          };
 
-        return (
-          <div className={styles.post} key={index} onClick={() => handleClick(postId)}>
-            <ImageBox
-              wrapperClassName={styles.imageWrapper}
-              imageClassName={styles.image}
-              Image={Thumbnail}
-              width="200px"
-              height="150px"
-            />
-            <div className={styles.title}>
-              <Header size="m">{title}</Header>
-              <div className={styles.tags}>
-                {tags.map((tag) => (
-                  <Highlight key={tag}>{tag}</Highlight>
-                ))}
+          return (
+            <div className={styles.post} key={index} onClick={() => handleClick(postKey)}>
+              <ImageBox
+                wrapperClassName={styles.imageWrapper}
+                imageClassName={styles.image}
+                Image={BLOG_THUMBNAIL[postKey]}
+                width="200px"
+                height="150px"
+              />
+              <div className={styles.title}>
+                <Header size="m">{title}</Header>
+                <div className={styles.tags}>
+                  {/* todo : 타입 설정 */}
+                  {tags?.map((tag: string) => <Highlight key={tag}>{tag}</Highlight>)}
+                </div>
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        },
+      )}
     </>
   );
 };

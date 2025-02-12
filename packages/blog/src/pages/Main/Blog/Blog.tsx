@@ -1,18 +1,19 @@
 import { Divider, Link, PageBox, Title } from '@monorepo/core/components';
 import styles from './Blog.module.scss';
-import { BLOG_POST_DATA } from '@constants/blog';
 import { useNavigate } from 'react-router-dom';
+import useGetPosts from '@apis/useGetPosts';
+import { BLOG_THUMBNAIL } from '@constants/blog';
 
 const Blog = () => {
   const navigate = useNavigate();
+
+  const { postsData } = useGetPosts();
 
   // todo : handleClick 수정 예정
   const handleClick = (postId: string) => {
     navigate(`/blog/${postId}`);
     window.scrollTo(0, 0);
   };
-
-  const postData = BLOG_POST_DATA.slice(0, 4);
 
   return (
     <div className={styles.wrapper}>
@@ -22,15 +23,15 @@ const Blog = () => {
       </div>
       <Divider />
       <div className={styles.boxWrapper}>
-        {postData.map((data, index) => {
-          const { title, postId, Thumbnail } = data;
+        {postsData?.slice(0, 4).map((data, index) => {
+          const { title, postKey } = data;
 
           return (
             <PageBox
               key={index}
-              Thumbnail={Thumbnail}
+              Thumbnail={BLOG_THUMBNAIL[postKey]}
               title={title}
-              onClick={() => handleClick(postId)}
+              onClick={() => handleClick(postKey)}
               width="400px"
               height="300px"
               imageClassName={styles.image}
