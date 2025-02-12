@@ -14,7 +14,7 @@ import {
   WoowaTechCourse,
 } from '@images';
 
-export const BLOG_THUMBNAIL = {
+export const BLOG_THUMBNAIL: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
   'woowa-course': WoowaTechCourse,
   'msw-3': Msw3,
   'msw-2': Msw2,
