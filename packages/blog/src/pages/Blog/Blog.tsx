@@ -7,9 +7,16 @@ import useGetPosts from '@apis/useGetPosts';
 const Blog = () => {
   const navigate = useNavigate();
 
-  // todo : recoil 사용 예정
-  // todo : error , loading 추가 예정
-  const { postsData } = useGetPosts();
+  // todo : loading , error 페이지 추가 예정
+  const { isLoading, isError, postsData } = useGetPosts();
+
+  if (isLoading) {
+    return <div>로딩중입니다 ... </div>;
+  }
+
+  if (isError) {
+    return <div>에러가 발생했습니다 . </div>;
+  }
 
   return (
     <>
