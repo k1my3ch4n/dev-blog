@@ -32,6 +32,7 @@
       "@constants/*": ["./src/constants/*"],
       "@graphql/*": ["./src/graphql/*"],
       "@pages/*": ["./src/pages/*"],
+      "@recoil/*": ["./src/recoil/*"],
       "@hooks/*": ["./src/hooks/*"]
     }
   },

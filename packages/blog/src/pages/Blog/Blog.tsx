@@ -2,13 +2,13 @@ import styles from './Blog.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { Divider, Header, Highlight, Title, ImageBox } from '@monorepo/core/components';
 import { BLOG_THUMBNAIL } from '@constants/blog';
-import useGetPosts from '@src/apis/useGetPosts';
+import useGetPosts from '@apis/useGetPosts';
 
 const Blog = () => {
   const navigate = useNavigate();
 
   // todo : loading , error 추가 예정
-  const { postsData } = useGetPosts();
+  const { isLoading, isError, postsData } = useGetPosts();
 
   return (
     <>

@@ -3,7 +3,7 @@ import styles from './Blog.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { BLOG_THUMBNAIL } from '@constants/blog';
 import { useRecoilValue } from 'recoil';
-import postsAtom from '@src/recoil/postsAtom';
+import postsAtom from '@recoil/postsAtom';
 
 const Blog = () => {
   const navigate = useNavigate();

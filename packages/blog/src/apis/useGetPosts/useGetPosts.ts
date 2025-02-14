@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
 import { GET_POSTS } from '@graphql/post';
-import postsAtom, { PostData } from '@src/recoil/postsAtom';
+import postsAtom, { PostData } from '@recoil/postsAtom';
 import { useRecoilState } from 'recoil';
 
 interface PostsResponseData {
