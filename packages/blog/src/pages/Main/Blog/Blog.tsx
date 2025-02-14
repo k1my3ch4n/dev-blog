@@ -1,13 +1,13 @@
 import { Divider, Link, PageBox, Title } from '@monorepo/core/components';
 import styles from './Blog.module.scss';
 import { useNavigate } from 'react-router-dom';
-import useGetPosts from '@apis/useGetPosts';
 import { BLOG_THUMBNAIL } from '@constants/blog';
+import { useRecoilValue } from 'recoil';
+import postsAtom from '@src/recoil/postsAtom';
 
 const Blog = () => {
   const navigate = useNavigate();
-
-  const { postsData } = useGetPosts();
+  const postsData = useRecoilValue(postsAtom);
 
   // todo : handleClick 수정 예정
   const handleClick = (postId: string) => {
