@@ -1,44 +1,29 @@
 import { useQuery } from '@apollo/client';
 import { GET_POSTS } from '@graphql/post';
-import { useEffect, useMemo, useState } from 'react';
+import postsAtom, { PostData } from '@src/recoil/postsAtom';
+import { useRecoilState } from 'recoil';
 
-interface PostData {
-  id: string;
-  postKey: string;
-  title: string;
-  tags: string[];
-}
-
-interface PostsData {
+interface PostsResponseData {
   posts: PostData[];
 }
 
-const adapter = (data?: PostsData) => {
+const adapter = (data?: PostsResponseData) => {
   if (!data) {
-    return;
+    return [];
   }
 
   return data.posts;
 };
 
 const useGetPosts = () => {
-  const [postsData, setPostsData] = useState<PostData[]>([]);
+  const [postsData, setPostsData] = useRecoilState<PostData[]>(postsAtom);
 
-  const { data } = useQuery(GET_POSTS, {
+  useQuery<PostsResponseData>(GET_POSTS, {
+    onCompleted: (data) => setPostsData(adapter(data)),
     onError: (error) => {
       console.log(error);
     },
   });
-
-  console.log(data?.posts);
-
-  const postsMemoData = useMemo(() => adapter(data), [data]);
-
-  useEffect(() => {
-    if (postsMemoData) {
-      setPostsData(postsMemoData);
-    }
-  }, [postsMemoData, setPostsData]);
 
   return {
     postsData,
