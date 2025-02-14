@@ -18,6 +18,8 @@ const adapter = (data?: PostsResponseData) => {
 const useGetPosts = () => {
   const [postsData, setPostsData] = useRecoilState<PostData[]>(postsAtom);
 
+  console.log(postsData);
+
   const { loading: isLoading, error: isError } = useQuery<PostsResponseData>(GET_POSTS, {
     onCompleted: (data) => setPostsData(adapter(data)),
     onError: (error) => {
