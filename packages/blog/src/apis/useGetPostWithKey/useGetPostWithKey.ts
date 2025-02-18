@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
-import { GET_POST_WITH_KEY } from '@src/graphql/post';
-import { PostData } from '@src/recoil/postsAtom';
+import { GET_POST_WITH_KEY } from '@graphql/post';
+import { PostData } from '@recoil/postsAtom';
 import { useState } from 'react';
 
 interface PostResponseData {
