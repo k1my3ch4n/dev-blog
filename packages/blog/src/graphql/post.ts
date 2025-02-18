@@ -10,3 +10,14 @@ export const GET_POSTS = gql`
     }
   }
 `;
+
+export const GET_POST_WITH_KEY = gql`
+  query GetPostWithKey($postKey: String!) {
+    post(postKey: $postKey) {
+      id
+      postKey
+      title
+      tags
+    }
+  }
+`;

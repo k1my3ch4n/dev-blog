@@ -9,12 +9,6 @@ const Blog = () => {
   const navigate = useNavigate();
   const postsData = useRecoilValue(postsAtom);
 
-  // todo : handleClick 수정 예정
-  const handleClick = (postId: string) => {
-    navigate(`/blog/${postId}`);
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.blogTitle}>
@@ -23,8 +17,14 @@ const Blog = () => {
       </div>
       <Divider />
       <div className={styles.boxWrapper}>
+        {/* todo : 블로그 페이지 수정 */}
         {postsData?.slice(0, 4).map((data, index) => {
           const { title, postKey } = data;
+
+          const handleClick = (postKey: string) => {
+            navigate(`/blog/${postKey}`);
+            window.scrollTo(0, 0);
+          };
 
           return (
             <PageBox

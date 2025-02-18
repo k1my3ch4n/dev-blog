@@ -1,6 +1,14 @@
 import styles from './Blog.module.scss';
 import { useNavigate } from 'react-router-dom';
-import { Divider, Header, Highlight, Title, ImageBox } from '@monorepo/core/components';
+import {
+  Divider,
+  Header,
+  Highlight,
+  Title,
+  ImageBox,
+  HomeButton,
+  ScrollToTopButton,
+} from '@monorepo/core/components';
 import { BLOG_THUMBNAIL } from '@constants/blog';
 import useGetPosts from '@apis/useGetPosts';
 
@@ -8,7 +16,12 @@ const Blog = () => {
   const navigate = useNavigate();
 
   // todo : loading , error 페이지 추가 예정
+  // todo : 페이지네이션 추가
   const { isLoading, isError, postsData } = useGetPosts();
+
+  const handleClick = () => {
+    navigate('/');
+  };
 
   if (isLoading) {
     return <div>로딩중입니다 ... </div>;
@@ -20,6 +33,7 @@ const Blog = () => {
 
   return (
     <>
+      <HomeButton onClick={handleClick} />
       <Title title="📘 K1MY3CH4N's Blog" />
       <Divider />
 
@@ -50,6 +64,8 @@ const Blog = () => {
           );
         },
       )}
+
+      <ScrollToTopButton />
     </>
   );
 };

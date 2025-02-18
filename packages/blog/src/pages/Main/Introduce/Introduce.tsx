@@ -27,7 +27,9 @@ const Introduce = () => {
             <Header size="m">질문하는 프론트엔드 개발자 입니다 .</Header>
             <Header size="m">질문하고 경험한 것들을 기록하고 공유합니다 .</Header>
             <Header size="m">
-              <Link link="">저에 대해서 더 알고 싶으시다면 클릭 !</Link>
+              <Link link="https://monorepo-portfolio-384003056882.asia-northeast3.run.app/">
+                저에 대해서 더 알고 싶으시다면 클릭 !
+              </Link>
             </Header>
           </>
         }
