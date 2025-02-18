@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
             Component: lazy(() => import('./pages/Blog')),
           },
           {
-            path: 'blog/:postId',
+            path: 'blog/:postKey',
             Component: lazy(() => import('./pages/BlogPost')),
           },
         ],

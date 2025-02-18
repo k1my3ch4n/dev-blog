@@ -16,7 +16,7 @@ const Blog = () => {
   const navigate = useNavigate();
 
   // todo : loading , error 페이지 추가 예정
-  // todo : 리스트 순서 반대로 추가 , 페이지네이션 추가 ( 서버 )
+  // todo : 페이지네이션 추가
   const { isLoading, isError, postsData } = useGetPosts();
 
   const handleClick = () => {
