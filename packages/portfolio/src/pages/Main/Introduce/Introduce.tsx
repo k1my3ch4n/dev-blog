@@ -1,5 +1,5 @@
 import styles from './Introduce.module.scss';
-import { ReactComponent as MainPhoto } from '@images/mainPhoto.svg';
+import { MainPhoto } from '@images';
 
 import { Text, Divider, Header, List, SplitGrid } from 'k1my3ch4n-core/components';
 
