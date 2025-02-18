@@ -1,7 +1,12 @@
 .wrapper {
   width: 100%;
+  padding: 40px 20px;
   @include font($size: 20px);
   line-height: 1.5;
+
+  p + p {
+    margin-top: 10px;
+  }
 
   h2 {
     @include font($size: 32px, $weight: 700);
@@ -28,17 +33,21 @@
     margin: 10px;
   }
 
+  // todo : code 수정
   code {
     @include font($weight: 600);
-    padding: 2px;
+    padding: 4px;
     background-color: lightgray;
+    border-radius: 4px;
   }
 
   pre {
+    margin: 10px;
     padding: 10px;
     background-color: lightgray;
     position: relative;
     overflow-x: auto;
+    border-radius: 8px;
 
     code {
       background-color: lightgray;

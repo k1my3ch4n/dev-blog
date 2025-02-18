@@ -33,7 +33,7 @@ const BlogPost = () => {
           <Highlight key={tag}>{tag}</Highlight>
         ))}
       </div>
-      <MarkdownWrapper markdown={markdown} />;
+      <MarkdownWrapper markdown={markdown} />
       <ScrollToTopButton />
     </>
   );
