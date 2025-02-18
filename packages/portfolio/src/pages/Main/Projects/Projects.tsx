@@ -3,7 +3,7 @@ import styles from './Projects.module.scss';
 
 import { Divider, Header, PageBox } from '@monorepo/core/components';
 
-import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
+import { TwinnyLogo, MainLogo } from '@images';
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -13,9 +13,11 @@ const Projects = () => {
     window.scrollTo(0, 0);
   };
 
+  // todo : 분리해야 하나 ? 고민
+
   return (
     <>
-      <Header>👩🏻‍💻 Projects</Header>
+      <Header>👩🏻‍💻 Career Projects</Header>
       <Divider />
       <div className={styles.boxWrapper}>
         <PageBox
@@ -29,6 +31,18 @@ const Projects = () => {
           Thumbnail={TwinnyLogo}
           title="🤖 관리자용 로봇 관제 웹 프로젝트"
           onClick={() => handleClick('managerRobot')}
+          width="400px"
+          height="300px"
+        />
+      </div>
+
+      <Header>👩🏻‍💻 Personal Projects</Header>
+      <Divider />
+      <div className={styles.boxWrapper}>
+        <PageBox
+          Thumbnail={MainLogo}
+          title="📖 Monorepo 로 블로그 및 포트폴리오 페이지 생성"
+          onClick={() => handleClick('userRobot')}
           width="400px"
           height="300px"
         />

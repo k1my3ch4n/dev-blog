@@ -25,7 +25,7 @@
     "paths": {
       "@src/*": ["./src/*"],
       "@styles/*": ["./src/assets/styles/*"],
-      "@images/*": ["./src/assets/images/*"],
+      "@images": ["./src/assets/images/index.ts"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
       "@hooks/*": ["./src/hooks/*"],
