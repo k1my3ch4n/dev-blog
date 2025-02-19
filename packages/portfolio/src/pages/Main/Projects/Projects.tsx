@@ -42,7 +42,7 @@ const Projects = () => {
         <PageBox
           Thumbnail={MainLogo}
           title="📖 Monorepo 로 블로그 및 포트폴리오 페이지 생성"
-          onClick={() => handleClick('userRobot')}
+          onClick={() => handleClick('blog')}
           width="400px"
           height="300px"
         />
