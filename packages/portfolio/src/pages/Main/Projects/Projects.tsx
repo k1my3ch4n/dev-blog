@@ -41,7 +41,7 @@ const Projects = () => {
       <div className={styles.boxWrapper}>
         <PageBox
           Thumbnail={MainLogo}
-          title="📖 Monorepo 로 블로그 및 포트폴리오 페이지 생성"
+          title="📖 Monorepo로 블로그 및 포트폴리오 페이지 생성"
           onClick={() => handleClick('blog')}
           width="400px"
           height="300px"

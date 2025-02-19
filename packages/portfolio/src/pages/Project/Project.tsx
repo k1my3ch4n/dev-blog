@@ -1,3 +1,5 @@
+import styles from './Project.module.scss';
+
 import { useParams } from 'react-router-dom';
 
 import Blog from '@projects/blog';
@@ -21,7 +23,7 @@ const Project = () => {
   return (
     <>
       <HomeButton />
-      {SelectedProject}
+      <div className={styles.projectWrapper}>{SelectedProject}</div>
       <ScrollToTopButton />
     </>
   );
