@@ -1,4 +1,4 @@
-import { Highlight, HomeButton, ScrollToTopButton, Title } from '@monorepo/core/components';
+import { Highlight, HomeButton, ScrollToTopButton, Title } from 'k1my3ch4n-core/components';
 import styles from './BlogPost.module.scss';
 
 import MarkdownWrapper from '@components/MarkdownWrapper';

@@ -1,4 +1,4 @@
-import { Divider, Link, PageBox, Title } from '@monorepo/core/components';
+import { Divider, Link, PageBox, Title } from 'k1my3ch4n-core/components';
 import styles from './Blog.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { BLOG_THUMBNAIL } from '@constants/blog';

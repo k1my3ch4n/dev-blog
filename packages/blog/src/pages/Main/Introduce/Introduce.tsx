@@ -1,4 +1,4 @@
-import { Divider, Header, ImageBox, Link, SplitGrid, Text, Title } from '@monorepo/core/components';
+import { Divider, Header, ImageBox, Link, SplitGrid, Text, Title } from 'k1my3ch4n-core/components';
 import styles from './Introduce.module.scss';
 import { MainPhoto } from '@images';
 

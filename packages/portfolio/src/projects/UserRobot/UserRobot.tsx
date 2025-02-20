@@ -1,4 +1,4 @@
-import { Bold, Text, Title, Header, Highlight, List, NumberList } from '@monorepo/core/components';
+import { Bold, Text, Title, Header, Highlight, List, NumberList } from 'k1my3ch4n-core/components';
 import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
 
 const UserRobot = () => {

@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Layout } from '@monorepo/core/components';
+import { Layout } from 'k1my3ch4n-core/components';
 
 const MainLayout = () => {
   return (
