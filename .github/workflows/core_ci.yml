@@ -48,7 +48,9 @@ jobs:
 
       - name: Publish to npm
         id: publish_npm
-        run: yarn publish
+        run: |
+          npm whoami
+          yarn publish
 
       - name: Upload Log File
         if: failure()
