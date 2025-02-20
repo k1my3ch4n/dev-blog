@@ -43,6 +43,7 @@ jobs:
       - name: Publish to npm
         id: publish_npm
         run: |
+          npm config get registry
           yarn publish
 
       - name: Upload Log File
