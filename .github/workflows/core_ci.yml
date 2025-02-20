@@ -32,6 +32,7 @@ jobs:
           echo "npmRegistries:" >> .yarnrc.yml
           echo "  \"https://registry.npmjs.org\":" >> .yarnrc.yml
           echo "    npmAuthToken: \"${{ secrets.NPM_AUTH_TOKEN }}\"" >> .yarnrc.yml
+          echo "    npmAlwaysAuth: true" >> .yarnrc.yml
 
       - name: Install dependency
         id: install_dependency
