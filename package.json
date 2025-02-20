@@ -8,7 +8,8 @@
   },
   "scripts": {
     "v1": "yarn workspace v1",
-    "core": "yarn workspace @monorepo/core",
+    "core": "yarn workspace k1my3ch4n-core",
+    "publish": "cd packages/core && npm publish",
     "blog": "yarn workspace blog",
     "server": "yarn workspace server",
     "portfolio": "yarn workspace portfolio",

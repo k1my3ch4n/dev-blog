@@ -1,7 +1,7 @@
 {
-  "name": "@monorepo/core",
+  "name": "k1my3ch4n-core",
   "composite": true,
-  "version": "0.0.0",
+  "version": "0.0.7",
   "type": "module",
   "scripts": {
     "dev": "vite",
