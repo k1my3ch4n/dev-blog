@@ -8,13 +8,12 @@ name: core_ci
 on:
   workflow_call:
 
-env:
-  NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
-
 jobs:
   integration:
     name: integration
     runs-on: ubuntu-latest
+    env:
+      NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
     steps:
       - name: Checkout
