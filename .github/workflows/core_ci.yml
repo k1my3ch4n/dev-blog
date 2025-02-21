@@ -27,12 +27,6 @@ jobs:
         with:
           node-version: '20'
           cache: yarn
-          registry-url: 'https://registry.npmjs.org/'
-
-      - name: Enable Corepack and prepare Yarn 4
-        run: |
-          corepack enable
-          corepack prepare yarn@4.4.1 --activate
 
       - name: Install dependency
         id: install_dependency
@@ -45,11 +39,6 @@ jobs:
         run: |
           yarn core build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
-
-      - name: Publish to npm
-        id: publish_npm
-        run: |
-          yarn core publish
 
       - name: Upload Log File
         if: failure()

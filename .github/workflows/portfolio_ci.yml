@@ -6,6 +6,9 @@ name: portfolio_ci
 on:
   workflow_call:
 
+env:
+  YARN_NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+
 jobs:
   integration:
     name: integration
@@ -27,12 +30,6 @@ jobs:
         id: install_dependency
         run: |
           yarn install --immutable 2> >(tee log_${{ github.run_id }}.txt) ; \
-          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
-
-      - name: Core Build
-        id: core_build
-        run: |
-          yarn core build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
       - name: Run Build
