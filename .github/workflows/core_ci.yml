@@ -49,7 +49,7 @@ jobs:
       - name: Publish to npm
         id: publish_npm
         run: |
-          YARN_NPM_AUTH_TOKEN="${{secrets.NPM_AUTH_TOKEN}}" yarn core publish
+          YARN_NPM_AUTH_TOKEN="${{secrets.NPM_AUTH_TOKEN}}" yarn core publish --registry "https://registry.npmjs.org"
 
       - name: Upload Log File
         if: failure()
