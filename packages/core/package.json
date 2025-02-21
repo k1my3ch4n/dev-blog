@@ -1,7 +1,7 @@
 {
   "name": "k1my3ch4n-core",
   "composite": true,
-  "version": "0.0.13",
+  "version": "0.0.17",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -58,7 +58,10 @@
   },
   "files": [
     "dist/*",
-    "src/**/*.scss"
+    "src/**/*.scss",
+    "index.d.ts",
+    "components.d.ts",
+    "hooks.d.ts"
   ],
   "eslintConfig": {
     "extends": [
