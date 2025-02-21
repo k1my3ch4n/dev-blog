@@ -20,10 +20,10 @@
     "esModuleInterop": true,
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "outDir": "dist"
   },
   "include": ["src"],
-  "exclude": ["dist"],
   "references": [
     {
       "path": "./tsconfig.node.json"

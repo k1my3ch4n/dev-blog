@@ -1,7 +1,7 @@
 {
   "name": "k1my3ch4n-core",
   "composite": true,
-  "version": "0.0.18",
+  "version": "0.0.20",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -58,7 +58,8 @@
   },
   "files": [
     "dist/*",
-    "package.json"
+    "package.json",
+    "vite.config.d.ts"
   ],
   "eslintConfig": {
     "extends": [
