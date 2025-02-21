@@ -43,13 +43,10 @@ jobs:
           yarn core build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
-      - name: Print .yarnrc.yml contents
-        run: cat .yarnrc.yml
-
       - name: Publish to npm
         id: publish_npm
         run: |
-          YARN_NPM_AUTH_TOKEN="${{secrets.NPM_AUTH_TOKEN}}" yarn core publish --registry "https://registry.npmjs.org"
+          YARN_NPM_AUTH_TOKEN="${{secrets.NPM_AUTH_TOKEN}}" yarn core publish
 
       - name: Upload Log File
         if: failure()
