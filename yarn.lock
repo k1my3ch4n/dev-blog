@@ -3367,7 +3367,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.16"
     globals: "npm:^15.14.0"
     graphql: "npm:^16.10.0"
-    k1my3ch4n-core: "npm:0.0.19"
+    k1my3ch4n-core: "npm:0.0.20"
     markdown-to-jsx: "npm:^7.7.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
@@ -5403,7 +5403,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"k1my3ch4n-core@npm:0.0.19, k1my3ch4n-core@workspace:packages/core":
+"k1my3ch4n-core@npm:0.0.20, k1my3ch4n-core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "k1my3ch4n-core@workspace:packages/core"
   dependencies:
@@ -6343,7 +6343,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^5.0.0"
     eslint-plugin-react-refresh: "npm:^0.4.14"
     globals: "npm:^15.11.0"
-    k1my3ch4n-core: "npm:0.0.19"
+    k1my3ch4n-core: "npm:0.0.20"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-router-dom: "npm:^7.0.2"
