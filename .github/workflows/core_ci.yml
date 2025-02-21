@@ -8,9 +8,6 @@ name: core_ci
 on:
   workflow_call:
 
-env:
-  NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
-
 jobs:
   integration:
     name: integration
@@ -31,7 +28,7 @@ jobs:
 
       - name: Configure Yarn authentication
         run: |
-          echo "npmRegistries:" > .yarnrc.yml
+          echo "npmRegistries:" >> .yarnrc.yml
           echo "  //registry.npmjs.org:" >> .yarnrc.yml
           echo "    npmAuthToken: \"${{ secrets.NPM_AUTH_TOKEN }}\"" >> .yarnrc.yml
 
@@ -51,8 +48,6 @@ jobs:
         id: publish_npm
         run: |
           yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: Upload Log File
         if: failure()
