@@ -29,6 +29,11 @@ jobs:
           cache: yarn
           registry-url: 'https://registry.npmjs.org/'
 
+      - name: Enable Corepack and prepare Yarn 4
+        run: |
+          corepack enable
+          corepack prepare yarn@4.4.1 --activate
+
       - name: Install dependency
         id: install_dependency
         run: |
