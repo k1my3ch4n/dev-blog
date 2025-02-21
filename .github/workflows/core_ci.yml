@@ -45,6 +45,8 @@ jobs:
         id: publish_npm
         run: |
           yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: Upload Log File
         if: failure()
