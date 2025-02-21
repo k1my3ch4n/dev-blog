@@ -31,12 +31,6 @@ jobs:
           corepack enable
           corepack prepare yarn@4.4.1 --activate
 
-      - name: Configure Yarn authentication
-        run: |
-          echo "npmRegistries:" >> .yarnrc.yml
-          echo "  //registry.npmjs.org:" >> .yarnrc.yml
-          echo "    npmAuthToken: \"${{ secrets.NPM_AUTH_TOKEN }}\"" >> .yarnrc.yml
-
       - name: Install dependency
         id: install_dependency
         run: |
@@ -55,7 +49,7 @@ jobs:
       - name: Publish to npm
         id: publish_npm
         run: |
-          yarn core publish
+          YARN_NPM_AUTH_TOKEN="${{secrets.NPM_AUTH_TOKEN}}" yarn core publish
 
       - name: Upload Log File
         if: failure()
