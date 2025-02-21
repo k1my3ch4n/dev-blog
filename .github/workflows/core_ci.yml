@@ -8,6 +8,9 @@ name: core_ci
 on:
   workflow_call:
 
+env:
+  YARN_NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+
 jobs:
   integration:
     name: integration
