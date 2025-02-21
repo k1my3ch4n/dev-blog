@@ -8,12 +8,13 @@ name: core_ci
 on:
   workflow_call:
 
+env:
+  NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+
 jobs:
   integration:
     name: integration
     runs-on: ubuntu-latest
-    env:
-      NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
     steps:
       - name: Checkout
@@ -39,11 +40,6 @@ jobs:
         run: |
           yarn core build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
-
-      - name: Check authentication
-        run: yarn npm whoami
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: Publish to npm
         id: publish_npm
