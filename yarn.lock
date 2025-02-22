@@ -5403,7 +5403,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"k1my3ch4n-core@npm:0.0.22, k1my3ch4n-core@workspace:packages/core":
+"k1my3ch4n-core@npm:0.0.22":
+  version: 0.0.22
+  resolution: "k1my3ch4n-core@npm:0.0.22"
+  dependencies:
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+  checksum: 10c0/63ded03a5f9ca7566534b44c98af0d137049ad02e824aa2abaabe363c13ca884db2c01a97cf30e1756425d195df7c3a01b69fac8a9503a0cd388676d73ea69b8
+  languageName: node
+  linkType: hard
+
+"k1my3ch4n-core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "k1my3ch4n-core@workspace:packages/core"
   dependencies:
