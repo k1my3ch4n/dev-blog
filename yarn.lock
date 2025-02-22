@@ -3367,7 +3367,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.16"
     globals: "npm:^15.14.0"
     graphql: "npm:^16.10.0"
-    k1my3ch4n-core: "npm:0.0.21"
+    k1my3ch4n-core: "npm:0.0.22"
     markdown-to-jsx: "npm:^7.7.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
@@ -5403,17 +5403,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"k1my3ch4n-core@npm:0.0.21":
-  version: 0.0.21
-  resolution: "k1my3ch4n-core@npm:0.0.21"
-  dependencies:
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
-  checksum: 10c0/b855f6ec66186bb296dc5b59bdf3660b80bda5115450ce4f9e2814dc30822f5307297db0f972d55297e4051cecde713228e694a0802f9e5b6e354a2a715070b2
-  languageName: node
-  linkType: hard
-
-"k1my3ch4n-core@workspace:packages/core":
+"k1my3ch4n-core@npm:0.0.22, k1my3ch4n-core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "k1my3ch4n-core@workspace:packages/core"
   dependencies:
@@ -6353,7 +6343,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^5.0.0"
     eslint-plugin-react-refresh: "npm:^0.4.14"
     globals: "npm:^15.11.0"
-    k1my3ch4n-core: "npm:0.0.21"
+    k1my3ch4n-core: "npm:0.0.22"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-router-dom: "npm:^7.0.2"
