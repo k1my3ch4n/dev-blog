@@ -1,5 +1,5 @@
 import styles from './Projects.module.scss';
-import { Divider, PageBox, Title } from '@monorepo/core/components';
+import { Divider, PageBox, Title } from 'k1my3ch4n-core/components';
 import { MainLogo } from '@images';
 
 const Projects = () => {

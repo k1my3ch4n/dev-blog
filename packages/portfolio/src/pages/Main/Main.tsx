@@ -1,6 +1,6 @@
 import styles from './Main.module.scss';
 
-import { Title, Header } from '@monorepo/core/components';
+import { Title, Header } from 'k1my3ch4n-core/components';
 
 import Skills from './Skills';
 import Profile from './Profile';

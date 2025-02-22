@@ -1,4 +1,4 @@
-import { Title } from '@monorepo/core/components';
+import { Title } from 'k1my3ch4n-core/components';
 import Introduce from './Introduce';
 import Projects from './Projects';
 import Blog from './Blog';

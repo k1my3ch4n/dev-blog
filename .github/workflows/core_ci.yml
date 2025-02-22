@@ -8,6 +8,9 @@ name: core_ci
 on:
   workflow_call:
 
+env:
+  YARN_NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+
 jobs:
   integration:
     name: integration
@@ -31,19 +34,11 @@ jobs:
           yarn install --immutable 2> >(tee log_${{ github.run_id }}.txt) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
 
-      #   - name: Set Environment File
-      #   - name: Run test
-      #   - name: Get failed test title
-
       - name: Run Build
         id: run_build
         run: |
           yarn core build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
-
-      # - name: Get failed test title
-      #   if: failure()
-      #   run: cat test_log | grep FAIL > log_${{ github.run_id }}.txt
 
       - name: Upload Log File
         if: failure()

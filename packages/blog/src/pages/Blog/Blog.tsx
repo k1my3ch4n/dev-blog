@@ -8,7 +8,7 @@ import {
   ImageBox,
   HomeButton,
   ScrollToTopButton,
-} from '@monorepo/core/components';
+} from 'k1my3ch4n-core/components';
 import { BLOG_THUMBNAIL } from '@constants/blog';
 import useGetPosts from '@apis/useGetPosts';
 

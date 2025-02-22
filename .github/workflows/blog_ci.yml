@@ -6,6 +6,9 @@ name: blog_ci
 on:
   workflow_call:
 
+env:
+  YARN_NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+
 jobs:
   integration:
     name: integration
@@ -33,13 +36,13 @@ jobs:
         id: core_build
         run: |
           yarn core build 2> >(tee test_log) ; \
-          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
+          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn core build failed." ; exit 1; }
 
       - name: Run Build
         id: run_build
         run: |
           yarn blog build 2> >(tee test_log) ; \
-          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn install failed." ; exit 1; }
+          test ${PIPESTATUS[0]} -eq 0 || { echo "yarn blog build failed." ; exit 1; }
 
       - name: Upload Log File
         if: failure()

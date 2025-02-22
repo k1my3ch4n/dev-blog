@@ -1,4 +1,4 @@
-import { Highlight } from '@monorepo/core/components';
+import { Highlight } from 'k1my3ch4n-core/components';
 
 import styles from './TableBody.module.scss';
 import TableCell from '@components/TableCell';

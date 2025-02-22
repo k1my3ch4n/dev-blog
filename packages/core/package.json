@@ -1,7 +1,7 @@
 {
-  "name": "@monorepo/core",
+  "name": "k1my3ch4n-core",
   "composite": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "publish": "yarn npm publish"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -57,11 +58,15 @@
   },
   "files": [
     "dist/*",
-    "src/**/*.scss"
+    "package.json",
+    "vite.config.d.ts"
   ],
   "eslintConfig": {
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

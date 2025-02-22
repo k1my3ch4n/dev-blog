@@ -4,7 +4,7 @@ import UserRobot from '@projects/UserRobot';
 import ManagerRobot from '@projects/ManagerRobot';
 
 import HomeButton from '@components/HomeButton';
-import { ScrollToTopButton } from '@monorepo/core/components';
+import { ScrollToTopButton } from 'k1my3ch4n-core/components';
 
 const PROJECT_MAP: { [key: string]: JSX.Element } = {
   managerRobot: <ManagerRobot />,
