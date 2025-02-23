@@ -1,5 +1,8 @@
 FROM node:20.11.0-alpine AS build
 
+ARG YARN_NPM_AUTH_TOKEN
+ENV YARN_NPM_AUTH_TOKEN=${YARN_NPM_AUTH_TOKEN}
+
 WORKDIR /app
 
 COPY ../../package.json ../../yarn.lock ../../.yarnrc.yml ./
