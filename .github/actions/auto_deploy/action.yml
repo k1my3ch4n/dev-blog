@@ -9,9 +9,8 @@ inputs:
     required: true
   gcp_service_account_key:
     required: true
-
-env:
-  YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+  npm_auth_token:
+    required: true
 
 runs:
   using: composite
@@ -38,7 +37,7 @@ runs:
         IMAGE_NAME="${{inputs.gcp_region}}-docker.pkg.dev/${{inputs.gcp_project_id}}/${{inputs.package}}/deploy"
 
         docker build \
-          --build-arg YARN_NPM_AUTH_TOKEN=${YARN_NPM_AUTH_TOKEN} \
+          --build-arg YARN_NPM_AUTH_TOKEN=${{inputs.npm_auth_token}} \
           -t $IMAGE_NAME:latest -f packages/${{inputs.package}}/Dockerfile .
           
         docker push $IMAGE_NAME:latest

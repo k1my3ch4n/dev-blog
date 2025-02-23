@@ -16,6 +16,7 @@ const Main = () => {
         <Profile />
         <Skills />
         <Projects />
+
         <Header>💫 About Me</Header>
       </div>
     </>
