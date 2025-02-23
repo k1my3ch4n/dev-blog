@@ -44,16 +44,6 @@ jobs:
           yarn blog build 2> >(tee test_log) ; \
           test ${PIPESTATUS[0]} -eq 0 || { echo "yarn blog build failed." ; exit 1; }
 
-      - name: Auto Deploy
-        id: auto_deploy
-        uses: ./.github/actions/auto_deploy
-        with:
-          package: 'blog'
-          gcp_region: ${{ secrets.GCP_REGION }}
-          gcp_project_id: ${{ secrets.GCP_PROJECT_ID }}
-          gcp_service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
-          npm_auth_token: ${{ secrets.NPM_AUTH_TOKEN }}
-
       - name: Upload Log File
         if: failure()
         uses: actions/upload-artifact@v4
