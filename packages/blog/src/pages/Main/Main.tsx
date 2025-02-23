@@ -12,7 +12,6 @@ const Main = () => {
       <Introduce />
       <Projects />
       <Blog />
-
       <Title title="ETC" />
     </>
   );
