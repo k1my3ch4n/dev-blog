@@ -6,8 +6,8 @@ const graphqlHandlers = [
       data: {
         posts: [
           {
-            id: 'id1',
-            postKey: 'postKey1',
+            id: 1,
+            postKey: 'msw-1',
             title: 'title1',
             tags: ['tag1', 'tag2'],
           },
