@@ -1,10 +1,11 @@
+/// <reference types="vitest" />
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import svgr from 'vite-plugin-svgr';
 import path from 'path';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -14,7 +15,11 @@ export default defineConfig({
       include: '**/*.svg',
     }),
   ],
-
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './vitest.setup.ts',
+  },
   resolve: {
     alias: {
       '@styles': path.resolve(__dirname, 'src/assets/styles'),
