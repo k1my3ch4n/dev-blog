@@ -1,8 +1,9 @@
-import { describe, test, expect } from 'vitest';
+import { describe, test, expect, vi } from 'vitest';
 import { PostData } from '@recoil/postsAtom';
-import { waitFor } from '@testing-library/react';
 import useGetPosts, { adapter } from './useGetPosts';
 import { renderTestHook } from '@utils/testUtil';
+import { graphqlMockError } from '@mock/server';
+import { waitFor } from '@testing-library/react';
 
 const renderUseGetPosts = () => {
   return renderTestHook({ hook: useGetPosts });
@@ -28,7 +29,30 @@ describe('useGetPosts 테스트', () => {
     test('postsData 를 반환한다.', async () => {
       const { result } = renderUseGetPosts();
 
+      expect(result.current.isLoading).toBe(true);
+    });
+
+    test('데이터를 받기전 isLoading 은 false , 받은 후 true 로 변경된다.', async () => {
+      const { result } = renderUseGetPosts();
+
+      expect(result.current.isLoading).toBe(true);
+
       await waitFor(() => expect(result.current.postsData).toEqual(adapter(MOCK_DATA)));
+
+      expect(result.current.isLoading).toBe(false);
+    });
+  });
+
+  describe('쿼리 요청 실패 시 ,', () => {
+    test('isError 가 정의된다. ', async () => {
+      graphqlMockError({
+        operationName: 'GetPosts',
+        operation: 'query',
+      });
+
+      const { result } = renderUseGetPosts();
+
+      await waitFor(() => expect(result.current.isError).toBeDefined());
     });
   });
 });

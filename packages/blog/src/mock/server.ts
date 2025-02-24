@@ -9,7 +9,6 @@ export const graphqlMock = ({
   operationName,
   data,
 }: {
-  status: number;
   operationName: string;
   data?: Record<string, unknown>;
   operation: 'query' | 'mutation';
@@ -17,6 +16,20 @@ export const graphqlMock = ({
   server.use(
     graphql[operation](operationName, () => {
       return HttpResponse.json(data);
+    }),
+  );
+};
+
+export const graphqlMockError = ({
+  operation,
+  operationName,
+}: {
+  operationName: string;
+  operation: 'query' | 'mutation';
+}) => {
+  server.use(
+    graphql[operation](operationName, () => {
+      return HttpResponse.json({ errors: [{ message: 'failed' }] });
     }),
   );
 };

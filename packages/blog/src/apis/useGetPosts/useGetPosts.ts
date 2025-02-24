@@ -1,7 +1,8 @@
 import { useQuery } from '@apollo/client';
 import { GET_POSTS } from '@graphql/post';
 import postsAtom, { PostData } from '@recoil/postsAtom';
-import { useRecoilState } from 'recoil';
+import { useEffect, useMemo } from 'react';
+import { useResetRecoilState, useSetRecoilState } from 'recoil';
 
 interface PostsResponseData {
   posts: PostData[];
@@ -16,20 +17,36 @@ export const adapter = (data?: PostsResponseData) => {
 };
 
 const useGetPosts = () => {
-  const [postsData, setPostsData] = useRecoilState<PostData[]>(postsAtom);
+  const setPostsData = useSetRecoilState(postsAtom);
+  const resetPostsData = useResetRecoilState(postsAtom);
 
-  console.log(postsData);
-
-  const { loading: isLoading, error: isError } = useQuery<PostsResponseData>(GET_POSTS, {
-    onCompleted: (data) => setPostsData(adapter(data)),
+  const {
+    data,
+    loading: isLoading,
+    error,
+  } = useQuery<PostsResponseData>(GET_POSTS, {
     onError: (error) => {
-      console.log(error);
+      console.error(error);
     },
   });
 
+  const postsData = useMemo(() => adapter(data), [data]);
+
+  useEffect(() => {
+    if (postsData) {
+      setPostsData(postsData);
+    }
+  }, [postsData, setPostsData]);
+
+  useEffect(() => {
+    return () => {
+      resetPostsData();
+    };
+  }, [resetPostsData]);
+
   return {
     isLoading,
-    isError,
+    isError: !!error,
     postsData,
   };
 };
