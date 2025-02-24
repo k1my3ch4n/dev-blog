@@ -1,13 +1,9 @@
 import { useQuery } from '@apollo/client';
 import { GET_POST_WITH_KEY } from '@graphql/post';
-import { PostData } from '@recoil/postsAtom';
+import { PostWithKeyResponseData, PostData } from '@fixtures/posts';
 import { useState } from 'react';
 
-interface PostResponseData {
-  post: PostData;
-}
-
-export const adapter = (data?: PostResponseData) => {
+export const adapter = (data?: PostWithKeyResponseData) => {
   if (!data) {
     return;
   }
@@ -18,7 +14,7 @@ export const adapter = (data?: PostResponseData) => {
 const useGetPostWithKey = (postKey?: string) => {
   const [postData, setPostData] = useState<PostData | undefined>(undefined);
 
-  const { loading: isLoading, error } = useQuery<PostResponseData>(GET_POST_WITH_KEY, {
+  const { loading: isLoading, error } = useQuery<PostWithKeyResponseData>(GET_POST_WITH_KEY, {
     variables: { postKey },
     onCompleted: (data) => setPostData(adapter(data)),
     onError: (error) => {

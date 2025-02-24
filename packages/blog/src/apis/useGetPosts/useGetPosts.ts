@@ -1,12 +1,9 @@
 import { useQuery } from '@apollo/client';
 import { GET_POSTS } from '@graphql/post';
-import postsAtom, { PostData } from '@recoil/postsAtom';
+import postsAtom from '@recoil/postsAtom';
+import { PostsResponseData } from '@fixtures/posts';
 import { useEffect, useMemo } from 'react';
 import { useResetRecoilState, useSetRecoilState } from 'recoil';
-
-interface PostsResponseData {
-  posts: PostData[];
-}
 
 export const adapter = (data?: PostsResponseData) => {
   if (!data) {

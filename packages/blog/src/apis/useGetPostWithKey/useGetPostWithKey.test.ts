@@ -3,19 +3,10 @@ import useGetPostWithKey, { adapter } from './useGetPostWithKey';
 import { describe, expect, test } from 'vitest';
 import { waitFor } from '@testing-library/react';
 import { graphqlMockError } from '@mock/server';
+import { MOCK_GET_POST_WITH_KEY_RESPONSE } from '@fixtures/posts';
 
 const renderUseGetPostWithKey = (postKey?: string) => {
   return renderTestHook({ hook: () => useGetPostWithKey(postKey) });
-};
-
-// todo : Mock data 정라
-const MOCK_DATA = {
-  post: {
-    id: 1,
-    postKey: 'msw-1',
-    title: 'title1',
-    tags: ['tag1', 'tag2'],
-  },
 };
 
 describe('useGetPostWithKey 테스트', () => {
@@ -25,7 +16,9 @@ describe('useGetPostWithKey 테스트', () => {
 
       expect(result.current.isLoading).toBe(true);
 
-      await waitFor(() => expect(result.current.postData).toEqual(adapter(MOCK_DATA)));
+      await waitFor(() =>
+        expect(result.current.postData).toEqual(adapter(MOCK_GET_POST_WITH_KEY_RESPONSE)),
+      );
 
       expect(result.current.isLoading).toBe(false);
     });

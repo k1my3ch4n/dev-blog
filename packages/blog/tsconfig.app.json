@@ -33,6 +33,7 @@
       "@graphql/*": ["./src/graphql/*"],
       "@pages/*": ["./src/pages/*"],
       "@mock/*": ["./src/mock/*"],
+      "@fixtures/*": ["./src/fixtures/*"],
       "@recoil/*": ["./src/recoil/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@utils/*": ["./src/utils/*"]
