@@ -7,7 +7,7 @@ interface PostsResponseData {
   posts: PostData[];
 }
 
-const adapter = (data?: PostsResponseData) => {
+export const adapter = (data?: PostsResponseData) => {
   if (!data) {
     return [];
   }

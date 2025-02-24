@@ -1,7 +1,7 @@
 import { atom } from 'recoil';
 
 export interface PostData {
-  id: string;
+  id: number;
   postKey: string;
   title: string;
   tags: string[];
