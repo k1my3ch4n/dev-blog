@@ -30,12 +30,6 @@ describe('useGetPosts 테스트', () => {
       const { result } = renderUseGetPosts();
 
       expect(result.current.isLoading).toBe(true);
-    });
-
-    test('데이터를 받기전 isLoading 은 false , 받은 후 true 로 변경된다.', async () => {
-      const { result } = renderUseGetPosts();
-
-      expect(result.current.isLoading).toBe(true);
 
       await waitFor(() => expect(result.current.postsData).toEqual(adapter(MOCK_DATA)));
 

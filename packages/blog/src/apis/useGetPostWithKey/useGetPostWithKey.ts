@@ -7,7 +7,7 @@ interface PostResponseData {
   post: PostData;
 }
 
-const adapter = (data?: PostResponseData) => {
+export const adapter = (data?: PostResponseData) => {
   if (!data) {
     return;
   }
@@ -18,7 +18,7 @@ const adapter = (data?: PostResponseData) => {
 const useGetPostWithKey = (postKey?: string) => {
   const [postData, setPostData] = useState<PostData | undefined>(undefined);
 
-  const { loading: isLoading, error: isError } = useQuery<PostResponseData>(GET_POST_WITH_KEY, {
+  const { loading: isLoading, error } = useQuery<PostResponseData>(GET_POST_WITH_KEY, {
     variables: { postKey },
     onCompleted: (data) => setPostData(adapter(data)),
     onError: (error) => {
@@ -28,7 +28,7 @@ const useGetPostWithKey = (postKey?: string) => {
 
   return {
     isLoading,
-    isError,
+    isError: !!error,
     postData,
   };
 };
