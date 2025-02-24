@@ -1,37 +1,8 @@
 import { describe, test, expect } from 'vitest';
-import { PostData } from '@src/recoil/postsAtom';
+import { PostData } from '@recoil/postsAtom';
+import { waitFor } from '@testing-library/react';
 import useGetPosts, { adapter } from './useGetPosts';
-import { renderHook, waitFor } from '@testing-library/react';
-import { MutableSnapshot, RecoilRoot, RecoilValue, Snapshot } from 'recoil';
-import { ApolloProvider } from '@apollo/client';
-import { ReactNode } from 'react';
-import client from '@clients/client.ts';
-
-type SnapshotRef = {
-  current?: {
-    snapshot: Snapshot;
-    get: (state: RecoilValue<any>) => any;
-  };
-};
-
-const renderTestHook = <T,>({
-  hook,
-  initializeRecoilState,
-}: {
-  hook: (props: any) => T;
-  snapshotRef?: SnapshotRef;
-  initializeRecoilState?: (mutableSnapshot: MutableSnapshot) => void;
-}) => {
-  const wrapper = ({ children }: { children: ReactNode }) => {
-    return (
-      <RecoilRoot initializeState={initializeRecoilState}>
-        <ApolloProvider client={client}>{children}</ApolloProvider>
-      </RecoilRoot>
-    );
-  };
-
-  return renderHook(hook, { wrapper });
-};
+import { renderTestHook } from '@utils/testUtil';
 
 const renderUseGetPosts = () => {
   return renderTestHook({ hook: useGetPosts });
