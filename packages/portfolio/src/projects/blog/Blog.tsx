@@ -1,4 +1,4 @@
-import { Bold, Header, Highlight, List, Text, Title } from '@monorepo/core/components';
+import { Bold, Header, Highlight, List, Text, Title } from 'k1my3ch4n-core/components';
 import { MainLogo } from '@images';
 
 const Blog = () => {
