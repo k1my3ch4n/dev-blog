@@ -1,6 +1,6 @@
 import styles from './Main.module.scss';
 
-import { Title, Header, Divider } from 'k1my3ch4n-core/components';
+import { Title } from 'k1my3ch4n-core/components';
 
 import Skills from './Skills';
 import Profile from './Profile';
