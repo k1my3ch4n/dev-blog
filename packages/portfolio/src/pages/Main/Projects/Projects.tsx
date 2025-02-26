@@ -3,7 +3,7 @@ import styles from './Projects.module.scss';
 
 import { Divider, Header, PageBox } from 'k1my3ch4n-core/components';
 
-import { TwinnyLogo, MainLogo } from '@images';
+import { TwinnyLogo, MainLogo, Github } from '@images';
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -43,6 +43,25 @@ const Projects = () => {
           Thumbnail={MainLogo}
           title="📖 Monorepo로 블로그 및 포트폴리오 페이지 생성"
           onClick={() => handleClick('blog')}
+          width="400px"
+          height="300px"
+        />
+      </div>
+
+      <Header>💫 About Me</Header>
+      <Divider />
+      <div className={styles.boxWrapper}>
+        <PageBox
+          Thumbnail={Github}
+          title="Github"
+          onClick={() => handleClick('')}
+          width="400px"
+          height="300px"
+        />
+        <PageBox
+          Thumbnail={MainLogo}
+          title="Blog"
+          onClick={() => handleClick('')}
           width="400px"
           height="300px"
         />
