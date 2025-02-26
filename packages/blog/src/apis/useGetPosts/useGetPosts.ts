@@ -14,8 +14,6 @@ export const adapter = (data?: PostsResponseData) => {
 };
 
 const useGetPosts = () => {
-  console.log('connected!');
-
   const setPostsData = useSetRecoilState(postsAtom);
   const resetPostsData = useResetRecoilState(postsAtom);
 
@@ -32,15 +30,8 @@ const useGetPosts = () => {
 
   const postsData = useMemo(() => adapter(data), [data]);
 
-  console.log('postsData : ', postsData);
-
   useEffect(() => {
-    console.log('loading:', isLoading);
-    console.log('error:', error);
-    console.log('data:', data);
-
     if (postsData) {
-      console.log('useEffect!');
       setPostsData(postsData);
     }
   }, [postsData, setPostsData]);
