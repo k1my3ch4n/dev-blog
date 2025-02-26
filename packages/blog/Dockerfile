@@ -3,6 +3,9 @@ FROM node:20.11.0-alpine AS build
 ARG YARN_NPM_AUTH_TOKEN
 ENV YARN_NPM_AUTH_TOKEN=${YARN_NPM_AUTH_TOKEN}
 
+ARG VITE_SERVER_URI
+ENV VITE_SERVER_URI=$VITE_SERVER_URI
+
 WORKDIR /app
 
 COPY ../../package.json ../../yarn.lock ../../.yarnrc.yml ./
