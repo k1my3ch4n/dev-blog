@@ -24,10 +24,15 @@ const useGetPosts = () => {
     loading: isLoading,
     error,
   } = useQuery<PostsResponseData>(GET_POSTS, {
+    fetchPolicy: 'network-only',
     onError: (error) => {
       console.error(error);
     },
   });
+
+  console.log('loading:', isLoading);
+  console.log('error:', error);
+  console.log('data:', data);
 
   const postsData = useMemo(() => adapter(data), [data]);
 
