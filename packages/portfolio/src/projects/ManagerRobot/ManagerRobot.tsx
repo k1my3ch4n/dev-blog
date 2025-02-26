@@ -1,5 +1,5 @@
 import { Bold, Link, Text, Title, Header, Highlight, List } from 'k1my3ch4n-core/components';
-import { ReactComponent as TwinnyLogo } from '@images/twinnyLogo.svg';
+import { TwinnyLogo } from '@images';
 
 const ManagerRobot = () => {
   return (
