@@ -11,6 +11,8 @@ inputs:
     required: true
   npm_auth_token:
     required: true
+  server_uri:
+    required: true
 
 runs:
   using: composite
@@ -38,7 +40,7 @@ runs:
 
         docker build \
           --build-arg YARN_NPM_AUTH_TOKEN=${{inputs.npm_auth_token}} \
-          --build-arg VITE_SERVER_URI=${{ env.VITE_SERVER_URI }} \
+          --build-arg VITE_SERVER_URI=${{ inputs.server_uri }} \
           -t $IMAGE_NAME:latest -f packages/${{inputs.package}}/Dockerfile .
           
         docker push $IMAGE_NAME:latest
