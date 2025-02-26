@@ -55,6 +55,7 @@ jobs:
           gcp_project_id: ${{ secrets.GCP_PROJECT_ID }}
           gcp_service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
           npm_auth_token: ${{ secrets.NPM_AUTH_TOKEN }}
+          server_uri: ${{ secrets.VITE_SERVER_URI }}
 
       - name: Upload Log File
         if: failure()
