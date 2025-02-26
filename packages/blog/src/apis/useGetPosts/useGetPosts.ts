@@ -30,15 +30,15 @@ const useGetPosts = () => {
     },
   });
 
-  console.log('loading:', isLoading);
-  console.log('error:', error);
-  console.log('data:', data);
-
   const postsData = useMemo(() => adapter(data), [data]);
 
   console.log('postsData : ', postsData);
 
   useEffect(() => {
+    console.log('loading:', isLoading);
+    console.log('error:', error);
+    console.log('data:', data);
+
     if (postsData) {
       console.log('useEffect!');
       setPostsData(postsData);

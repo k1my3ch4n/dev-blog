@@ -5,4 +5,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+console.log('uri : ', import.meta.env.VITE_SERVER_URI);
+
 export default client;
