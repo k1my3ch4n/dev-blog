@@ -5,8 +5,6 @@ import Extra from './Extra';
 import useGetPosts from '@apis/useGetPosts';
 
 const Main = () => {
-  console.log('main');
-
   useGetPosts();
 
   return (
