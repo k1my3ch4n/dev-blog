@@ -1,6 +1,6 @@
 import styles from './Main.module.scss';
 
-import { Title, Header } from 'k1my3ch4n-core/components';
+import { Title } from 'k1my3ch4n-core/components';
 
 import Skills from './Skills';
 import Profile from './Profile';
@@ -16,8 +16,6 @@ const Main = () => {
         <Profile />
         <Skills />
         <Projects />
-
-        <Header>💫 About Me</Header>
       </div>
     </>
   );

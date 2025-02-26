@@ -3,7 +3,10 @@ import styles from './Projects.module.scss';
 
 import { Divider, Header, PageBox } from 'k1my3ch4n-core/components';
 
-import { TwinnyLogo, MainLogo } from '@images';
+import { TwinnyLogo, MainLogo, Github } from '@images';
+
+const GITHUB_LINK = 'https://github.com/k1my3ch4n';
+const BLOG_LINK = 'https://monorepo-blog-384003056882.asia-northeast3.run.app/';
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -13,7 +16,9 @@ const Projects = () => {
     window.scrollTo(0, 0);
   };
 
-  // todo : 분리해야 하나 ? 고민
+  const handleLinkClick = (link: string) => {
+    window.open(link, '_blank');
+  };
 
   return (
     <>
@@ -43,6 +48,25 @@ const Projects = () => {
           Thumbnail={MainLogo}
           title="📖 Monorepo로 블로그 및 포트폴리오 페이지 생성"
           onClick={() => handleClick('blog')}
+          width="400px"
+          height="300px"
+        />
+      </div>
+
+      <Header>💫 About Me</Header>
+      <Divider />
+      <div className={styles.boxWrapper}>
+        <PageBox
+          Thumbnail={Github}
+          title="Github"
+          onClick={() => handleLinkClick(GITHUB_LINK)}
+          width="400px"
+          height="300px"
+        />
+        <PageBox
+          Thumbnail={MainLogo}
+          title="Blog"
+          onClick={() => handleLinkClick(BLOG_LINK)}
           width="400px"
           height="300px"
         />
