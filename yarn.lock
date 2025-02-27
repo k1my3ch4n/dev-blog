@@ -3698,6 +3698,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.16"
     globals: "npm:^15.14.0"
     graphql: "npm:^16.10.0"
+    highlight.js: "npm:^11.11.1"
     jsdom: "npm:^26.0.0"
     k1my3ch4n-core: "workspace:^"
     markdown-to-jsx: "npm:^7.7.2"
@@ -5436,6 +5437,13 @@ __metadata:
   version: 4.0.3
   resolution: "headers-polyfill@npm:4.0.3"
   checksum: 10c0/53e85b2c6385f8d411945fb890c5369f1469ce8aa32a6e8d28196df38568148de640c81cf88cbc7c67767103dd9acba48f4f891982da63178fc6e34560022afe
+  languageName: node
+  linkType: hard
+
+"highlight.js@npm:^11.11.1":
+  version: 11.11.1
+  resolution: "highlight.js@npm:11.11.1"
+  checksum: 10c0/40f53ac19dac079891fcefd5bd8a21cf2e8931fd47da5bd1dca73b7e4375c1defed0636fc39120c639b9c44119b7d110f7f0c15aa899557a5a1c8910f3c0144c
   languageName: node
   linkType: hard
 
