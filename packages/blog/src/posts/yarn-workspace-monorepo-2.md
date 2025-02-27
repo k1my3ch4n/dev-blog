@@ -103,5 +103,4 @@ yarn add -D eslint
 monorepo에서 prettier 나 eslint의 경우 , 프로젝트마다 설정하지 않고 한번에 설정할 수 있어서 큰 장점이 되는 것 같다. 다음편에서는 공통의 component , hook 을 설정하는 경우를 작성해보려고 한다.
 
 잘못된 부분이 있으면 알려주시면 감사드리겠습니다.
-위 작업이 있는 repo 는 아래 링크를 확인해주세요 !
-https://github.com/k1my3ch4n/Vite-monorepo
+위 작업이 있는 repo 는 [여기](https://github.com/k1my3ch4n/Vite-monorepo)를 확인해주세요 !

@@ -111,5 +111,4 @@ yarn {package_name} version {patch | minor | major}
 npm publish 를 사용하지 못하고 다른 방법을 찾던 와중에 그 대체안으로 `github` 에서 제공하는 `github package publish` 를 사용하게 되었다. 아마 다음 글로 작성이 될 것 같은데 , github에서 일정 공간 private 하게 배포 지원을 해준다. 때문에 돈을 내지 않고도 private 한 배포가 되어서 유용하게 사용 가능하다.
 
 잘못된 부분, 추가해야 하는 부분이 있다면 말씀해주시면 감사드리겠습니다 .
-해당 repo는 아래에서 확인 가능합니다 .
-https://github.com/k1my3ch4n/Vite-monorepo
+해당 repo는 [여기](https://github.com/k1my3ch4n/Vite-monorepo)에서 확인 가능합니다 .
