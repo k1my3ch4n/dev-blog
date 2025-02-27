@@ -55,7 +55,6 @@ package 배포를 위해서 `package.json` 을 아래와 같이 수정합니다.
 배포를 위해서 `.yarnrc` 파일도 수정해줘야 합니다.
 
 ```yml
-
 ---
 npmRegistries:
   'https://npm.pkg.github.com':
@@ -133,5 +132,4 @@ github package 배포의 장점은
 저는 monorepo로 배포하기 위해서 package 를 사용했지만 , 다시 생각해보면 굳이 monorepo 를 사용해야 했나 ? 라는 생각이 듭니다. 오히려 package 배포를 위한 repo 를 만들었다면 monorepo 의 어려운 세팅을 적용하지 않아도 되어서 더 편리할 것 같습니다. 만약 다음에 작업을 하게 된다면 분리해서 작업할 것 같네요.
 
 잘못된 부분, 추가해야 하는 부분이 있다면 말씀해주시면 감사드리겠습니다 .
-해당 repo는 아래에서 확인 가능합니다 .
-https://github.com/k1my3ch4n/Vite-monorepo
+해당 repo는 [여기](https://github.com/k1my3ch4n/Vite-monorepo)에서 확인 가능합니다 .

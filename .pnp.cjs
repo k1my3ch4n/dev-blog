@@ -5174,6 +5174,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-refresh", "virtual:bb450255a815aa7dccf883bad092308804e47385772e6bf49e498668f5cfa04ce936d2e3c664ae1d62ef0c9cb8c0c2c6ddef0f117170df8942337c2ee1761700#npm:0.4.19"],\
           ["globals", "npm:15.15.0"],\
           ["graphql", "npm:16.10.0"],\
+          ["highlight.js", "npm:11.11.1"],\
           ["jsdom", "virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:26.0.0"],\
           ["k1my3ch4n-core", "workspace:packages/core"],\
           ["markdown-to-jsx", "virtual:e39e6f7b80c364d2b2d86942b9327a194dd32b9253b61b3dbefb372e9915b448e98b6642dbbb6a6c40e0ebce5446bf3cdd4c0f2af9ab2089fc965bf16febee78#npm:7.7.4"],\
@@ -7128,6 +7129,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/headers-polyfill-npm-4.0.3-65ca63b329-10c0.zip/node_modules/headers-polyfill/",\
         "packageDependencies": [\
           ["headers-polyfill", "npm:4.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["highlight.js", [\
+      ["npm:11.11.1", {\
+        "packageLocation": "../../Users/예찬/AppData/Local/Yarn/Berry/cache/highlight.js-npm-11.11.1-1afef66f5e-10c0.zip/node_modules/highlight.js/",\
+        "packageDependencies": [\
+          ["highlight.js", "npm:11.11.1"]\
         ],\
         "linkType": "HARD"\
       }]\

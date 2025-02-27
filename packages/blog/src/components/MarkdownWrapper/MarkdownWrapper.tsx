@@ -1,18 +1,21 @@
 import styles from './MarkdownWrapper.module.scss';
 import MarkdownToJSX from 'markdown-to-jsx';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/lightfair.css';
 
 const MarkdownWrapper = ({ markdown }: { markdown: string }) => {
   const PreComponent = ({ ...props }: React.HTMLAttributes<HTMLElement>) => {
     return <pre className={styles.pre}>{props.children}</pre>;
   };
 
-  const CodeComponent = ({ ...props }: React.HTMLAttributes<HTMLElement>) => {
-    const preLanguage = props.className?.slice(5);
+  const CodeComponent = ({ className, children }: { className?: string; children: string }) => {
+    const preLanguage = className ? className.replace('lang-', '') : 'plaintext'; // 언어 감지
+    const highlightedCode = hljs.highlight(children, { language: preLanguage }).value;
 
     return (
       <>
-        {preLanguage && <p className={styles.preLanguage}>{preLanguage}</p>}
-        <code className={`${styles.pre} ${props.className}`}>{props.children}</code>
+        {preLanguage !== 'plaintext' && <p className={styles.preLanguage}>{preLanguage}</p>}
+        <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
       </>
     );
   };

@@ -150,5 +150,4 @@ import './hooks.d.ts';
 추가로 , 이전 경험으로 위 방법을 최종적으로 사용하지는 않았는데 , 그 이유는 common 에서 수정이 일어나면 , 모든 프로젝트에 영향을 주기 때문입니다. common 에서 수정이 일어나면 다른 곳에서 버전에 따라서 각각 다르게 사용하고 싶었기 때문에 , 다음 게시글에서는 해당 common 을 publish 해 두고 , 버전에 맞춰서 사용하는 두가지 방법을 작성해 보려고 합니다.
 
 잘못된 부분, 추가해야 하는 부분이 있다면 말씀해주시면 감사드리겠습니다 .
-해당 repo는 아래에서 확인 가능합니다 .
-https://github.com/k1my3ch4n/Vite-monorepo
+해당 repo는 [여기](https://github.com/k1my3ch4n/Vite-monorepo)에서 확인 가능합니다 .

@@ -1,6 +1,6 @@
 .wrapper {
   width: 100%;
-  padding: 40px 20px;
+  padding: 40px 0;
   @include font($size: 20px);
   line-height: 1.5;
 
@@ -19,9 +19,10 @@
   }
 
   img {
+    display: block;
+
     max-width: 100%;
-    margin: 20px;
-    border: 1px solid black;
+    margin: 20px auto;
   }
 
   a {
@@ -33,24 +34,25 @@
     margin: 10px;
   }
 
-  // todo : code 수정
   code {
     @include font($weight: 600);
     padding: 4px;
-    background-color: lightgray;
+    color: #eb5757;
+    background-color: rgba(135, 131, 120, 0.15);
     border-radius: 4px;
   }
 
   pre {
     margin: 10px;
     padding: 10px;
-    background-color: lightgray;
+    background-color: rgba(135, 131, 120, 0.15);
     position: relative;
     overflow-x: auto;
     border-radius: 8px;
 
     code {
-      background-color: lightgray;
+      color: inherit;
+      background-color: transparent;
     }
 
     .preLanguage {

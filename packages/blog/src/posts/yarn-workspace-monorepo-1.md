@@ -156,5 +156,4 @@ yarn p2 dev		# project2 실행
 기본 설정의 경우 크게 어려움이 없었지만 , 이후 라이브러리 설치 등의 과정에서 여러 오류가 있었던 기억이 있다. 이후 2편에서는 prettier , eslint 등 개발을 시작하기 전에 설정해야 하는 것들을 작성하려고 한다.
 
 잘못된 부분이 있으면 알려주시면 감사드리겠습니다.
-위 작업이 있는 repo 는 아래 링크를 확인해주세요 !
-https://github.com/k1my3ch4n/Vite-monorepo
+위 작업이 있는 repo 는 [여기](https://github.com/k1my3ch4n/Vite-monorepo)를 확인해주세요 !

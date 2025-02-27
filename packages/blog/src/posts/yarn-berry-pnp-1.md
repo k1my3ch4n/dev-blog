@@ -104,5 +104,4 @@ select typescript version 입력
 `yarn berry` 의 가장 큰 장점은 `yarn install` `yarn build` 시 굉장한 시간 단축이 된다는 점입니다. 사실 프로젝트가 커지면 커질수록 점점 더 오래 걸리기 마련인데 , 그 시간들을 단축해 준다는건 생산성과도 연결되는 부분이라 더 와닿았던 것 같습니다.
 
 - 잘못된 부분, 추가해야하는 부분이 있다면 알려주시면 감사하겠습니다 !
-- 해당 작업은 아래 링크에서 확인 가능합니다.
-  - https://github.com/k1my3ch4n/yarn-berry
+- 해당 작업은 [여기](https://github.com/k1my3ch4n/yarn-berry)에서 확인 가능합니다.
