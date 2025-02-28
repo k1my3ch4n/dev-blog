@@ -36,7 +36,7 @@ runs:
     - name: Docker Build and Push Image
       id: docker_build_and_push_image
       run: |
-        IMAGE_NAME="${{inputs.gcp_region}}-docker.pkg.dev/${{inputs.gcp_project_id}}/${{inputs.package}}/deploy"
+        IMAGE_NAME="${{inputs.gcp_region}}-docker.pkg.dev/${{inputs.gcp_project_id}}/monorepo-${{inputs.package}}/deploy"
 
         docker build \
           --build-arg YARN_NPM_AUTH_TOKEN=${{inputs.npm_auth_token}} \
@@ -49,8 +49,8 @@ runs:
     - name: Deploy to Cloud Run
       id: deploy_to_cloud_run
       run: |
-        gcloud run deploy monorepo-${{inputs.package}} \
-          --image=${{inputs.gcp_region}}-docker.pkg.dev/${{inputs.gcp_project_id}}/${{inputs.package}}/deploy:latest \
+        gcloud run deploy ${{inputs.package}} \
+          --image=${{inputs.gcp_region}}-docker.pkg.dev/${{inputs.gcp_project_id}}/monorepo-${{inputs.package}}/deploy:latest \
           --region=${{inputs.gcp_region}} \
           --platform=managed \
           --allow-unauthenticated
