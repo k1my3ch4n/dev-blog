@@ -2,7 +2,9 @@
 
 <div align="center">
 
-<img src='https://img.shields.io/badge/monorepo-core-skyblue?style=for-the-badge&labelColor=4C566A'>
+<a href='https://www.npmjs.com/package/k1my3ch4n-core' target="_blank">
+   <img src='https://img.shields.io/badge/core-npm-skyblue?style=for-the-badge&labelColor=4C566A'>
+</a>
 
 </div>
 
@@ -23,6 +25,21 @@ Monorepo 의 core 패키지 입니다. Blog 패키지와 Portfolio 패키지에�
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="rainbow" />
 
+## 🔶 Technology Stack
+
+- [Typescript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- [Vite](https://ko.vitejs.dev/guide/)
+- [Github action](https://github.com/features/actions)
+- [Google Cloud Platform](https://cloud.google.com/?hl=ko)
+- [Docker](https://www.docker.com/)
+- [Sass](https://sass-lang.com/)
+- [Storybook](https://storybook.js.org/)
+- [NPM](https://www.npmjs.com/)
+<!-- - [Mock Service Worker](https://mswjs.io/) -->
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="rainbow" />
+
 ## 🌵 Folder Structure
 
 ```sh
@@ -39,3 +56,5 @@ core
 ├── tsconfig.node.json
 └── vite.config.ts
 ```
+
+## 📙 Versioning
