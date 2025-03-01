@@ -20,8 +20,20 @@
 
 <br>
 
+<a href='https://www.npmjs.com/package/k1my3ch4n-core' target="_blank">
+   <img src='https://img.shields.io/badge/core-npm-skyblue?style=for-the-badge&labelColor=4C566A'>
+</a>
 <a href='https://github.com/k1my3ch4n/dev-blog/blob/main/packages/core/README.md' target="_blank">
     <img src='https://img.shields.io/badge/core-readme-633DE5?style=for-the-badge&labelColor=4C566A'>
+</a>
+
+<br>
+
+<a href='https://server-384003056882.asia-northeast1.run.app/graphql' target="_blank">
+   <img src='https://img.shields.io/badge/server-site-skyblue?style=for-the-badge&labelColor=4C566A'>
+</a>
+<a href='https://github.com/k1my3ch4n/dev-blog-server/blob/main/README.md' target="_blank">
+    <img src='https://img.shields.io/badge/server-readme-633DE5?style=for-the-badge&labelColor=4C566A'>
 </a>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="rainbow" />
