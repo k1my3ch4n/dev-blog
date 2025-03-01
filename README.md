@@ -53,6 +53,8 @@ Monorepo 를 사용해서 블로그와 포트폴리오를 구현하는 프로젝
    yarn --version
    ```
 
+추가로 블로그 패키지에서 사용하는 서버는 모노레포 외부에 존재합니다. [참고](https://github.com/k1my3ch4n/dev-blog-server/blob/main/README)
+
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="rainbow" />
 
 ## 🔶 Technology Stack
@@ -67,12 +69,11 @@ Monorepo 를 사용해서 블로그와 포트폴리오를 구현하는 프로젝
 - [Docker](https://www.docker.com/)
 - [Sass](https://sass-lang.com/)
 - [Storybook](https://storybook.js.org/)
-<!-- - [GraphQL](https://graphql.org/)
+- [GraphQL](https://graphql.org/)
 - [Apollo Client](https://www.apollographql.com/docs/react/)
 - [Recoil](https://recoiljs.org/)
-- [Jest](https://jestjs.io/) -->
-
-<!-- [폰트 - paperlogy 체](https://noonnu.cc/font_page/1456) -->
+- [Vitest](https://vitest.dev/)
+- [Mock Service Worker](https://mswjs.io/)
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="rainbow" />
 
@@ -94,12 +95,19 @@ packages
 │   └── vite.config.ts
 ├── blog
 │   ├── src
+│   │   ├── apis
 │   │   ├── assets
+│   │   ├── clients
 │   │   ├── components
 │   │   ├── constants
+│   │   ├── fixtures
+│   │   ├── graphql
 │   │   ├── hooks
+│   │   ├── mock
 │   │   ├── pages
 │   │   ├── posts
+│   │   ├── recoil
+│   │   ├── utils
 │   │   ├── App.tsx
 │   │   ├── index.tsx
 │   │   ├── router.tsx
