@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<a href='https://monorepo-blog-384003056882.asia-northeast3.run.app/' target="_blank">
+<a href='https://blog-384003056882.asia-northeast3.run.app/' target="_blank">
    <img src='https://img.shields.io/badge/blog-site-skyblue?style=for-the-badge&labelColor=4C566A'>
 </a>
 <a href='https://github.com/k1my3ch4n/dev-blog/blob/main/packages/blog/README.md' target="_blank">
@@ -11,7 +11,7 @@
 
 <br>
 
-<a href='https://monorepo-portfolio-384003056882.asia-northeast3.run.app/' target="_blank">
+<a href='https://portfolio-384003056882.asia-northeast3.run.app/' target="_blank">
    <img src='https://img.shields.io/badge/portfolio-site-skyblue?style=for-the-badge&labelColor=4C566A'>
 </a>
 <a href='https://github.com/k1my3ch4n/dev-blog/blob/main/packages/portfolio/README.md' target="_blank">
