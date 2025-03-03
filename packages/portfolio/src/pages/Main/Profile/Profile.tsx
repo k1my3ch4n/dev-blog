@@ -1,7 +1,7 @@
 import styles from './Profile.module.scss';
 import { TwinnyLogo } from '@images';
 
-import { Link, Text, Divider, Header, Highlight, List, SplitGrid } from 'k1my3ch4n-core/components';
+import { Text, Divider, Header, Highlight, List, SplitGrid } from 'k1my3ch4n-core/components';
 
 const Profile = () => {
   return (
@@ -32,15 +32,11 @@ const Profile = () => {
             <List spot="l">
               웹 프로덕트 배포 및 버저닝 자동화, 리팩토링 진행
               <List spot="m">
-                <Link link="https://velog.io/@k1my3ch4n/series/github-actions">
-                  <Highlight>github action</Highlight>을 이용한 배포 및 버저닝 자동화 진행
-                </Link>
+                <Highlight>github action</Highlight>을 이용한 배포 및 버저닝 자동화 진행
               </List>
               <List spot="m">
                 <Highlight>CRA</Highlight> → <Highlight>VITE</Highlight> 마이그레이션 및{' '}
-                <Link link="https://velog.io/@k1my3ch4n/series/monorepo">
-                  <Highlight>monorepo</Highlight> 적용
-                </Link>
+                <Highlight>monorepo</Highlight> 적용
                 <List spot="s">빌드 시간 단축 ( 2:20 → 0:40 , 약 72% 속도 개선 )</List>
                 <List spot="s">
                   <Highlight>yarn workspaces</Highlight> 사용해서 <Highlight>monorepo</Highlight>
