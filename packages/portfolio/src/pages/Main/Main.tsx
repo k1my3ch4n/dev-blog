@@ -6,6 +6,7 @@ import Skills from './Skills';
 import Profile from './Profile';
 import Projects from './Projects';
 import Introduce from './Introduce';
+import AboutMe from './AboutMe';
 
 const Main = () => {
   return (
@@ -16,6 +17,7 @@ const Main = () => {
         <Profile />
         <Skills />
         <Projects />
+        <AboutMe />
       </div>
     </>
   );
