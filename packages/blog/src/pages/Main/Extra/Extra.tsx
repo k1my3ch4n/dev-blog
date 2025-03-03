@@ -3,7 +3,7 @@ import styles from './Extra.module.scss';
 import { Github, MainLogo } from '@images';
 
 const GITHUB_LINK = 'https://github.com/k1my3ch4n';
-const BLOG_LINK = 'https://monorepo-blog-384003056882.asia-northeast3.run.app/';
+const BLOG_LINK = 'https://blog.k1my3ch4n.xyz/';
 
 const Extra = () => {
   const handleClick = (link: string) => {

@@ -2,6 +2,8 @@ import styles from './Projects.module.scss';
 import { Divider, PageBox, Title } from 'k1my3ch4n-core/components';
 import { MainLogo } from '@images';
 
+const GITHUB_REPO_LINK = 'https://github.com/k1my3ch4n/dev-blog/blob/main/README.md';
+
 const Projects = () => {
   const handleClick = (link: string) => {
     window.open(link, '_blank');
@@ -14,7 +16,7 @@ const Projects = () => {
       <PageBox
         Thumbnail={MainLogo}
         title="Monorepo로 블로그 및 포트폴리오 페이지 생성"
-        onClick={() => handleClick('https://github.com/k1my3ch4n/dev-blog/blob/main/README.md')}
+        onClick={() => handleClick(GITHUB_REPO_LINK)}
         width="400px"
         height="300px"
       />
