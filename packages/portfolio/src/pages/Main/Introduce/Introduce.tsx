@@ -14,13 +14,14 @@ const Introduce = () => {
             <MainPhoto className={styles.mainPhoto} />
             <Text>🔥 김예찬 </Text>
             <Text>
-              <Link link="mailto:k1my3ch4n@gmail.com">✉️ k1my3ch4n@gmail.com</Link>
+              ✉️ <Link link="mailto:k1my3ch4n@gmail.com">k1my3ch4n@gmail.com</Link>
             </Text>
             <Text>📱 010-2695-7092</Text>
             <Text>🏠 경기 성남시 분당구</Text>
             <Text>
+              📘{' '}
               <Link link="https://k1my3ch4ns.notion.site/1a8c98c1db058050acfdfab5d4bc6b9f">
-                📘 Resume
+                Resume
               </Link>
             </Text>
           </>
