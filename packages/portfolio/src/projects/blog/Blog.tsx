@@ -1,4 +1,4 @@
-import { Bold, Header, Highlight, List, Text, Title } from 'k1my3ch4n-core/components';
+import { Bold, Header, Highlight, Link, List, Text, Title } from 'k1my3ch4n-core/components';
 import { MainLogo } from '@images';
 
 const Blog = () => {
@@ -48,8 +48,17 @@ const Blog = () => {
       </List>
 
       <Header size="s">관련 홈페이지 및 자료</Header>
-      <List>관련 홈페이지</List>
-      <List>관련 유튜브</List>
+      <List>
+        <Link link="https://blog.k1my3ch4n.xyz/">블로그 페이지</Link>
+      </List>
+      <List>
+        <Link link="https://portfolio.k1my3ch4n.xyz/">포트폴리오 페이지</Link>
+      </List>
+      <List>
+        <Link link="https://github.com/k1my3ch4n/dev-blog/blob/main/README.md">
+          Github Repository
+        </Link>
+      </List>
     </>
   );
 };
