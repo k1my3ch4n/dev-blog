@@ -8,17 +8,23 @@ import TableHeader from '@components/TableHeader';
 const SKILL_HEADER = ['Category', '기능 구현에 자신이 있어요.', '지식은 있지만 , 경험은 부족해요.'];
 
 const SKILL_FRONTEND = [
-  ['Typescript', 'React', 'Vite', 'Recoil', 'Sass', 'Apollo', 'Client', 'Storybook'],
+  ['Typescript', 'React', 'Vite', 'Recoil', 'Sass', 'Apollo Client', 'Storybook'],
   ['NextJs', 'Redux'],
 ];
 
-const SKILL_BACKEND = [['GraphQL', 'Rest API'], ['AWS']];
+const SKILL_BACKEND = [
+  ['Apollo Server', 'GraphQL', 'Rest API', 'Google Cloud Platform'],
+  ['AWS', 'Docker'],
+];
 
-const SKILL_TESTING = [['Jest', 'React Testing Library', 'MSW (Mock Service Worker)'], ['Vitest']];
+const SKILL_TESTING = [
+  ['Jest', 'React Testing Library', 'MSW (Mock Service Worker)', 'Vitest'],
+  ['Cypress'],
+];
 
 const SKILL_OTHERS = [
-  ['Git', 'Github', 'Github Actions', 'Yarn PnP', 'yarn workspaces', 'monorepo', 'Notion', 'Figma'],
-  ['Docker'],
+  ['Git', 'Github Actions', 'Yarn PnP', 'yarn workspaces', 'monorepo', 'Notion', 'Figma'],
+  [],
 ];
 
 const Skills = () => {

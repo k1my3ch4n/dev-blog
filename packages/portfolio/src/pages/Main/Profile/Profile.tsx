@@ -14,7 +14,7 @@ const Profile = () => {
           <>
             <TwinnyLogo className={styles.logo} />
             <Text>TWINNY</Text>
-            <Text>2022.4 - 2024.4</Text>
+            <Highlight>2022.4 - 2024.4</Highlight>
           </>
         }
         rhs={

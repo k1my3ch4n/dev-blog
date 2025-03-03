@@ -6,7 +6,7 @@ import { Divider, Header, PageBox } from 'k1my3ch4n-core/components';
 import { TwinnyLogo, MainLogo, Github } from '@images';
 
 const GITHUB_LINK = 'https://github.com/k1my3ch4n';
-const BLOG_LINK = 'https://monorepo-blog-384003056882.asia-northeast3.run.app/';
+const BLOG_LINK = 'https://blog.k1my3ch4n.xyz/';
 
 const Projects = () => {
   const navigate = useNavigate();
