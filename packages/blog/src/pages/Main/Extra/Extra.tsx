@@ -3,7 +3,7 @@ import styles from './Extra.module.scss';
 import { Github, MainLogo } from '@images';
 
 const GITHUB_LINK = 'https://github.com/k1my3ch4n';
-const BLOG_LINK = 'https://blog.k1my3ch4n.xyz/';
+const PORTFOLIO_LINK = 'https://portfolio.k1my3ch4n.xyz/';
 
 const Extra = () => {
   const handleClick = (link: string) => {
@@ -24,8 +24,8 @@ const Extra = () => {
         />
         <PageBox
           Thumbnail={MainLogo}
-          title="Blog"
-          onClick={() => handleClick(BLOG_LINK)}
+          title="Portfolio"
+          onClick={() => handleClick(PORTFOLIO_LINK)}
           width="400px"
           height="300px"
         />
