@@ -17,7 +17,6 @@ const Blog = () => {
       </div>
       <Divider />
       <div className={styles.boxWrapper}>
-        {/* todo : 블로그 페이지 수정 */}
         {postsData?.slice(0, 4).map((data, index) => {
           const { title, postKey } = data;
 
