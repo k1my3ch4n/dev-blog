@@ -13,6 +13,8 @@ inputs:
     required: true
   server_uri:
     required: true
+  x-api-key:
+    required: false
 
 runs:
   using: composite
@@ -41,6 +43,7 @@ runs:
         docker build \
           --build-arg YARN_NPM_AUTH_TOKEN=${{inputs.npm_auth_token}} \
           --build-arg VITE_SERVER_URI=${{ inputs.server_uri }} \
+          --build-arg VITE_VALIDATED_API_KEY=${{ inputs.x-api-key }} \
           -t $IMAGE_NAME:latest -f packages/${{inputs.package}}/Dockerfile .
           
         docker push $IMAGE_NAME:latest
