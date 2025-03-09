@@ -1,3 +1,14 @@
+.tagWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+
+  .mainTags {
+    margin: 4px;
+  }
+}
+
 .post {
   display: flex;
   cursor: pointer;

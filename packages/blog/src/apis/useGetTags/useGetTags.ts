@@ -9,6 +9,7 @@ export const adapter = (data: any) => {
   return data.allTags;
 };
 
+// todo : data 만 리턴하는 경우 수정
 const useGetTags = () => {
   const { data } = useQuery(GET_TAGS);
 
