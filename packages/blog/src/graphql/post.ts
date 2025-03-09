@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const GET_POSTS = gql`
-  query GetPosts {
-    posts {
+  query GetPosts($tag: String!) {
+    posts(tag: $tag) {
       id
       postKey
       title
@@ -19,5 +19,11 @@ export const GET_POST_WITH_KEY = gql`
       title
       tags
     }
+  }
+`;
+
+export const GET_TAGS = gql`
+  query GetAllTags {
+    allTags
   }
 `;
