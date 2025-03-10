@@ -17,9 +17,6 @@ const useGetPostWithKey = (postKey?: string) => {
   const { loading: isLoading, error } = useQuery<PostWithKeyResponseData>(GET_POST_WITH_KEY, {
     variables: { postKey },
     onCompleted: (data) => setPostData(adapter(data)),
-    onError: (error) => {
-      console.log(error);
-    },
   });
 
   return {

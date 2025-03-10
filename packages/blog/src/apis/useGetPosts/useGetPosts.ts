@@ -13,7 +13,7 @@ export const adapter = (data?: PostsResponseData) => {
   return data.posts;
 };
 
-const useGetPosts = () => {
+const useGetPosts = (tag: string = '') => {
   const setPostsData = useSetRecoilState(postsAtom);
   const resetPostsData = useResetRecoilState(postsAtom);
 
@@ -22,10 +22,7 @@ const useGetPosts = () => {
     loading: isLoading,
     error,
   } = useQuery<PostsResponseData>(GET_POSTS, {
-    fetchPolicy: 'network-only',
-    onError: (error) => {
-      console.error(error);
-    },
+    variables: { tag },
   });
 
   const postsData = useMemo(() => adapter(data), [data]);
