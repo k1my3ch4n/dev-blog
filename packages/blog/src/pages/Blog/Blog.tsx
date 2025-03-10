@@ -11,24 +11,14 @@ import {
 } from 'k1my3ch4n-core/components';
 import { BLOG_THUMBNAIL } from '@constants/blog';
 import useGetPosts from '@apis/useGetPosts';
-import useGetTags from '@src/apis/useGetTags';
-import { useState } from 'react';
+import useGetTags from '@apis/useGetTags';
+import useSelectedTag from '@hooks/useSelectedTag';
 
 const Blog = () => {
   const navigate = useNavigate();
-  const { data: tagsData } = useGetTags();
+  const { tagsData } = useGetTags();
 
-  // todo : 해당 부분 hook 으로 분리
-  const [selectedTag, setSelectedTag] = useState<string>('');
-
-  const handleSelected = (tag: string) => {
-    if (!selectedTag || selectedTag !== tag) {
-      setSelectedTag(tag);
-      return;
-    }
-
-    setSelectedTag('');
-  };
+  const { selectedTag, handleSelected } = useSelectedTag();
 
   // todo : 페이지네이션 추가
   const {
