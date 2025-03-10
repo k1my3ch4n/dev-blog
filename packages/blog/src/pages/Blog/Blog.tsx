@@ -31,17 +31,17 @@ const Blog = () => {
     postsData,
   } = useGetPosts({ tag: selectedTag, orderBy });
 
-  const handleClick = () => {
+  const goHomeButtonClick = () => {
     navigate('/');
   };
 
-  const handleOrder = (orderBy: 'DESC' | 'ASC') => {
+  const handleOrderClick = (orderBy: 'DESC' | 'ASC') => {
     setOrderBy(orderBy);
   };
 
   return (
     <>
-      <HomeButton onClick={handleClick} />
+      <HomeButton onClick={goHomeButtonClick} />
       <Title title="📘 K1MY3CH4N's Blog" />
       <Divider />
       <div className={styles.tagWrapper}>
@@ -58,18 +58,19 @@ const Blog = () => {
       <div className={styles.orderWrapper}>
         <div
           className={`${styles.orderTab} ${orderBy === 'DESC' ? styles.isSelected : ''}`}
-          onClick={() => handleOrder('DESC')}
+          onClick={() => handleOrderClick('DESC')}
         >
           최신 순
         </div>
         <span>/</span>
         <div
           className={`${styles.orderTab} ${orderBy === 'ASC' ? styles.isSelected : ''}`}
-          onClick={() => handleOrder('ASC')}
+          onClick={() => handleOrderClick('ASC')}
         >
           오래된 순
         </div>
       </div>
+
       <Divider />
       {/* todo : loading, error 컴포넌트 만들기 */}
       {isGetPostsLoading && <div>로딩중입니다 ... </div>}
