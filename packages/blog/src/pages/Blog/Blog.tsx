@@ -13,6 +13,7 @@ import { BLOG_THUMBNAIL } from '@constants/blog';
 import useGetPosts from '@apis/useGetPosts';
 import useGetTags from '@apis/useGetTags';
 import useSelectedTag from '@hooks/useSelectedTag';
+import Tag from '@components/Tag';
 
 const Blog = () => {
   const navigate = useNavigate();
@@ -39,11 +40,10 @@ const Blog = () => {
 
       <div className={styles.tagWrapper}>
         {tagsData.map((tag) => {
+          const isSelected = tag === selectedTag;
+
           return (
-            <div className={styles.mainTags} onClick={() => handleSelected(tag)}>
-              {/* todo : 컴포넌트 변경 */}
-              <Highlight key={tag}>{tag}</Highlight>
-            </div>
+            <Tag key={tag} tag={tag} isSelected={isSelected} onClick={() => handleSelected(tag)} />
           );
         })}
       </div>
