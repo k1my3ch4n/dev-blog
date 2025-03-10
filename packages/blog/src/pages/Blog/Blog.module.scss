@@ -5,6 +5,26 @@
   margin: 20px;
 }
 
+.orderWrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  .orderTab {
+    margin: 4px;
+    cursor: pointer;
+  }
+
+  .isSelected {
+    font-weight: 700;
+    cursor: default;
+  }
+
+  span {
+    margin: 0 8px;
+  }
+}
+
 .post {
   display: flex;
   cursor: pointer;

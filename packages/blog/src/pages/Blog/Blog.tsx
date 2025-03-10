@@ -14,6 +14,7 @@ import useGetPosts from '@apis/useGetPosts';
 import useGetTags from '@apis/useGetTags';
 import useSelectedTag from '@hooks/useSelectedTag';
 import Tag from '@components/Tag';
+import { useState } from 'react';
 
 const Blog = () => {
   const navigate = useNavigate();
@@ -21,23 +22,28 @@ const Blog = () => {
 
   const { selectedTag, handleSelected } = useSelectedTag();
 
+  const [orderBy, setOrderBy] = useState<'DESC' | 'ASC'>('DESC');
+
   // todo : 페이지네이션 추가
   const {
     isLoading: isGetPostsLoading,
     isError: isGetPostsError,
     postsData,
-  } = useGetPosts(selectedTag);
+  } = useGetPosts({ tag: selectedTag, orderBy });
 
   const handleClick = () => {
     navigate('/');
   };
 
+  const handleOrder = (orderBy: 'DESC' | 'ASC') => {
+    setOrderBy(orderBy);
+  };
+
   return (
-    <>
+    <div>
       <HomeButton onClick={handleClick} />
       <Title title="📘 K1MY3CH4N's Blog" />
       <Divider />
-
       <div className={styles.tagWrapper}>
         {tagsData.map((tag) => {
           const isSelected = tag === selectedTag;
@@ -48,12 +54,26 @@ const Blog = () => {
         })}
       </div>
 
+      {/* todo : 컴포넌트 분리? */}
+      <div className={styles.orderWrapper}>
+        <div
+          className={`${styles.orderTab} ${orderBy === 'DESC' ? styles.isSelected : ''}`}
+          onClick={() => handleOrder('DESC')}
+        >
+          최신 순
+        </div>
+        <span>/</span>
+        <div
+          className={`${styles.orderTab} ${orderBy === 'ASC' ? styles.isSelected : ''}`}
+          onClick={() => handleOrder('ASC')}
+        >
+          오래된 순
+        </div>
+      </div>
       <Divider />
-
       {/* todo : loading, error 컴포넌트 만들기 */}
       {isGetPostsLoading && <div>로딩중입니다 ... </div>}
       {isGetPostsError && <div>에러가 발생했습니다 . </div>}
-
       {postsData?.map(
         ({ title, tags, postKey }: { title: string; tags: string[]; postKey: string }, index) => {
           const handleClick = (projectName: string) => {
@@ -81,9 +101,8 @@ const Blog = () => {
           );
         },
       )}
-
       <ScrollToTopButton />
-    </>
+    </div>
   );
 };
 
