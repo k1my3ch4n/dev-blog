@@ -1,7 +1,12 @@
 import { useQuery } from '@apollo/client';
-import { GET_TAGS } from '@src/graphql/post';
+import { GET_TAGS } from '@graphql/post';
+import { useMemo } from 'react';
 
-export const adapter = (data: any) => {
+interface GetTagsResponse {
+  allTags: string[];
+}
+
+export const adapter = (data?: GetTagsResponse) => {
   if (!data) {
     return [];
   }
@@ -9,11 +14,12 @@ export const adapter = (data: any) => {
   return data.allTags;
 };
 
-// todo : data 만 리턴하는 경우 수정
 const useGetTags = () => {
-  const { data } = useQuery(GET_TAGS);
+  const { data, loading, error } = useQuery<GetTagsResponse>(GET_TAGS);
 
-  return { data: adapter(data) };
+  const tagsData = useMemo(() => adapter(data), [data]);
+
+  return { tagsData, isLoading: loading, isError: !!error };
 };
 
 export default useGetTags;
