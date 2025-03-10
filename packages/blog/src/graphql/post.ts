@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const GET_POSTS = gql`
-  query GetPosts($tag: String!) {
-    posts(tag: $tag) {
+  query GetPosts($tag: String!, $orderBy: String) {
+    posts(tag: $tag, orderBy: $orderBy) {
       id
       postKey
       title

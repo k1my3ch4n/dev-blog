@@ -6,7 +6,7 @@ import { waitFor } from '@testing-library/react';
 import { MOCK_GET_POSTS_RESPONSE } from '@fixtures/posts';
 
 const renderUseGetPosts = () => {
-  return renderTestHook({ hook: useGetPosts });
+  return renderTestHook({ hook: () => useGetPosts({}) });
 };
 
 describe('useGetPosts 테스트', () => {
