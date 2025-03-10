@@ -13,7 +13,13 @@ export const adapter = (data?: PostsResponseData) => {
   return data.posts;
 };
 
-const useGetPosts = ({ tag = '', orderBy }: { tag: string; orderBy: 'DESC' | 'ASC' }) => {
+const useGetPosts = ({
+  tag = '',
+  orderBy = 'DESC',
+}: {
+  tag?: string;
+  orderBy?: 'DESC' | 'ASC';
+}) => {
   const setPostsData = useSetRecoilState(postsAtom);
   const resetPostsData = useResetRecoilState(postsAtom);
 

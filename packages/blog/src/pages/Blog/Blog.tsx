@@ -40,7 +40,7 @@ const Blog = () => {
   };
 
   return (
-    <div>
+    <>
       <HomeButton onClick={handleClick} />
       <Title title="📘 K1MY3CH4N's Blog" />
       <Divider />
@@ -102,7 +102,7 @@ const Blog = () => {
         },
       )}
       <ScrollToTopButton />
-    </div>
+    </>
   );
 };
 
