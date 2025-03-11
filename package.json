@@ -10,10 +10,8 @@
     "v1": "yarn workspace v1",
     "core": "yarn workspace k1my3ch4n-core",
     "blog": "yarn workspace blog",
-    "server": "yarn workspace server",
     "portfolio": "yarn workspace portfolio",
     "typeCheck:v1": "tsc -p 'packages/v1/ -w",
-    "typeCheck:server": "tsc -p 'packages/server/ -w",
     "typeCheck:portfolio": "tsc -p 'packages/portfolio/ -w"
   },
   "dependencies": {
@@ -26,16 +24,10 @@
   },
   "references": [
     {
-      "path": "packages/v1"
-    },
-    {
       "path": "packages/core"
     },
     {
       "path": "packages/blog"
-    },
-    {
-      "path": "packages/server"
     },
     {
       "path": "packages/portfolio"
