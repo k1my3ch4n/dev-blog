@@ -12,9 +12,11 @@ import {
   Msw2,
   Msw3,
   WoowaTechCourse,
+  MarchMemoir,
 } from '@images';
 
 export const BLOG_THUMBNAIL: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
+  'march-memoir': MarchMemoir,
   'woowa-course': WoowaTechCourse,
   'msw-3': Msw3,
   'msw-2': Msw2,
@@ -37,13 +39,13 @@ export const BLOG_POST_DATA = [
   //     postId: '',
   //     tags: ['태그 1', '태그 2'],
   //   },
-  //   {
-  //     thumbnail: '',
-  //     title: 'msw ( mock service worker ) 를 이용한 API mocking #4 ( jest vs vitest )',
-  //     postId: '',
-  //     tags: ['msw', 'mock service worker', 'monorepo'],
-  //   },
-  // msw 4번은 보류
+
+  {
+    Thumbnail: MarchMemoir,
+    title: '3dnjf',
+    postId: 'woowa-course',
+    tags: ['우아한 테크코스'],
+  },
   {
     Thumbnail: WoowaTechCourse,
     title: '우아한 테크코스 프론트엔드 7기 프리코스 회고록',

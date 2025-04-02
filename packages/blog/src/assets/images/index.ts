@@ -23,4 +23,6 @@ export { ReactComponent as Msw3 } from './msw3.svg';
 
 export { ReactComponent as WoowaTechCourse } from './woowaTechCourse.svg';
 
+export { ReactComponent as MarchMemoir } from './marchMemoir.svg';
+
 export { ReactComponent as Github } from './github.svg';
