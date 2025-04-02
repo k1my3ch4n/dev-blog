@@ -80,13 +80,17 @@ blog
 
 ## 📙 Versioning
 
-[`0.0.27](https://github.com/k1my3ch4n/dev-blog/pull/69)
+[`0.0.28](https://github.com/k1my3ch4n/dev-blog/pull/71)
 
-- 블로그 목록에 최신 순 / 오래된 순 정렬이 추가되었습니다 .
+- `3월 취준 회고록` 게시글이 업데이트 되었습니다.
 
 <details>
 <summary>이전 버전 보기</summary>
 <div markdown="1">
+
+[`0.0.27](https://github.com/k1my3ch4n/dev-blog/pull/69)
+
+- 블로그 목록에 최신 순 / 오래된 순 정렬이 추가되었습니다 .
 
 [`0.0.26](https://github.com/k1my3ch4n/dev-blog/pull/68)
 
@@ -98,7 +102,7 @@ blog
 
 [`0.0.24](https://github.com/k1my3ch4n/dev-blog/pull/66)
 
-- 내부 Portfolio 링크가 수정되었습니다. 
+- 내부 Portfolio 링크가 수정되었습니다.
 
 [`0.0.23](https://github.com/k1my3ch4n/dev-blog/pull/65)
 
@@ -111,7 +115,6 @@ blog
 [`0.0.21`](https://github.com/k1my3ch4n/dev-blog/pull/62)
 
 - 리전 변경으로 인해 패키지 배포 주소가 변경되었습니다.
-
 
 [`0.0.20`](https://github.com/k1my3ch4n/dev-blog/pull/61)
 
