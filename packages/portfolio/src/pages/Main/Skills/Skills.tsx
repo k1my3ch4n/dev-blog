@@ -9,7 +9,7 @@ const SKILL_HEADER = ['Category', '기능 구현에 자신이 있어요.', '지�
 
 const SKILL_FRONTEND = [
   ['Typescript', 'React', 'Vite', 'Recoil', 'Sass', 'Apollo Client', 'Storybook'],
-  ['NextJs', 'Redux'],
+  ['Next JS', 'Redux', 'Zustand'],
 ];
 
 const SKILL_BACKEND = [
@@ -19,7 +19,7 @@ const SKILL_BACKEND = [
 
 const SKILL_TESTING = [
   ['Jest', 'React Testing Library', 'MSW (Mock Service Worker)', 'Vitest'],
-  ['Cypress'],
+  [],
 ];
 
 const SKILL_OTHERS = [
