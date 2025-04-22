@@ -1,6 +1,8 @@
 import { Bold, Link, Text, Title, Header, Highlight, List } from 'k1my3ch4n-core/components';
 import { TwinnyLogo } from '@images';
 
+const HOMEPAGE_TWINNY = 'https://twinny.ai/';
+
 const ManagerRobot = () => {
   return (
     <>
@@ -36,11 +38,9 @@ const ManagerRobot = () => {
         </List>
       </List>
 
+      <Header size="s">관련 홈페이지 및 자료</Header>
       <List>
-        관련 홈페이지 및 자료
-        <List spot="m">
-          <Link link="https://twinny.ai/">관련 홈페이지</Link>
-        </List>
+        <Link link={HOMEPAGE_TWINNY}>관련 홈페이지</Link>
       </List>
     </>
   );
