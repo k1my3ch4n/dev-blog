@@ -3,6 +3,8 @@ import { MainPhoto } from '@images';
 
 import { Text, Divider, Header, List, SplitGrid, Link, Highlight } from 'k1my3ch4n-core/components';
 
+const RESUME_LINK = 'https://k1my3ch4ns.notion.site/1cac98c1db05805bb6e8c4c02a55c72c';
+
 const Introduce = () => {
   return (
     <>
@@ -19,10 +21,7 @@ const Introduce = () => {
             <Text>📱 010-2695-7092</Text>
             <Text>🏠 경기 성남시 분당구</Text>
             <Text>
-              📘{' '}
-              <Link link="https://k1my3ch4ns.notion.site/1a8c98c1db058050acfdfab5d4bc6b9f">
-                Resume
-              </Link>
+              📘 <Link link={RESUME_LINK}>Resume</Link>
             </Text>
           </>
         }
