@@ -67,13 +67,33 @@ portfolio
 
 ## 📙 Versioning
 
-[`0.0.10`](https://github.com/k1my3ch4n/dev-blog/pull/62)
+[`0.0.14`](https://github.com/k1my3ch4n/dev-blog/pull/73)
 
-- 리전 변경으로 인해 패키지 배포 주소가 변경되었습니다.
+- portfolio 메인 페이지가 수정되었습니다.
 
 <details>
 <summary>이전 버전 보기</summary>
 <div markdown="1">
+   
+[`0.0.14`](https://github.com/k1my3ch4n/dev-blog/pull/73)
+
+- portfolio 메인 페이지가 수정되었습니다.
+
+[`0.0.13`](https://github.com/k1my3ch4n/dev-blog/pull/68)
+
+- 포트폴리오 패키지 의존성 업데이트
+
+[`0.0.12`](https://github.com/k1my3ch4n/dev-blog/pull/64)
+
+- 포트폴리오 메인 페이지 업데이트 진행
+
+[`0.0.11`](https://github.com/k1my3ch4n/dev-blog/pull/63)
+
+- 패키지 Readme 업데이트 진행
+
+[`0.0.10`](https://github.com/k1my3ch4n/dev-blog/pull/62)
+
+- 리전 변경으로 인해 패키지 배포 주소가 변경되었습니다.
 
 [`0.0.9`](https://github.com/k1my3ch4n/dev-blog/pull/52)
 
