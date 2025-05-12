@@ -13,6 +13,7 @@ import {
   Msw3,
   WoowaTechCourse,
   MarchMemoir,
+  FastestVite,
 } from '@images';
 
 export const BLOG_THUMBNAIL: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
@@ -30,6 +31,7 @@ export const BLOG_THUMBNAIL: { [key: string]: React.FC<React.SVGProps<SVGSVGElem
   'github-actions-2': GithubActions2,
   'github-actions-1': GithubActions1,
   'yarn-berry-pnp-1': YarnBerryPnp,
+  'fastest-vite': FastestVite,
 };
 
 export const BLOG_POST_DATA = [

@@ -25,4 +25,6 @@ export { ReactComponent as WoowaTechCourse } from './woowaTechCourse.svg';
 
 export { ReactComponent as MarchMemoir } from './marchMemoir.svg';
 
+export { ReactComponent as FastestVite } from './fastestVite.svg';
+
 export { ReactComponent as Github } from './github.svg';
