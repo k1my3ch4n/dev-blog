@@ -1,3 +1,11 @@
+> # 경고 : !해당 프로젝트는 더이상 사용되지 않습니다.
+> 변경된 [repo](https://github.com/k1my3ch4n/dev-next-blog) 를 확인해 주세요. 
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="rainbow" />
+
+
 # Monorepo 로 블로그 , 포트폴리오 구현 프로젝트
 
 <div align="center">
