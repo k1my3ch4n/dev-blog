@@ -1,4 +1,5 @@
 > # 경고 : !해당 프로젝트는 더이상 사용되지 않습니다.
+> 해당 프로젝트는 next 프로젝트로 마이그레이션 되었습니다 . 
 > 변경된 [repo](https://github.com/k1my3ch4n/dev-next-blog) 를 확인해 주세요. 
 
 <br>
